@@ -7,7 +7,7 @@ let index = 0
 
 export function setInitialArrival() {
     for (let i = 0; i < 3; i++) {
-        const eta = i === 0 ? "Now" : `${i * 2 + 1}min`
+        const eta = i === 0 ? "Now" : `${getETA(i+1)}min`
         const arrivalElement = createArrivalElement(introductions[i], eta)
         arrivalElement.css("top", `${i * 80}px`)
         $("#schedule").append(arrivalElement)
@@ -24,13 +24,13 @@ function slideUp() {
     $(".arrival").first().remove()
 
     $(".arrival").first().children(".eta").text("Now")
-    $(".arrival").last().children(".eta").text("3min")
+    $(".arrival").last().children(".eta").text(`${getETA(2)}min`)
     $(".arrival").first().animate({ top: `0px` }, 500)
     $(".arrival").last().animate({ top: `80px` }, 500, insertNewArrival)
 }
 
 function insertNewArrival() {
-    const arrivalElement = createArrivalElement(introductions[index], "5min")
+    const arrivalElement = createArrivalElement(introductions[index], `${getETA(3)}min`)
     arrivalElement.css("top", `160px`)
     arrivalElement.css("left", `-1000px`)
     $("#schedule").append(arrivalElement)
@@ -48,15 +48,6 @@ function createArrivalElement(destination, eta) {
       </div>
     `)
     return arrivalElement
-}
-
-function getDestination() {
-    switch (Math.floor(Math.random() * 2)) {
-        case 0:
-            return "King George"
-        case 1:
-            return "Production Way - University"
-    }
 }
 
 export function updateClock() {
@@ -79,5 +70,16 @@ function toAMPM(hour, minute) {
     }
     else if (hour > 12) {
         return `${hour - 12}:${minute}p.m.`
+    }
+}
+
+function getETA(line) {
+    switch(line) {
+        case 2:
+            return Math.floor(Math.random() * 2) + 3
+            break;
+        case 3:
+            return Math.floor(Math.random() * 6) + 5
+            break;
     }
 }
