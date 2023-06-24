@@ -9,14 +9,14 @@ export function setInitialArrival() {
     for (let i = 0; i < 3; i++) {
         const eta = i === 0 ? "Now" : `${getETA(i+1)}min`
         const arrivalElement = createArrivalElement(introductions[i], eta)
-        arrivalElement.css("top", `${i * 80}px`)
+        arrivalElement.css("top", `${i * 33}%`)
         $("#schedule").append(arrivalElement)
     }
 }
 
 export function updateIntroduction() {
     $(".arrival").first().animate(
-        { left: '1000px' }, 1000, slideUp
+        { left: '100%' }, 1000, slideUp
     )
 }
 
@@ -25,14 +25,14 @@ function slideUp() {
 
     $(".arrival").first().children(".eta").text("Now")
     $(".arrival").last().children(".eta").text(`${getETA(2)}min`)
-    $(".arrival").first().animate({ top: `0px` }, 500)
-    $(".arrival").last().animate({ top: `80px` }, 500, insertNewArrival)
+    $(".arrival").first().animate({ top: `0%` }, 500)
+    $(".arrival").last().animate({ top: `33%` }, 500, insertNewArrival)
 }
 
 function insertNewArrival() {
     const arrivalElement = createArrivalElement(introductions[index], `${getETA(3)}min`)
-    arrivalElement.css("top", `160px`)
-    arrivalElement.css("left", `-1000px`)
+    arrivalElement.css("top", `66%`)
+    arrivalElement.css("left", `-100%`)
     $("#schedule").append(arrivalElement)
     $(".arrival").last().animate({ left: `0px` }, 500)
     

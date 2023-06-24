@@ -5,104 +5,94 @@
   src: url(RingMatrix.ttf);
 }
 
-:root {
-  --train-board-width: 800px;
-  --hiding-frame-width: calc((100vw - var(--train-board-width)) / 2);
-}
 
 header {
-  width: var(--train-board-width);
-  margin: 5rem auto;
-  border: 15px solid rgb(43, 42, 42);
+  width: 100%;
   position: relative;
-  letter-spacing: -.1rem;
 
-  * {
-    font-family: "MyFont";
-    color: white;
+  #station-image {
+    width: 100%;
   }
 
-  #schedule {
-    width: 100%;
-    height: 240px;
-    background-color: black;
-    position: relative;
-  }
+  // background-image: url("./img/station.jpg");
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  // background-size: cover;
 
-  .arrival {
-    height: 80px;
-    width: 100%;
-    display: flex;
-    padding: 0 1rem;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2.4rem;
+  #board {
     position: absolute;
-    left: 0;
-    z-index: 0;
-  }
-
-  .train-icon {
-    height: 80%;
-    width: auto;
-  }
-
-  .destination {
-    width: 70%;
-  }
-
-  .eta {
-    width: 15%;
-    text-align: center;
-  }
-
-  #info {
-    width: 100%;
-    height: 40px;
-    background-color: rgb(0, 42, 120);
-    font-size: 1.6rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    #announce {
-      width: 86%;
+    top: 7.5%;
+    left: 8%;
+    width: 43%;
+    height: 20%;
+    margin: 0;
+    letter-spacing: -.1rem;
+    background-color: rgb(31, 31, 31);
+  
+    * {
+      font-family: "MyFont";
+      color: rgb(231, 231, 231);
     }
-  }
+  
+    #schedule {
+      width: 100%;
+      height: 84%;
+      position: relative;
 
-  #current-time {
-    width: 12%;
-    text-align: center;
-    letter-spacing: 0;
-  }
+      .arrival {
+        height: 33%;
+        width: 100%;
+        display: flex;
+        padding: 0 1rem;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6vw;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+        letter-spacing: 0.003vw;
 
-  #frame-cover {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    width: var(--train-board-width);
-    height: calc(280px + 15px * 2);
-    border: 15px solid rgb(43, 42, 42);
-    z-index: 1;
-  }
+        .train-icon {
+          height: 80%;
+          width: auto;
+        }
+      
+        .destination {
+          width: 70%;
+        }
+      
+        .eta {
+          width: 15%;
+          text-align: center;
+        }
+      }
+    }
+  
+    #info {
+      width: 100%;
+      height: 16%;
+      background-color: rgb(0, 42, 120);
+      font-size: 1.2vw;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+  
+      #announce {
+        width: 86%;
+        display: flex;
+        align-items: center;
+      }
 
-  #left-cover,
-  #right-cover {
-    position: absolute;
-    top: -15px;
-    width: var(--hiding-frame-width);
-    height: calc(280px + 15px * 2);
-    background-color: var(--header-black);
-    z-index: 1;
-  }
-
-  #left-cover {
-    left: calc(-1 * calc((100vw - var(--train-board-width)) / 2) - 15px);
-  }
-
-  #right-cover {
-    left: calc(var(--train-board-width) - 15px);
+      #current-time {
+        width: 12%;
+        text-align: center;
+        letter-spacing: 0;
+      }
+    }
+  
   }
 }
+
+
 
