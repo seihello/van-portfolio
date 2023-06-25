@@ -20,11 +20,10 @@ header {
     width: 43%;
     height: 19%;
     margin: 0;
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(16, 16, 16);
   
     * {
       font-family: "MyFont";
-      color: rgb(231, 231, 231);
     }
   
     #schedule {
@@ -32,6 +31,8 @@ header {
       height: 84%;
       position: relative;
       overflow: hidden;
+      color: rgb(231, 231, 231);
+      border-radius: 3px 3px 0 0;
 
       .arrival {
         height: 33%;
@@ -71,6 +72,8 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
+      color: white;
+      border-radius: 0 0 3px 3px;
   
       #announce {
         width: 86%;
@@ -132,7 +135,7 @@ header {
       }
     
       #info {
-        font-size: 2.4vw;
+        font-size: 2vw;
       }
     }
   }
