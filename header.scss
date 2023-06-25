@@ -5,7 +5,6 @@
   src: url(RingMatrix.ttf);
 }
 
-
 header {
   width: 100%;
   position: relative;
@@ -13,11 +12,6 @@ header {
   #station-image {
     width: 100%;
   }
-
-  // background-image: url("./img/station.jpg");
-  // background-repeat: no-repeat;
-  // background-size: 100% 100%;
-  // background-size: cover;
 
   #board {
     position: absolute;
@@ -43,7 +37,7 @@ header {
         height: 33%;
         width: 100%;
         display: flex;
-        padding: 0 1rem;
+        padding: 0 0 0 0.5vw;
         justify-content: space-between;
         align-items: center;
         font-size: 1.6vw;
@@ -96,3 +90,50 @@ header {
 
 
 
+@media (max-width: 899px) {
+  header {
+    overflow: hidden;
+    #station-image {
+      width: 899px;
+    }
+    
+    #board {
+      width: calc(899px * .43);
+      left: calc(899px * .08);
+
+      #schedule {
+        .arrival {
+          font-size: 14px;
+        }
+      }
+    
+      #info {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  header {
+    overflow: hidden;
+    #station-image {
+      width: 170%;
+    }
+    
+    #board {
+      width: 73%;
+      left: 14%;
+
+      #schedule {
+        .arrival {
+          font-size: 3vw;
+        }
+      }
+    
+      #info {
+        font-size: 2.4vw;
+      }
+    }
+  }
+}
