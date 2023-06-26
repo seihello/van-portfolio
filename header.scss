@@ -8,6 +8,7 @@
 header {
   width: 100%;
   position: relative;
+  perspective: 100vmax;
 
   #station-image {
     width: 100%;
@@ -17,10 +18,11 @@ header {
     position: absolute;
     top: 7.5%;
     left: 8%;
-    width: 43%;
+    width: 43.5%;
     height: 19%;
     margin: 0;
     background-color: rgb(16, 16, 16);
+    transform: rotateX(-2deg) rotateY(2deg);
   
     * {
       font-family: "MyFont";
