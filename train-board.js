@@ -42,7 +42,7 @@ function insertNewArrival() {
 function createArrivalElement(destination, eta) {
     const arrivalElement = $(`
       <div class="arrival">
-        <img class="train-icon" src="train.png">
+        <img class="train-icon" src="img/train.png">
         <div class="destination">${destination}</div>
         <div class="eta">${eta}</div>
       </div>
