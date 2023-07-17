@@ -5,6 +5,7 @@ import ProjectList from './ProjectList'
 import SkillList from './SkillList'
 import WorkExperienceList from './WorkExperienceList'
 import EducationList from './EducationList'
+import Resume from './Resume'
 
 function App() {
 
@@ -15,19 +16,12 @@ function App() {
       <SkillList />
       <WorkExperienceList />
       <EducationList />
-
+      <Resume />
         
 
         
 
-        <div className="section">
-            <h2>Résumé</h2>
-            <hr/>
-            <div className="line">
-                <img id="pdf-icon" src="./pdf.png" />
-                <a className="resume" href="./resume/Seisuke_Yamada_Resume.pdf"><h3>Résumé (English)</h3></a>
-            </div>
-        </div>
+        
 
         <div className="section">
             <h2>Contact</h2>
