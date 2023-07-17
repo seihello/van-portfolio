@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import classes from './App.module.scss'
+import Header from './Header'
 import AboutMeSection from './AboutMeSection'
 import ProjectSection from './ProjectSection'
 import SkillSection from './SkillSection'
@@ -10,16 +11,19 @@ import ContactSection from './ContactSection'
 
 function App() {
 
-  return (    
-    <body>
-      <AboutMeSection />
-      <ProjectSection />
-      <SkillSection />
-      <WorkExperienceSection />
-      <EducationSection />
-      <ResumeSection />
-      <ContactSection />
-    </body>
+  return (
+    <>
+      <Header />
+      <body>
+        <AboutMeSection />
+        <ProjectSection />
+        <SkillSection />
+        <WorkExperienceSection />
+        <EducationSection />
+        <ResumeSection />
+        <ContactSection />
+      </body>
+    </>
   )
 }
 

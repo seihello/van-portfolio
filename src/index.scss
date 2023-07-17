@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
 :root {
   --main-beige: #d3c29e;
   --main-brown: #613d0a;
+
 }
 
 * {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
   box-sizing: border-box;
 }
 
@@ -14,8 +15,9 @@ h2 {
   display: inline-block;
   margin-bottom: 0;
   margin-top: 3rem;
-  padding: 0.8rem 1rem;
+  padding: .8rem 1rem;
   border: 3px solid var(--main-brown);
+
   position: relative;
 }
 
@@ -35,11 +37,12 @@ h2::first-letter {
   /* font-size: 2.5rem; */
 }
 
+
 hr {
   position: relative;
-  height: 2px;
-  border-width: 0;
-  background-color: var(--main-brown);
+	height: 2px;
+	border-width: 0;
+	background-color: var(--main-brown);
   margin-bottom: 1rem;
 }
 
@@ -50,7 +53,7 @@ body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Lexend Deca', sans-serif, 
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -61,10 +64,10 @@ a:link, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 
-video.top {
+video.top { 
   position: relative;
   width: 100%;
   height: auto;
@@ -78,9 +81,7 @@ video.top {
   top: 100px;
   left: 50%;
   transform: translate(-50%, 0%);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   text-shadow: #6f6f6f 1px 1px 5px;
 }
 
@@ -120,9 +121,9 @@ div.interest-item {
   width: 80px;
   text-align: center;
   background-color: #faecb2;
-  background-image: linear-gradient(135deg, #f9e5bc 10%, #fbd085 100%);
+  background-image: linear-gradient( 135deg, #f9e5bc 10%, #fbd085 100%);
   border-left: solid 4px #fea100;
-  box-shadow: 2px 2px 10px #d0c69e;
+  box-shadow: 2px 2px 10px #d0c69e;;
   line-height: 3rem;
   font-size: 1rem;
   padding: 0 2rem;
@@ -133,7 +134,7 @@ div.interest-item {
 
 a.to-gallery {
   padding-top: 3rem;
-  color: #60abf7;
+  color:#60abf7;
   text-decoration: none;
 }
 
@@ -168,7 +169,7 @@ div.project {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, .7);
   transition: opacity 0.3s;
   opacity: 0;
 }
@@ -202,13 +203,13 @@ div.project-lang {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(135deg, #ff3661 20%, #0D25B9 100%);
+  background-image: linear-gradient( 135deg, #ff3661 20%,#0D25B9 100%);
   color: white;
   font-weight: bold;
   border-radius: 10px;
   height: 70%;
-  padding: 0rem 0.8rem;
-  margin-right: 0.8rem;
+  padding: 0rem .8rem;
+  margin-right: .8rem;
 }
 
 div.skills {
@@ -230,12 +231,12 @@ div.skill:hover {
 
 p.skill-name {
   font-size: 1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: .3rem;
 }
 
 p.skill-name-two-lines {
   font-size: 1rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: .1rem;
   line-height: 1.2rem;
 }
 
@@ -255,24 +256,20 @@ p.skill-name-two-lines {
 
 .rate20 {
   width: 20%;
-  animation-duration: 0.3s;
+  animation-duration: .3s;
 }
-
 .rate40 {
   width: 40%;
-  animation-duration: 0.6s;
+  animation-duration: .6s;
 }
-
 .rate60 {
   width: 60%;
-  animation-duration: 0.9s;
+  animation-duration: .9s;
 }
-
 .rate80 {
   width: 80%;
   animation-duration: 1.2s;
 }
-
 .rate100 {
   width: 100%;
   border-radius: 5px;
@@ -281,36 +278,40 @@ p.skill-name-two-lines {
 
 @keyframes rateUntil20 {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 20%;
+      width: 20%;
   }
 }
+
 @keyframes rateUntil40 {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 40%;
+      width: 40%;
   }
 }
+
 @keyframes rateUntil60 {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 60%;
+      width: 60%;
   }
 }
+
 @keyframes rateUntil80 {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 80%;
+      width: 80%;
   }
 }
+
 @keyframes rateUntil100 {
   from {
     width: 0;
@@ -319,6 +320,7 @@ p.skill-name-two-lines {
     width: 100%;
   }
 }
+
 div.experience-first {
   display: flex;
   justify-content: flex-start;
@@ -373,6 +375,8 @@ img.work-image {
   margin-top: 2rem;
 }
 
+
+
 img#pdf-icon {
   width: auto;
   height: 2rem;
@@ -417,7 +421,7 @@ a.contact-link {
 .contact-image {
   height: 60%;
   width: auto;
-  margin: auto 0;
+  margin: auto 0
 }
 
 footer {
@@ -429,7 +433,7 @@ footer {
   align-items: center;
 }
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-width:1440px) {
   .title-text {
     font-size: 1.2rem;
     top: 80px;
@@ -437,30 +441,39 @@ footer {
   div.section {
     width: 90%;
   }
+  
   div.profile {
     flex-direction: column;
   }
+
   .profile-image {
     width: 100%;
   }
+
   div.profile-text {
     width: 100%;
     margin-top: 2rem;
     padding-left: 0;
+
   }
+
   div.interest {
     justify-content: center;
   }
+
   div.project {
     width: 100%;
   }
+
   div.skills {
     gap: 1rem 0;
   }
+  
   div.skill {
     width: 30%;
     margin: 0 1%;
   }
+
   div.experience-first {
     flex-direction: column;
     display: flex;
@@ -469,133 +482,169 @@ footer {
     padding-top: 0;
     padding-bottom: 0;
   }
+
   div.work-item {
     width: 100%;
     flex-direction: column;
   }
+
   div.work-description {
     width: 100%;
   }
+
   img.work-image {
     width: 100%;
     height: auto;
   }
+
   div.org-name {
     width: 100%;
+
   }
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
 @font-face {
-  font-family: "MyFont";
+  font-family: 'MyFont';
   src: url(RingMatrix.ttf);
 }
+
 header {
   width: 100%;
   position: relative;
   perspective: 100vmax;
+
+  #station-image {
+    width: 100%;
+  }
+
+  #board {
+    position: absolute;
+    top: 7.5%;
+    left: 8%;
+    width: 43.5%;
+    height: 19%;
+    margin: 0;
+    background-color: rgb(16, 16, 16);
+    transform: rotateX(-2deg) rotateY(2deg);
+  
+    * {
+      font-family: "MyFont";
+    }
+  
+    #schedule {
+      width: 100%;
+      height: 84%;
+      position: relative;
+      overflow: hidden;
+      color: rgb(231, 231, 231);
+      border-radius: 3px 3px 0 0;
+
+      .arrival {
+        height: 33%;
+        width: 100%;
+        display: flex;
+        padding: 0 0 0 0.5vw;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.6vw;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+        letter-spacing: 0.003vw;
+
+        .train-icon {
+          height: 80%;
+          width: auto;
+        }
+      
+        .destination {
+          width: 70%;
+        }
+      
+        .eta {
+          width: 15%;
+          text-align: center;
+        }
+      }
+    }
+  
+    #info {
+      width: 100%;
+      height: 16%;
+      background-color: rgb(0, 42, 120);
+      font-size: 1.2vw;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      color: white;
+      border-radius: 0 0 3px 3px;
+  
+      #announce {
+        width: 86%;
+        display: flex;
+        align-items: center;
+      }
+
+      #current-time {
+        width: 12%;
+        text-align: center;
+        letter-spacing: 0;
+      }
+    }
+  
+  }
 }
-header #station-image {
-  width: 100%;
-}
-header #board {
-  position: absolute;
-  top: 7.5%;
-  left: 8%;
-  width: 43.5%;
-  height: 19%;
-  margin: 0;
-  background-color: rgb(16, 16, 16);
-  transform: rotateX(-2deg) rotateY(2deg);
-}
-header #board * {
-  font-family: "MyFont";
-}
-header #board #schedule {
-  width: 100%;
-  height: 84%;
-  position: relative;
-  overflow: hidden;
-  color: rgb(231, 231, 231);
-  border-radius: 3px 3px 0 0;
-}
-header #board #schedule .arrival {
-  height: 33%;
-  width: 100%;
-  display: flex;
-  padding: 0 0 0 0.5vw;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.6vw;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-  letter-spacing: 0.003vw;
-}
-header #board #schedule .arrival .train-icon {
-  height: 80%;
-  width: auto;
-}
-header #board #schedule .arrival .destination {
-  width: 70%;
-}
-header #board #schedule .arrival .eta {
-  width: 15%;
-  text-align: center;
-}
-header #board #info {
-  width: 100%;
-  height: 16%;
-  background-color: rgb(0, 42, 120);
-  font-size: 1.2vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-  border-radius: 0 0 3px 3px;
-}
-header #board #info #announce {
-  width: 86%;
-  display: flex;
-  align-items: center;
-}
-header #board #info #current-time {
-  width: 12%;
-  text-align: center;
-  letter-spacing: 0;
-}
+
+
 
 @media (max-width: 899px) {
   header {
     overflow: hidden;
-  }
-  header #station-image {
-    width: 899px;
-  }
-  header #board {
-    width: 386.57px;
-    left: 71.92px;
-  }
-  header #board #schedule .arrival {
-    font-size: 14px;
-  }
-  header #board #info {
-    font-size: 10px;
+    #station-image {
+      width: 899px;
+    }
+    
+    #board {
+      width: calc(899px * .43);
+      left: calc(899px * .08);
+
+      #schedule {
+        .arrival {
+          font-size: 14px;
+        }
+      }
+    
+      #info {
+        font-size: 10px;
+      }
+    }
   }
 }
+
 @media (max-width: 530px) {
   header {
     overflow: hidden;
+    #station-image {
+      width: 170%;
+    }
+    
+    #board {
+      width: 73%;
+      left: 14%;
+
+      #schedule {
+        .arrival {
+          font-size: 3vw;
+        }
+      }
+    
+      #info {
+        font-size: 2vw;
+      }
+    }
   }
-  header #station-image {
-    width: 170%;
-  }
-  header #board {
-    width: 73%;
-    left: 14%;
-  }
-  header #board #schedule .arrival {
-    font-size: 3vw;
-  }
-  header #board #info {
-    font-size: 2vw;
-  }
-}/*# sourceMappingURL=index.css.map */
+}
