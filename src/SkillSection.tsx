@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SkillList() {
+export default function SkillSection() {
   return (
     <div className="section">
       <h2>Skill</h2>

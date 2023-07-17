@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Resume() {
+export default function ResumeSection() {
   return (
     <div className="section">
       <h2>Résumé</h2>

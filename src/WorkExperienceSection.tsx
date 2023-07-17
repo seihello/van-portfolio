@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function WorkExperienceList() {
+export default function WorkExperienceSection() {
   return (
     <div className="section">
       <h2>Work Experience</h2>

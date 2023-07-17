@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function EducationList() {
+export default function EducationSection() {
   return (
     <div className="section">
       <h2>Education</h2>

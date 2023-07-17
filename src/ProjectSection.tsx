@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProjectList() {
+export default function ProjectSection() {
   return (
     <div className="section">
       <h2>Project</h2>

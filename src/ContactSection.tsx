@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ContactList() {
+export default function ContactSection() {
   return (
     <div className="section">
       <h2>Contact</h2>
