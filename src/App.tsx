@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import classes from './App.module.scss'
 import Header from './Header'
 import AboutMeSection from './AboutMeSection'
@@ -10,7 +10,7 @@ import ResumeSection from './ResumeSection'
 import ContactSection from './ContactSection'
 
 function App() {
-
+  
   return (
     <>
       <Header />
