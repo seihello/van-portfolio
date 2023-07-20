@@ -12,27 +12,15 @@ const introductions = [
 const AnimatedArrival = animated(Arrival)
 
 export default function Header() {
-  const intervalRef = useRef(0);
-  const [position, setPosition] = useSpring(() => ({ x: "-400px" }));
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      console.log('3 seconds passed');
-    }, 3000);
-
-    return () => {
-      clearInterval(intervalRef.current);
-    };
-  }, []);
 
   return (
     <header>
       <img id="station-image" src="./station.jpg" />
         <div id="board">
           <div id="schedule">
-            <AnimatedArrival destination={introductions[0]} eta={getETA(0)} style={position}/>
-            <AnimatedArrival destination={introductions[1]} eta={getETA(1)} style={position} />
-            <AnimatedArrival destination={introductions[2]} eta={getETA(2)} style={position} />
+            <AnimatedArrival destination={introductions[0]} eta={getETA(0)} />
+            <AnimatedArrival destination={introductions[1]} eta={getETA(1)} />
+            <AnimatedArrival destination={introductions[2]} eta={getETA(2)} />
           </div>
           <div id="info">
             <div id="announce">
