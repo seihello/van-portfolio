@@ -1,7 +1,9 @@
+import { log } from 'console';
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
 
-enum AnimationState {
+export enum AnimationState {
+  None,
   Join,
   BottomToMiddle,
   MiddleToTop,
@@ -45,21 +47,35 @@ const leave = keyframes`
 `
 
 const animations = [
-  join, bottomToMiddle, middleToTop, leave
+  null, join, bottomToMiddle, middleToTop, leave
+]
+
+const translateDistance = [
+  [0, 0],
+  []
 ]
 
 type ArrivalProps = {
   destination: string;
   eta: string;
+  index: number;
+  animationState: AnimationState;
 };
 
-const ArrivalDiv = styled.div`
-  animation: ${animations[AnimationState.Join]} 2s forwards;
+type ArrivalDivProps = {
+  index: number;
+  animationState: AnimationState;
+}
+
+const ArrivalDiv = styled.div<ArrivalDivProps>`
+
+  top: ${props => props.index * 33}%;
 `
 
-export default function Arrival({destination, eta}: ArrivalProps) {
+export default function Arrival({destination, eta, index, animationState}: ArrivalProps) {
+  console.log(index, animationState)
   return (
-    <ArrivalDiv className="arrival">
+    <ArrivalDiv className="arrival" index={index} animationState={animationState}>
       <img className="train-icon" src="./train.png"/>
       <div className="destination">{destination}</div>
       <div className="eta">{eta}</div>
