@@ -533,15 +533,15 @@ header {
 
   #board {
     position: absolute;
-    width: 43.5%;
-    height: 21%;
-    top: 7.5%;
-    left: 8%;
     @media (aspect-ratio > $st-ratio) { // 横長
+      width: calc($bd-width/$st-width*100%);
+      left: calc($bd-left/$st-width*100%);
       height: calc(100vw / $st-ratio * ($bd-height/$st-height));
       top:  calc(100vw / $st-ratio * ($bd-top/$st-height));
     }
     @media (aspect-ratio <= $st-ratio) { // 縦長
+      height: calc($bd-height/$st-height*100%);
+      top: calc($bd-top/$st-height*100%);
       width: calc(100vh * $st-ratio * ($bd-width/$st-width));
       left:  calc(100vh * $st-ratio * ($bd-left/$st-width));
     }
