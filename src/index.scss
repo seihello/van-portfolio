@@ -533,18 +533,18 @@ header {
 
   #board {
     position: absolute;
+    width: 43.5%;
+    height: 21%;
     top: 7.5%;
     left: 8%;
-    width: 43.5%;
-    @media (min-aspect-ratio: $st-ratio) { // 横長
+    @media (aspect-ratio > $st-ratio) { // 横長
       height: calc(100vw / $st-ratio * ($bd-height/$st-height));
       top:  calc(100vw / $st-ratio * ($bd-top/$st-height));
     }
-    @media (max-aspect-ratio: $st-ratio) { // 縦長
+    @media (aspect-ratio <= $st-ratio) { // 縦長
       width: calc(100vh * $st-ratio * ($bd-width/$st-width));
       left:  calc(100vh * $st-ratio * ($bd-left/$st-width));
     }
-    height: 21%;
     margin: 0;
     background-color: rgb(16, 16, 16);
     transform: rotateX(-2deg) rotateY(2deg);

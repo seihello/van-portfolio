@@ -501,21 +501,21 @@ header #station-image {
 }
 header #board {
   position: absolute;
-  top: 7.5%;
-  left: 8%;
   width: 43.5%;
   height: 21%;
+  top: 7.5%;
+  left: 8%;
   margin: 0;
   background-color: rgb(16, 16, 16);
   transform: rotateX(-2deg) rotateY(2deg);
 }
-@media (min-aspect-ratio: 1.8874625588) {
+@media (aspect-ratio > 1.8874625588) {
   header #board {
     height: 8.7055089549vw;
     top: 5.4862842893vw;
   }
 }
-@media (max-aspect-ratio: 1.8874625588) {
+@media (aspect-ratio <= 1.8874625588) {
   header #board {
     width: 83.1835686778vh;
     left: 14.8053059478vh;
