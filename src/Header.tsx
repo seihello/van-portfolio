@@ -51,7 +51,6 @@ export default function Header() {
 
   return (
     <header>
-      <img id="station-image" src="./station.jpg" />
       <div id="board">
         <div id="schedule">
           {[...Array(3)].map((_, index) => (
