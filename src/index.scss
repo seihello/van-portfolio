@@ -512,6 +512,8 @@ footer {
 
 $st-width: 4411;
 $st-height: 2337;
+$st-ratio: $st-width/$st-height;
+
 $bd-width: 1944;
 $bd-height: 384;
 $bd-left: 346;
@@ -534,13 +536,13 @@ header {
     top: 7.5%;
     left: 8%;
     width: 43.5%;
-    @media (min-aspect-ratio: calc($st-width/$st-height)) { // 横長
-      height: calc(100vw / ($st-width/$st-height) * ($bd-height/$st-height));
-      top:  calc(100vw / ($st-width/$st-height) * ($bd-top/$st-height));
+    @media (min-aspect-ratio: $st-ratio) { // 横長
+      height: calc(100vw / $st-ratio * ($bd-height/$st-height));
+      top:  calc(100vw / $st-ratio * ($bd-top/$st-height));
     }
-    @media (max-aspect-ratio: calc($st-width/$st-height)) { // 縦長
-      width: calc(100vh * ($st-width/$st-height) * ($bd-width/$st-width));
-      left:  calc(100vh * ($st-width/$st-height) * ($bd-left/$st-width));
+    @media (max-aspect-ratio: $st-ratio) { // 縦長
+      width: calc(100vh * $st-ratio * ($bd-width/$st-width));
+      left:  calc(100vh * $st-ratio * ($bd-left/$st-width));
     }
     height: 21%;
     margin: 0;
