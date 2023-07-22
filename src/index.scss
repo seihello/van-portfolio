@@ -605,11 +605,30 @@ header {
       justify-content: space-evenly;
       color: white;
       border-radius: 0 0 3px 3px;
-  
+      
       #announce {
         width: 86%;
+        height: 100%;
         display: flex;
         align-items: center;
+        position: relative;
+        overflow: hidden;
+        
+
+        #announce-text {
+          position: absolute;
+          animation: announce 10s linear infinite;
+          white-space: nowrap;
+          margin: 0;
+          z-index: 100;
+
+          @media (aspect-ratio > $st-ratio) { // 横長
+            font-size: 1vw;
+          }
+          @media (aspect-ratio <= $st-ratio) { // 縦長
+            font-size: 1.8vh;
+          }
+        }
       }
 
       #current-time {
@@ -622,3 +641,11 @@ header {
   }
 }
 
+@keyframes announce {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}

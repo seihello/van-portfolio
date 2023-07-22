@@ -59,7 +59,9 @@ export default function Header() {
         </div>
         <div id="info">
           <div id="announce">
-            My interests are traveling, taking photos, watching musical, and playing Kalimba.
+            <div id="announce-text">
+              My interests are traveling, taking photos, watching musical, and playing Kalimba.
+            </div>
           </div>
           <div id="current-time"></div>
         </div>
