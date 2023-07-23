@@ -358,6 +358,13 @@ p.role {
   font-style: italic;
 }
 
+div.work-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
 div.work-item {
   display: flex;
   justify-content: flex-start;
@@ -368,10 +375,13 @@ div.work-description {
   width: 60%;
 }
 
-img.work-image {
+div.work-image {
   width: 20%;
-  height: auto;
   margin-top: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 

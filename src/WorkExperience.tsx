@@ -11,7 +11,7 @@ type Props = {
 
 export default function WorkExperience(props: Props) {
   return (
-    <>
+    <div className='work-wrapper'>
       <div className="experience-first">
         <div className="org-name">
           <a className="link" href={props.companyLink} target="_blank">
@@ -29,8 +29,10 @@ export default function WorkExperience(props: Props) {
             })}
           </ul>
         </div>
-        <img className="work-image" src={props.image} />
+        <div className="work-image">
+          <img src={props.image} />
+        </div>
       </div>
-    </>
+    </div>
   )
 }
