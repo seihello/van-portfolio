@@ -1,4 +1,7 @@
 import React from 'react'
+import Skill from './Skill'
+
+
 
 export default function SkillSection() {
   return (
@@ -7,102 +10,57 @@ export default function SkillSection() {
       <hr />
       <h3>Computer Language</h3>
       <div className="skills">
-        <div className="skill">
-          <p className="skill-name">C++</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">C</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Python</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Java</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">HTML/CSS</p>
-          <div className="skill-rate-box"><div className="skill-rate rate60"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">JavaScript</p>
-          <div className="skill-rate-box"><div className="skill-rate rate60"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">PHP</p>
-          <div className="skill-rate-box"><div className="skill-rate rate20"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Swift</p>
-          <div className="skill-rate-box"><div className="skill-rate rate40"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">SQL</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
+        <Skill skillName="C++" proficiency={100}/>
+        <Skill skillName="C" proficiency={100}/>
+        <Skill skillName="Python" proficiency={80}/>
+        <Skill skillName="Java" proficiency={80}/>
+        <Skill skillName="HTML/CSS" proficiency={80}/>
+        <Skill skillName="JavaScript" proficiency={60}/>
+        <Skill skillName="PHP" proficiency={40}/>
+        <Skill skillName="Swift" proficiency={40}/>
+        <Skill skillName="SQL" proficiency={80}/>
+      </div>
+
+      <h3>Framework/Library</h3>
+      <div className="skills">
+        <Skill skillName="JQuery" proficiency={100}/>
+        <Skill skillName="React.js" proficiency={40}/>
+        <Skill skillName="Kivy" proficiency={80}/>
+        <Skill skillName="Selenium" proficiency={80}/>
       </div>
 
       <h3>Tool</h3>
       <div className="skills">
-        <div className="skill">
-          <p className="skill-name">Git</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">GitHub</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Enterprise Architecture</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Redmine</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
+        <Skill skillName="Git/GitHub" proficiency={100}/>
+        <Skill skillName="Figma" proficiency={60}/>
+        <Skill skillName="WordPress" proficiency={60}/>
+        <Skill skillName="Joomla!" proficiency={80}/>
+        <Skill skillName="Enterprise Architecture" proficiency={100}/>
+        <Skill skillName="Redmine" proficiency={100}/>
+      </div>
+
+      <h3>DB</h3>
+      <div className="skills">
+        <Skill skillName="MySQL" proficiency={80}/>
+        <Skill skillName="PostgleSQL" proficiency={40}/>
+        <Skill skillName="Apache Cassandra" proficiency={60}/>
+        <Skill skillName="Neo4j" proficiency={60}/>
       </div>
 
       <h3>OS</h3>
       <div className="skills">
-        <div className="skill">
-          <p className="skill-name">Windows</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">macOS</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Linux</p>
-          <div className="skill-rate-box"><div className="skill-rate rate40"></div></div>
-        </div>
+        <Skill skillName="Windows" proficiency={100}/>
+        <Skill skillName="macOS" proficiency={100}/>
+        <Skill skillName="Linux" proficiency={60}/>
       </div>
-
+      
       <h3>Other</h3>
       <div className="skills">
-        <div className="skill">
-          <p className="skill-name">OOP</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">UML</p>
-          <div className="skill-rate-box"><div className="skill-rate rate100"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">DevOps</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">Agile Development</p>
-          <div className="skill-rate-box"><div className="skill-rate rate60"></div></div>
-        </div>
-        <div className="skill">
-          <p className="skill-name">SEMI Standards</p>
-          <div className="skill-rate-box"><div className="skill-rate rate80"></div></div>
-        </div>
+        <Skill skillName="OOP" proficiency={100}/>
+        <Skill skillName="UML" proficiency={100}/>
+        <Skill skillName="DevOps" proficiency={80}/>
+        <Skill skillName="Agile Development" proficiency={60}/>
+        <Skill skillName="SEMI Standards" proficiency={80}/>
       </div>
     </div>
   )
