@@ -1,25 +1,15 @@
 import React from 'react'
+import Education from './Education'
 
 export default function EducationSection() {
   return (
     <div className="section">
       <h2>Education</h2>
       <hr />
-      <div className="experience-first">
-        <div className="org-name">
-          <a className="link" href="https://ciccc.ca/" target="_blank"><h3>Cornerstone Collage</h3></a>
-        </div>
-        <h3>Oct. 2022 - Present</h3>
+      <div className='education-list'>
+        <Education orgName="Cornerstone Collage" orgLink="https://ciccc.ca/" duration="Oct. 2022 - Present" level="Diploma of Web Development" />
+        <Education orgName="Kyoto Sangyo University" orgLink="https://www.kyoto-su.ac.jp/" duration="Apr. 2013 - Mar. 2017" level="Bachelor of Computer Science and Engineering" />
       </div>
-      <p className="role">Diploma of Web Development</p>
-      <br />
-      <div className="experience-first">
-        <div className="org-name">
-          <a className="link" href="https://www.kyoto-su.ac.jp/" target="_blank"><h3>Kyoto Sangyo University</h3></a>
-        </div>
-        <h3>Apr. 2013 - Mar. 2017</h3>
-      </div>
-      <p className="role">Bachelor of Computer Science and Engineering</p>
     </div>
   )
 }
