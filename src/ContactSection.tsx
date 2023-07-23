@@ -1,4 +1,5 @@
 import React from 'react'
+import Contact from './Contact'
 
 export default function ContactSection() {
   return (
@@ -6,36 +7,11 @@ export default function ContactSection() {
       <h2>Contact</h2>
       <hr />
       <div className="contact">
-        <a className="contact-link" href="mailto:seisuke.ym@gmail.com">
-          <button className="contact-item">
-            <i className="fas fa-envelope"></i>
-            <p>Mail</p>
-          </button>
-        </a>
-        <a className="contact-link" href="https://github.com/seihello">
-          <button className="contact-item">
-            <i className="fab fa-github"></i>
-            <p>GitHub</p>
-          </button>
-        </a>
-        <a className="contact-link" href="https://www.linkedin.com/in/seisuke-yamada-a02140257/">
-          <button className="contact-item">
-            <i className="fab fa-linkedin"></i>
-            <p>LinkedIn</p>
-          </button>
-        </a>
-        <a className="contact-link" href="https://leetcode.com/momoiropuchoman/">
-          <button className="contact-item">
-            <i className="fas fa-keyboard"></i>
-            <p>LeetCode</p>
-          </button>
-        </a>
-        <a className="contact-link" href="https://www.instagram.com/y_seisuke/">
-          <button className="contact-item">
-            <i className="fab fa-instagram-square"></i>
-            <p>Instagram</p>
-          </button>
-        </a>
+        <Contact name="Mail" link="mailto:seisuke.ym@gmail.com" iconClassName='fas fa-envelope' />
+        <Contact name="GitHub" link="https://github.com/seihello" iconClassName='fab fa-github' />
+        <Contact name="LinkedIn" link="https://www.linkedin.com/in/seisuke-yamada-a02140257/" iconClassName='fab fa-linkedin' />
+        <Contact name="LeetCode" link="https://leetcode.com/momoiropuchoman/" iconClassName='fas fa-keyboard' />
+        <Contact name="Instagram" link="https://www.instagram.com/y_seisuke/" iconClassName='fab fa-instagram-square' />
       </div>
     </div>
   )
