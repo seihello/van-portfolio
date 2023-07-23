@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState, useRef } from 'react'
 import { useSpring, animated } from 'react-spring';
 import Arrival, { AnimationState } from './Arrival'
+import BoardClock from './BoardClock'
+
 import { log } from 'console';
 
 const introductions = [
@@ -63,7 +65,7 @@ export default function Header() {
               My interests are traveling, taking photos, watching musical, and playing Kalimba.
             </div>
           </div>
-          <div id="current-time"></div>
+          <BoardClock />
         </div>
       </div>
     </header>
