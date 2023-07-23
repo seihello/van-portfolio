@@ -413,7 +413,13 @@ div.contact-item:hover {
 }
 
 a.contact-link {
-  color: black;
+
+  i, p {
+    color: var(--main-brown);
+  }
+  i {
+    font-size: 1.4rem;
+  }
   text-decoration: none;
 }
 
