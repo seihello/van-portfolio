@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react'
 import classes from './App.module.scss'
-import Header from './Header'
-import AboutMeSection from './AboutMeSection'
-import ProjectSection from './ProjectSection'
-import SkillSection from './SkillSection'
-import WorkExperienceSection from './WorkExperienceSection'
-import EducationSection from './EducationSection'
-import ResumeSection from './ResumeSection'
-import ContactSection from './ContactSection'
+import Header from './header/Header'
+import AboutMeSection from './about-me/AboutMeSection'
+import ProjectSection from './project/ProjectSection'
+import SkillSection from './skill/SkillSection'
+import WorkExperienceSection from './experience/WorkExperienceSection'
+import EducationSection from './experience/EducationSection'
+import ResumeSection from './resume/ResumeSection'
+import ContactSection from './contact/ContactSection'
 
 function App() {
   
