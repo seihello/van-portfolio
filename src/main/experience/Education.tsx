@@ -12,7 +12,7 @@ export default function Education(props: Props) {
     <div>
       <div className="experience-first">
         <div className="org-name">
-          <a className="link" href="https://ciccc.ca/" target="_blank"><h3>{props.orgName}</h3></a>
+          <a className="link" href={props.orgLink} target="_blank"><h3>{props.orgName}</h3></a>
         </div>
         <h3>{props.duration}</h3>
       </div>
