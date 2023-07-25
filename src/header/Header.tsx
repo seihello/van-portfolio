@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react'
 import { useSpring, animated } from 'react-spring';
 import Arrival, { AnimationState } from './Arrival'
 import BoardClock from './BoardClock'
+import styles from './header.module.scss'
 
 import { log } from 'console';
 
@@ -52,16 +53,16 @@ export default function Header() {
   }
 
   return (
-    <header>
-      <div id="board">
-        <div id="schedule">
+    <header className={styles.header}>
+      <div className={styles.board}>
+        <div className={styles.schedule}>
           {[...Array(3)].map((_, index) => (
             <AnimatedArrival key={index} destination={introductions[index]} eta={getETA(index)} index={index} animationState={nextAnimation[index]} />
           ))}
         </div>
-        <div id="info">
-          <div id="announce">
-            <div id="announce-text">
+        <div className={styles.info}>
+          <div className={styles.announce}>
+            <div className={styles.announce_text}>
               My interests are traveling, taking photos, watching musical, and playing Kalimba.
             </div>
           </div>

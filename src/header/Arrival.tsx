@@ -1,6 +1,7 @@
 import { log } from 'console';
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
+import styles from './header.module.scss'
 
 export enum AnimationState {
   None,
@@ -75,10 +76,10 @@ const ArrivalDiv = styled.div<ArrivalDivProps>`
 export default function Arrival({destination, eta, index, animationState}: ArrivalProps) {
   console.log(index, animationState)
   return (
-    <ArrivalDiv className="arrival" index={index} animationState={animationState}>
-      <img className="train-icon" src="./train.png"/>
-      <div className="destination">{destination}</div>
-      <div className="eta">{eta}</div>
+    <ArrivalDiv className={styles.arrival} index={index} animationState={animationState}>
+      <img className={styles.train_icon} src="./train.png"/>
+      <div className={styles.destination}>{destination}</div>
+      <div className={styles.eta}>{eta}</div>
     </ArrivalDiv>
   )
 }

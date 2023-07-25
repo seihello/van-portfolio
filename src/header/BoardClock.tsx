@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-
-
+import styles from './header.module.scss'
 
 function toAMPM(hour: number, minute: number) {
 
@@ -41,7 +40,7 @@ export default function BoardClock() {
   }, []);
 
   return (
-    <div id="current-time">
+    <div className={styles.current_time}>
       {`${toAMPM(date.getHours(), date.getMinutes())}`}
     </div>
   )
