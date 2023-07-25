@@ -611,7 +611,7 @@ header #board #info #announce {
 }
 header #board #info #announce #announce-text {
   position: absolute;
-  animation: announce 10s linear infinite;
+  animation: announce 20s linear infinite;
   white-space: nowrap;
   margin: 0;
   z-index: 100;
