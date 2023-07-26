@@ -1,12 +1,13 @@
 import React from 'react'
 import Project from './Project'
+import styles from './project.module.scss'
 
 export default function ProjectSection() {
   return (
     <div className="section">
       <h2>Project</h2>
       <hr />
-      <div className="projects">
+      <div className={styles.projects}>
         <Project projectName="Reversi" projectLink="https://github.com/momoiropuchoman/Reversi" projectImage="./reversi.png" projectLangs={["Python", "TKinter"]}/>
         <Project projectName="RPG" projectLink="hhttps://github.com/momoiropuchoman/BeeTrade" projectImage="./rpg.png" projectLangs={["Java", "Swing"]}/>
         <Project projectName="English Learning" projectLink="https://github.com/momoiropuchoman/https://github.com/seihello/EverydayEnglish-on-Browser" projectImage="././everydayenglish-browser.png" projectLangs={["HTML/CSS", "JavaScript"]}/>

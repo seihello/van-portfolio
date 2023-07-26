@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './project.module.scss'
 
 type Props = {
   projectName: string;
@@ -9,14 +10,14 @@ type Props = {
 
 export default function Project(props: Props) {
   return (
-    <div className="project">
-      <a className="project-link" href={props.projectLink}>
-        <img className="project-image" src={props.projectImage}></img>
-        <div className="project-filter">
-          <div className="project-name">{props.projectName}</div>
-          <div className="project-langs">
+    <div className={styles.project}>
+      <a className={styles.project_link} href={props.projectLink}>
+        <img className={styles.project_image} src={props.projectImage}></img>
+        <div className={styles.project_filter}>
+          <div className={styles.project_name}>{props.projectName}</div>
+          <div className={styles.project_langs}>
             {props.projectLangs.map((projectLang) => {
-              return <div className="project-lang">{projectLang}</div>
+              return <div className={styles.project_lang}>{projectLang}</div>
             })}
           </div>
         </div>
