@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './skill.module.scss'
 
-type Props = {
+export type SkillProps = {
   skillName: string;
   proficiency: number;
 };
 
-export default function Skill(props: Props) {
+export default function Skill(props: SkillProps) {
   return (
     <div className={styles.skill}>
       <p className={styles.skill_name}>{props.skillName}</p>

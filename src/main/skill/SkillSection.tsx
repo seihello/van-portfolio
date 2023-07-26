@@ -1,25 +1,28 @@
 import React from 'react'
+import SkillCategory from './SkillCategory'
 import Skill from './Skill'
 import styles from './skill.module.scss'
 import commonStyles from '../../common.module.scss'
 
 export default function SkillSection() {
+
+  const computerLanguageSkills = [
+      {skillName: "C++", proficiency: 100 },
+      {skillName: "C", proficiency: 100 },
+      {skillName: "Python", proficiency: 80 },
+      {skillName: "Java", proficiency: 80 },
+      {skillName: "HTML/CSS", proficiency: 80 },
+      {skillName: "JavaScript", proficiency: 60 },
+      {skillName: "PHP", proficiency: 40 },
+      {skillName: "Swift", proficiency: 40 },
+      {skillName: "SQL", proficiency: 80 },
+  ]
+
   return (
     <div className={commonStyles.section}>
       <h2>Skill</h2>
       <hr />
-      <h3>Computer Language</h3>
-      <div className={styles.skills}>
-        <Skill skillName="C++" proficiency={100}/>
-        <Skill skillName="C" proficiency={100}/>
-        <Skill skillName="Python" proficiency={80}/>
-        <Skill skillName="Java" proficiency={80}/>
-        <Skill skillName="HTML/CSS" proficiency={80}/>
-        <Skill skillName="JavaScript" proficiency={60}/>
-        <Skill skillName="PHP" proficiency={40}/>
-        <Skill skillName="Swift" proficiency={40}/>
-        <Skill skillName="SQL" proficiency={80}/>
-      </div>
+      <SkillCategory categoryTitle='Computer Language' skillList={computerLanguageSkills}/>
 
       <h3>Framework/Library</h3>
       <div className={styles.skills}>
