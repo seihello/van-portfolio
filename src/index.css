@@ -126,11 +126,6 @@ a.to-gallery:hover {
   text-decoration: underline;
 }
 
-img#pdf-icon {
-  width: auto;
-  height: 2rem;
-}
-
 div.contact {
   display: flex;
   justify-content: flex-start;
