@@ -1,7 +1,6 @@
 import React from 'react'
 import Skill from './Skill'
-
-
+import styles from './skill.module.scss'
 
 export default function SkillSection() {
   return (
@@ -9,7 +8,7 @@ export default function SkillSection() {
       <h2>Skill</h2>
       <hr />
       <h3>Computer Language</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="C++" proficiency={100}/>
         <Skill skillName="C" proficiency={100}/>
         <Skill skillName="Python" proficiency={80}/>
@@ -22,7 +21,7 @@ export default function SkillSection() {
       </div>
 
       <h3>Framework/Library</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="JQuery" proficiency={100}/>
         <Skill skillName="React.js" proficiency={40}/>
         <Skill skillName="Kivy" proficiency={80}/>
@@ -30,7 +29,7 @@ export default function SkillSection() {
       </div>
 
       <h3>Tool</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="Git/GitHub" proficiency={100}/>
         <Skill skillName="Figma" proficiency={60}/>
         <Skill skillName="WordPress" proficiency={60}/>
@@ -40,7 +39,7 @@ export default function SkillSection() {
       </div>
 
       <h3>DB</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="MySQL" proficiency={80}/>
         <Skill skillName="PostgleSQL" proficiency={40}/>
         <Skill skillName="Apache Cassandra" proficiency={60}/>
@@ -48,14 +47,14 @@ export default function SkillSection() {
       </div>
 
       <h3>OS</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="Windows" proficiency={100}/>
         <Skill skillName="macOS" proficiency={100}/>
         <Skill skillName="Linux" proficiency={60}/>
       </div>
       
       <h3>Other</h3>
-      <div className="skills">
+      <div className={styles.skills}>
         <Skill skillName="OOP" proficiency={100}/>
         <Skill skillName="UML" proficiency={100}/>
         <Skill skillName="DevOps" proficiency={80}/>

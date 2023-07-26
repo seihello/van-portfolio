@@ -1,0 +1,109 @@
+
+div.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  gap: 0 5%;
+}
+
+div.skill {
+  width: 30%;
+  margin: 0 0;
+  border-radius: 10px;
+}
+
+div.skill:hover {
+  /* background-color: #00bcd4; */
+}
+
+p.skill_name {
+  font-size: 1rem;
+  margin-bottom: .3rem;
+}
+
+p.skill_name_two_lines {
+  font-size: 1rem;
+  margin-bottom: .1rem;
+  line-height: 1.2rem;
+}
+
+.skill_rate_box {
+  width: 100%;
+  height: 1rem;
+  border: 2px solid #9d876a;
+  border-radius: 10px;
+}
+
+.skill_rate {
+  height: 100%;
+  background-color: #f6a235;
+  border-radius: 5px 0 0 5px;
+  transition-property: width;
+}
+
+.rate20 {
+  width: 20%;
+  animation-duration: .3s;
+}
+.rate40 {
+  width: 40%;
+  animation-duration: .6s;
+}
+.rate60 {
+  width: 60%;
+  animation-duration: .9s;
+}
+.rate80 {
+  width: 80%;
+  animation-duration: 1.2s;
+}
+.rate100 {
+  width: 100%;
+  border-radius: 5px;
+  animation-duration: 1.5s;
+}
+
+@keyframes rateUntil20 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 20%;
+  }
+}
+
+@keyframes rateUntil40 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 40%;
+  }
+}
+
+@keyframes rateUntil60 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 60%;
+  }
+}
+
+@keyframes rateUntil80 {
+  from {
+      width: 0;
+  }
+  to {
+      width: 80%;
+  }
+}
+
+@keyframes rateUntil100 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
