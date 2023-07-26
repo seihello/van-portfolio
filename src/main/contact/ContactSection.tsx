@@ -1,10 +1,11 @@
 import React from 'react'
 import Contact from './Contact'
 import styles from './contact.module.scss'
+import commonStyles from '../../common.module.scss'
 
 export default function ContactSection() {
   return (
-    <div className="section">
+    <div className={commonStyles.section}>
       <h2>Contact</h2>
       <hr />
       <div className={styles.contact}>

@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './about-me.module.scss'
+import commonStyles from '../../common.module.scss'
 
 export default function AboutMeSection() {
   return (
-    <div className="section">
+    <div className={commonStyles.section}>
       <h2>About Me</h2>
       <hr />
       <div className={styles.profile}>

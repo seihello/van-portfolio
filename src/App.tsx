@@ -1,5 +1,3 @@
-import { useState, useRef } from 'react'
-import classes from './App.module.scss'
 import Header from './header/Header'
 import AboutMeSection from './main/about-me/AboutMeSection'
 import ProjectSection from './main/project/ProjectSection'

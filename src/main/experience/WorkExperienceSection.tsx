@@ -1,6 +1,7 @@
 import React from 'react'
 import WorkExperience from './WorkExperience'
 import styles from './experience.module.scss'
+import commonStyles from '../../common.module.scss'
 
 const sandmanmediaDescription = [
   "Built web pages using a CMS, utilizing HTML and CSS to ensure optimal design and layout across different devices and screen sizes",
@@ -18,7 +19,7 @@ const muratecDescription = [
 
 export default function WorkExperienceSection() {
   return (
-    <div className="section">
+    <div className={commonStyles.section}>
       <h2>Work Experience</h2>
       <hr />
       <div className={styles.work_list}>

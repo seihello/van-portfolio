@@ -1,10 +1,11 @@
 import React from 'react'
 import Skill from './Skill'
 import styles from './skill.module.scss'
+import commonStyles from '../../common.module.scss'
 
 export default function SkillSection() {
   return (
-    <div className="section">
+    <div className={commonStyles.section}>
       <h2>Skill</h2>
       <hr />
       <h3>Computer Language</h3>

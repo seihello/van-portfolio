@@ -1,10 +1,11 @@
 import React from 'react'
 import Education from './Education'
 import styles from './experience.module.scss'
+import commonStyles from '../../common.module.scss'
 
 export default function EducationSection() {
   return (
-    <div className="section">
+    <div className={commonStyles.section}>
       <h2>Education</h2>
       <hr />
       <div className={styles.education_list}>
