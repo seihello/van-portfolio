@@ -1,6 +1,5 @@
 import React from 'react'
 import SkillCategory from './SkillCategory'
-import Skill from './Skill'
 import styles from './skill.module.scss'
 import commonStyles from '../../common.module.scss'
 
@@ -18,53 +17,53 @@ export default function SkillSection() {
       {skillName: "SQL", proficiency: 80 },
   ]
 
+  const frameworkLibrarySkills = [
+    {skillName: "JQuery", proficiency: 100 },
+    {skillName: "React.js", proficiency: 40 },
+    {skillName: "Kivy", proficiency: 80 },
+    {skillName: "Selenium", proficiency: 80 },
+  ]
+
+  const toolSkills = [
+    {skillName: "Git/GitHub", proficiency: 100 },
+    {skillName: "Figma", proficiency: 60 },
+    {skillName: "WordPress", proficiency: 60 },
+    {skillName: "Joomla!", proficiency: 80 },
+    {skillName: "Enterprise Architecture", proficiency: 100 },
+    {skillName: "Redmine", proficiency: 100 },
+  ]
+
+  const DBSkills = [
+    {skillName: "MySQL", proficiency: 80 },
+    {skillName: "PostgleSQL", proficiency: 40 },
+    {skillName: "Apache Cassandra", proficiency: 60 },
+    {skillName: "Neo4j", proficiency: 60 },
+  ]
+
+  const OSSkills = [
+    {skillName: "Windows", proficiency: 100 },
+    {skillName: "macOS", proficiency: 100 },
+    {skillName: "Linux", proficiency: 60 },
+  ]
+
+  const otherSkills = [
+    {skillName: "OOP", proficiency: 100 },
+    {skillName: "UML", proficiency: 100 },
+    {skillName: "DevOps", proficiency: 80 },
+    {skillName: "Agile Development", proficiency: 60 },
+    {skillName: "SEMI Standards", proficiency: 80 },
+  ]
+
   return (
     <div className={commonStyles.section}>
       <h2>Skill</h2>
       <hr />
       <SkillCategory categoryTitle='Computer Language' skillList={computerLanguageSkills}/>
-
-      <h3>Framework/Library</h3>
-      <div className={styles.skills}>
-        <Skill skillName="JQuery" proficiency={100}/>
-        <Skill skillName="React.js" proficiency={40}/>
-        <Skill skillName="Kivy" proficiency={80}/>
-        <Skill skillName="Selenium" proficiency={80}/>
-      </div>
-
-      <h3>Tool</h3>
-      <div className={styles.skills}>
-        <Skill skillName="Git/GitHub" proficiency={100}/>
-        <Skill skillName="Figma" proficiency={60}/>
-        <Skill skillName="WordPress" proficiency={60}/>
-        <Skill skillName="Joomla!" proficiency={80}/>
-        <Skill skillName="Enterprise Architecture" proficiency={100}/>
-        <Skill skillName="Redmine" proficiency={100}/>
-      </div>
-
-      <h3>DB</h3>
-      <div className={styles.skills}>
-        <Skill skillName="MySQL" proficiency={80}/>
-        <Skill skillName="PostgleSQL" proficiency={40}/>
-        <Skill skillName="Apache Cassandra" proficiency={60}/>
-        <Skill skillName="Neo4j" proficiency={60}/>
-      </div>
-
-      <h3>OS</h3>
-      <div className={styles.skills}>
-        <Skill skillName="Windows" proficiency={100}/>
-        <Skill skillName="macOS" proficiency={100}/>
-        <Skill skillName="Linux" proficiency={60}/>
-      </div>
-      
-      <h3>Other</h3>
-      <div className={styles.skills}>
-        <Skill skillName="OOP" proficiency={100}/>
-        <Skill skillName="UML" proficiency={100}/>
-        <Skill skillName="DevOps" proficiency={80}/>
-        <Skill skillName="Agile Development" proficiency={60}/>
-        <Skill skillName="SEMI Standards" proficiency={80}/>
-      </div>
+      <SkillCategory categoryTitle='Framework/Library' skillList={frameworkLibrarySkills}/>
+      <SkillCategory categoryTitle='Tool' skillList={toolSkills}/>
+      <SkillCategory categoryTitle='DB' skillList={DBSkills}/>
+      <SkillCategory categoryTitle='OS' skillList={OSSkills}/>
+      <SkillCategory categoryTitle='Other' skillList={otherSkills}/>
     </div>
   )
 }
