@@ -1,0 +1,15 @@
+div.profile {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.profile_image {
+  width: 30%;
+  height: auto;
+  box-shadow: 0px 5px 20px 0 rgba(251, 251, 251, 0.5);
+}
+
+div.profile_text {
+  width: 70%;
+  padding-left: 2rem;
+}/*# sourceMappingURL=about-me.module.css.map */
