@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './contact.module.scss'
 
 type Props = {
   name: string;
@@ -8,8 +9,8 @@ type Props = {
 
 export default function Contact(props: Props) {
   return (
-    <a className="contact-link" href={props.link}>
-      <button className="contact-item">
+    <a className={styles.contact_link} href={props.link}>
+      <button className={styles.contact_item}>
         <i className={props.iconClassName}></i>
         <p>{props.name}</p>
       </button>
