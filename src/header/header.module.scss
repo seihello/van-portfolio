@@ -7,10 +7,10 @@ $st-width: 4411;
 $st-height: 2337;
 $st-ratio: $st-width/$st-height;
 
-$bd-width: 1944;
+$bd-width: 1928;
 $bd-height: 384;
-$bd-left: 346;
-$bd-top: 242;
+$bd-left: 352;
+$bd-top: 246;
 
 .header {
   width: 100%;
@@ -40,7 +40,7 @@ $bd-top: 242;
     }
     margin: 0;
     background-color: rgb(16, 16, 16);
-    transform: rotateX(-2deg) rotateY(2deg);
+    transform: rotateX(-2deg) rotateY(3deg);
   
     * {
       font-family: "MyFont";
