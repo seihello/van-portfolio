@@ -1,0 +1,75 @@
+
+div.experience_first {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.org_name {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 1rem;
+}
+
+a.link {
+  display: flex;
+  align-items: center;
+}
+
+img.link {
+  width: 1rem;
+  height: auto;
+}
+
+img.link:hover {
+  filter: invert(88%) sepia(100%) saturate(2929%) hue-rotate(200deg) brightness(200%) contrast(104%);
+}
+
+p.role {
+  font-style: italic;
+}
+
+div.work_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+div.work_item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 4rem;
+}
+
+div.work_description {
+  width: 60%;
+}
+
+div.work_image {
+  width: 20%;
+  margin-top: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+div.education_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+
+  & > div {
+    width: 100%;
+  }
+}

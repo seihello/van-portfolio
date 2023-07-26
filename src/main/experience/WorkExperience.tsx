@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './experience.module.scss'
 
 type Props = {
   companyName: string;
@@ -11,25 +12,25 @@ type Props = {
 
 export default function WorkExperience(props: Props) {
   return (
-    <div className='work-wrapper'>
-      <div className="experience-first">
-        <div className="org-name">
-          <a className="link" href={props.companyLink} target="_blank">
+    <div className={styles.work_wrapper}>
+      <div className={styles.experience_first}>
+        <div className={styles.org_name}>
+          <a className={styles.link} href={props.companyLink} target="_blank">
             <h3>{props.companyName}</h3>
           </a>
         </div>
         <h3>{props.duration}</h3>
       </div>
-      <div className="work-item">
-        <div className="work-description">
-          <p className="role">{props.position}</p>
+      <div className={styles.work_item}>
+        <div className={styles.work_description}>
+          <p className={styles.role}>{props.position}</p>
           <ul>
             {props.description.map((description) => {
               return <li>{description}</li>
             })}
           </ul>
         </div>
-        <div className="work-image">
+        <div className={styles.work_image}>
           <img src={props.image} />
         </div>
       </div>
