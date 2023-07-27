@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './resume.module.scss'
 import commonStyles from '../../common.module.scss'
 

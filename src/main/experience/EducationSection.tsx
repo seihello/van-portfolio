@@ -1,4 +1,3 @@
-import React from 'react'
 import Education from './Education'
 import styles from './experience.module.scss'
 import commonStyles from '../../common.module.scss'

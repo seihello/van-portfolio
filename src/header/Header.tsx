@@ -1,11 +1,8 @@
-import React from 'react'
-import { useEffect, useState, useRef } from 'react'
-import { useSpring, animated } from 'react-spring';
-import Arrival, { AnimationState } from './Arrival'
+// import { useState } from 'react'
+import { animated } from 'react-spring';
+import Arrival from './Arrival'
 import BoardClock from './BoardClock'
 import styles from './header.module.scss'
-
-import { log } from 'console';
 
 const introductions = [
   "Hello, I'm Seisuke!",
@@ -15,17 +12,17 @@ const introductions = [
 
 const AnimatedArrival = animated(Arrival)
 
-enum AnimationPhase {
-  Start = 0,
-  Remove = 5,
-  Up = 10,
-  Insert = 12,
-  End = 14
-}
+// enum AnimationPhase {
+//   Start = 0,
+//   Remove = 5,
+//   Up = 10,
+//   Insert = 12,
+//   End = 14
+// }
 
 export default function Header() {
 
-  const [animationTimer, setAnimationTimer] = useState(AnimationPhase.Start)
+  // const [animationTimer, setAnimationTimer] = useState(AnimationPhase.Start)
 
   // useEffect(() => {
   //   const timeoutId = setInterval(() => {
@@ -37,27 +34,27 @@ export default function Header() {
   //   };
   // }, []);
 
-  let nextAnimation: AnimationState[] = []
-  switch (animationTimer) {
-    case AnimationPhase.Remove:
-      nextAnimation = [AnimationState.Leave, AnimationState.None, AnimationState.None]
-      break
-    case AnimationPhase.Up:
-      nextAnimation = [AnimationState.None, AnimationState.MiddleToTop, AnimationState.BottomToMiddle]
-      break
-    case AnimationPhase.Insert:
-      nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
-      break
-    default:
-      nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
-  }
+  // let nextAnimation: AnimationState[] = []
+  // switch (animationTimer) {
+  //   case AnimationPhase.Remove:
+  //     nextAnimation = [AnimationState.Leave, AnimationState.None, AnimationState.None]
+  //     break
+  //   case AnimationPhase.Up:
+  //     nextAnimation = [AnimationState.None, AnimationState.MiddleToTop, AnimationState.BottomToMiddle]
+  //     break
+  //   case AnimationPhase.Insert:
+  //     nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
+  //     break
+  //   default:
+  //     nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
+  // }
 
   return (
     <header className={styles.header}>
       <div className={styles.board}>
         <div className={styles.schedule}>
           {[...Array(3)].map((_, index) => (
-            <AnimatedArrival key={index} destination={introductions[index]} eta={getETA(index)} index={index} animationState={nextAnimation[index]} />
+            <AnimatedArrival key={index} destination={introductions[index]} eta={getETA(index)} index={index} animationState={1} />
           ))}
         </div>
         <div className={styles.info}>

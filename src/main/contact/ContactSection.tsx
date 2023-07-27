@@ -1,4 +1,3 @@
-import React from 'react'
 import Contact from './Contact'
 import styles from './contact.module.scss'
 import commonStyles from '../../common.module.scss'
