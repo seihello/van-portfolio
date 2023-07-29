@@ -85,6 +85,17 @@ $bd-top: 246;
           width: 15%;
           text-align: center;
         }
+
+
+      }
+      .arrival:nth-child(1) {
+        top: 0%;
+      }
+      .arrival:nth-child(2) {
+        top: 33%;
+      }
+      .arrival:nth-child(3) {
+        top: 66%;
       }
     }
   

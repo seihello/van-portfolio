@@ -1,7 +1,6 @@
 import styles from './header.module.scss'
-import { useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { Power1 } from "gsap";
+import { forwardRef } from 'react';
+
 
 export enum AnimationState {
   None,
@@ -15,26 +14,16 @@ type ArrivalProps = {
   destination: string;
   eta: string;
   index: number;
-  animationState: AnimationState;
+  ref: React.MutableRefObject<null>;
 };
 
-export default function Arrival({destination, eta, index, animationState}: ArrivalProps) {
-  const arrival: React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.to(arrival.current, { x: "100%", duration: 1, ease: Power1.easeIn });
-      
-    }, arrival);
-    
-    return () => ctx.revert();
-  }, []);
-
+export const ForwardArrival = forwardRef((props: ArrivalProps, ref: React.Ref<HTMLDivElement>) => {
   return (
-    <div className={styles.arrival} ref={arrival} style={{top: `${index*33}%`}}>
+    <div className={styles.arrival} style={{top: `${props.index*33}%`}} ref={ref}>
       <img className={styles.train_icon} src="./train.png" />
-      <div className={styles.destination}>{destination}</div>
-      <div className={styles.eta}>{eta}</div>
+      <div className={styles.destination}>{props.destination}</div>
+      <div className={styles.eta}>{props.eta}</div>
     </div>
   )
-}
+});
