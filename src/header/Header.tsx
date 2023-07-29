@@ -12,43 +12,7 @@ const introductions = [
 
 const AnimatedArrival = animated(Arrival)
 
-// enum AnimationPhase {
-//   Start = 0,
-//   Remove = 5,
-//   Up = 10,
-//   Insert = 12,
-//   End = 14
-// }
-
 export default function Header() {
-
-  // const [animationTimer, setAnimationTimer] = useState(AnimationPhase.Start)
-
-  // useEffect(() => {
-  //   const timeoutId = setInterval(() => {
-  //     setAnimationTimer((prev) => prev + 1);
-  //   }, 1000);
-
-  //   return () => {
-  //     clearTimeout(timeoutId);
-  //   };
-  // }, []);
-
-  // let nextAnimation: AnimationState[] = []
-  // switch (animationTimer) {
-  //   case AnimationPhase.Remove:
-  //     nextAnimation = [AnimationState.Leave, AnimationState.None, AnimationState.None]
-  //     break
-  //   case AnimationPhase.Up:
-  //     nextAnimation = [AnimationState.None, AnimationState.MiddleToTop, AnimationState.BottomToMiddle]
-  //     break
-  //   case AnimationPhase.Insert:
-  //     nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
-  //     break
-  //   default:
-  //     nextAnimation = [AnimationState.None, AnimationState.None, AnimationState.None]
-  // }
-
   return (
     <header className={styles.header}>
       <div className={styles.board}>
