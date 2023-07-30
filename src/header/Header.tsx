@@ -13,11 +13,18 @@ const introductions = [
 export default function Header() {
   const [eta, setEta] = useState([getETA(0), getETA(1), getETA(2)])
 
-  const controls = useAnimation();
+  const controls0 = useAnimation();
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
   const startAnimation = async () => {
     // 要素Aのxのアニメーションを開始
-    await controls.start({ x: "100%" });
+    await controls0.start({ x: "100%" }, { duration: 1 });
+    controls1.start({ y: "-100%" }, { duration: 1 });
+    await controls2.start({ y: "-100%" }, { duration: 1 });
+    await controls0.start({ x: "100%" }, { duration: 1 });
+    await controls0.start({ x: "-100%", y: "200%"}, { duration: 0 });
+    await controls0.start({ x: "0%" }, { duration: 1 });
   };
 
   useEffect(() => {
@@ -28,9 +35,9 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.board}>
         <div className={styles.schedule}>
-          {<Arrival control={controls} key={0} destination={introductions[0]} eta={eta[0]} index={0} />}
-          {<Arrival control={controls} key={1} destination={introductions[1]} eta={eta[1]} index={1} />}
-          {<Arrival control={controls} key={2} destination={introductions[2]} eta={eta[2]} index={2} />}
+          {<Arrival control={controls0} key={0} destination={introductions[0]} eta={eta[0]} index={0} />}
+          {<Arrival control={controls1} key={1} destination={introductions[1]} eta={eta[1]} index={1} />}
+          {<Arrival control={controls2} key={2} destination={introductions[2]} eta={eta[2]} index={2} />}
         </div>
         <div className={styles.info}>
           <div className={styles.announce}>

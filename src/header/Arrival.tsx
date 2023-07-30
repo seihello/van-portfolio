@@ -20,7 +20,7 @@ type ArrivalProps = {
 
 export default function Arrival(props: ArrivalProps) {
   return (
-    <motion.div animate={props.control} transition={{ duration: 1 }} className={styles.arrival} style={{top: `${props.index*33}%`}}>
+    <motion.div animate={props.control} className={styles.arrival} style={{top: `${props.index*33}%`}}>
       <img className={styles.train_icon} src="./train.png" />
       <div className={styles.destination}>{props.destination}</div>
       <div className={styles.eta}>{props.eta}</div>
