@@ -17,15 +17,29 @@ export default function Header() {
   const controls1 = useAnimation();
   const controls2 = useAnimation();
 
+  const controls = [controls0, controls1, controls2]
+
   const startAnimation = async () => {
-    // 要素Aのxのアニメーションを開始
-    await controls0.start({ x: "100%" }, { duration: 1 });
-    controls1.start({ y: "-100%" }, { duration: 1 });
-    await controls2.start({ y: "-100%" }, { duration: 1 });
+    await controls[0].start({ x: "100%" }, { duration: 1 });
+    controls[0].start({ x: "-100%", y: "200%"}, { duration: 0 });
+    controls[1].start({ y: "-100%" }, { duration: 1 });
+    await controls[2].start({ y: "-100%" }, { duration: 1 });
     setEta([getETA(2), getETA(0), getETA(1)])
-    await controls0.start({ x: "100%" }, { duration: 1 });
-    await controls0.start({ x: "-100%", y: "200%"}, { duration: 0 });
-    await controls0.start({ x: "0%" }, { duration: 1 });
+    await controls[0].start({ x: "0%" }, { duration: .6 });
+
+    await controls[1].start({ x: "100%" }, { duration: 1 });
+    controls[1].start({ x: "-100%", y: "100%"}, { duration: 0 });
+    controls[2].start({ y: "-200%" }, { duration: 1 });
+    await controls[0].start({ y: "100%" }, { duration: 1 });
+    setEta([getETA(1), getETA(2), getETA(0)])
+    await controls[1].start({ x: "0%" }, { duration: .6 });
+
+    await controls[2].start({ x: "100%" }, { duration: 1 });
+    controls[2].start({ x: "-100%", y: "0%"}, { duration: 0 });
+    controls[0].start({ y: "0%" }, { duration: 1 });
+    await controls[1].start({ y: "0%" }, { duration: 1 });
+    setEta([getETA(0), getETA(1), getETA(2)])
+    await controls[2].start({ x: "0%" }, { duration: .6 });
   };
 
   useEffect(() => {
