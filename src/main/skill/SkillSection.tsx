@@ -1,6 +1,4 @@
-import React from 'react'
 import SkillCategory from './SkillCategory'
-import styles from './skill.module.scss'
 import commonStyles from '../../common.module.scss'
 
 export default function SkillSection() {
