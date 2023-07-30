@@ -22,6 +22,7 @@ export default function Header() {
     await controls0.start({ x: "100%" }, { duration: 1 });
     controls1.start({ y: "-100%" }, { duration: 1 });
     await controls2.start({ y: "-100%" }, { duration: 1 });
+    setEta([getETA(2), getETA(0), getETA(1)])
     await controls0.start({ x: "100%" }, { duration: 1 });
     await controls0.start({ x: "-100%", y: "200%"}, { duration: 0 });
     await controls0.start({ x: "0%" }, { duration: 1 });
