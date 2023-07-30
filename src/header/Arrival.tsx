@@ -1,6 +1,6 @@
 import styles from './header.module.scss'
 import { forwardRef } from 'react';
-
+import { motion, useAnimation, AnimationControls } from "framer-motion";
 
 export enum AnimationState {
   None,
@@ -14,16 +14,16 @@ type ArrivalProps = {
   destination: string;
   eta: string;
   index: number;
-  ref: React.MutableRefObject<null>;
+  control: AnimationControls;
 };
 
 
-export const ForwardArrival = forwardRef((props: ArrivalProps, ref: React.Ref<HTMLDivElement>) => {
+export default function Arrival(props: ArrivalProps) {
   return (
-    <div className={styles.arrival} style={{top: `${props.index*33}%`}} ref={ref}>
+    <motion.div animate={props.control} className={styles.arrival} style={{top: `${props.index*33}%`}}>
       <img className={styles.train_icon} src="./train.png" />
       <div className={styles.destination}>{props.destination}</div>
       <div className={styles.eta}>{props.eta}</div>
-    </div>
+    </motion.div>
   )
-});
+};

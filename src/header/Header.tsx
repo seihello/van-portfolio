@@ -1,9 +1,8 @@
 import { useLayoutEffect, useState, useEffect, useRef } from 'react'
-import { ForwardArrival } from './Arrival'
+import Arrival from './Arrival'
 import BoardClock from './BoardClock'
 import styles from './header.module.scss'
-import gsap from 'gsap';
-import { Power1 } from "gsap";
+import { useAnimation } from "framer-motion";
 
 const introductions = [
   "Hello, I'm Seisuke!",
@@ -12,85 +11,50 @@ const introductions = [
 ]
 
 export default function Header() {
-
-  console.log("Reder")
-
   const [eta, setEta] = useState([getETA(0), getETA(1), getETA(2)])
 
-  const headerRef = useRef(null);
+  const controls0 = useAnimation();
+  const controls1 = useAnimation();
+  const controls2 = useAnimation();
 
-  let arrivals = [useRef(null), useRef(null), useRef(null)]
-  // const arrival0 = useRef<typeof ForwardArrival | null>(null);
+  const controls = [controls0, controls1, controls2]
 
+  const startAnimation = async () => {
+    while(true) {
+      await controls[0].start({ x: "100%" }, { duration: 1, delay: 3 });
+      controls[0].start({ x: "-100%", y: "200%"}, { duration: 0 });
+      controls[1].start({ y: "-100%" }, { duration: 1 });
+      await controls[2].start({ y: "-100%" }, { duration: 1 });
+      setEta([getETA(2), getETA(0), getETA(1)])
+      await controls[0].start({ x: "0%" }, { duration: .6 });
 
-  // const arrival0 = (<Arrival ref={arrival0Ref} key={0} destination={introductions[0]} eta={getETA(0)} index={0} />)
-  // const arrival1 = (<Arrival ref={arrival1Ref} key={1} destination={introductions[1]} eta={getETA(1)} index={1} />)
-  // const arrival2 = (<Arrival ref={arrival2Ref} key={2} destination={introductions[2]} eta={getETA(2)} index={2} />)
+      await controls[1].start({ x: "100%" }, { duration: 1, delay: 3 });
+      controls[1].start({ x: "-100%", y: "100%"}, { duration: 0 });
+      controls[2].start({ y: "-200%" }, { duration: 1 });
+      await controls[0].start({ y: "100%" }, { duration: 1 });
+      setEta([getETA(1), getETA(2), getETA(0)])
+      await controls[1].start({ x: "0%" }, { duration: .6 });
 
-
-  // useEffect(() => {
-  //   console.log("ref", arrival0Ref)
-  //   let ctx = gsap.context(() => {
-  //     gsap.to(arrival0Ref.current, { x: "100%", duration: 1, ease: Power1.easeIn });
-      
-  //   }, headerRef);
-    
-  //   return () => ctx.revert();
-  // }, []);
-
-  // useLayoutEffect(() => {
-
-  //   let ctx = gsap.context(() => {
-  //     const tl1 = gsap.timeline({ repeat: 3, repeatDelay: 10 });
-  //     tl1.to(arrival0Ref.current, { left: "10%", duration: 0.5 })
-  //     .to([arrival1Ref.current, arrival2Ref.current], { transform: "translateY(-100%)", duration: 1 })
-      
-  //   }, headerRef);
-    
-  //   return () => ctx.revert();
-  // }, []);
+      await controls[2].start({ x: "100%" }, { duration: 1, delay: 3 });
+      controls[2].start({ x: "-100%", y: "0%"}, { duration: 0 });
+      controls[0].start({ y: "0%" }, { duration: 1 });
+      await controls[1].start({ y: "0%" }, { duration: 1 });
+      setEta([getETA(0), getETA(1), getETA(2)])
+      await controls[2].start({ x: "0%" }, { duration: .6 });
+    }
+  };
 
   useEffect(() => {
-    const tl1 = gsap.timeline({delay: 3});
-    tl1.to(arrivals[0].current, { left: "100%", duration: 2 })
-    .to(arrivals[0].current, { left: "-100%", top: "66%", duration: 1}, 2)
-    .to(arrivals[1].current, { top: `0px`, duration: 2 }, 2)
-    .to(arrivals[2].current, { top: `33%`, duration: 2 }, 2)
-    .to(arrivals[0].current, { left: "0px" }, 4)
-
-
-    const tl2 = gsap.timeline({delay: 3});
-    tl2.to(arrivals[1].current, { left: "100%", duration: 2 })
-    .to(arrivals[1].current, { left: "-100%", top: "66%" }, 2)
-    .to(arrivals[2].current, { top: `0px`, duration: 2 }, 2)
-    .to(arrivals[0].current, { top: `33%`, duration: 2 }, 2)
-    .to(arrivals[1].current, { left: "0px" }, 4)
-
-    const tl3 = gsap.timeline({delay: 3});
-    tl3.to(arrivals[2].current, { left: "100%", duration: 2 })
-    .to(arrivals[2].current, { left: "-100%", top: "66%" }, 2)
-    .to(arrivals[0].current, { top: `0px`, duration: 2 }, 2)
-    .to(arrivals[1].current, { top: `33%`, duration: 2 }, 2)
-    .to(arrivals[2].current, { left: "0px" }, 4)
-
-
-    const mainTimeline = gsap.timeline({repeat: -1, onComplete: () => {
-      gsap.set(arrivals[2].current, { top: `66%`, left: "0px" });
-      gsap.set(arrivals[0].current, { top: `0px`, left: "0px"  });
-      gsap.set(arrivals[1].current, { top: `33%`, left: "0px"  });
-
-    }});
-    mainTimeline.add(tl1).add(tl2).add(tl3);
-    
-  });
+    startAnimation();
+  }, []); 
 
   return (
-    <header ref={headerRef} className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.board}>
         <div className={styles.schedule}>
-          {<ForwardArrival ref={arrivals[0]} key={0} destination={introductions[0]} eta={eta[0]} index={0} />}
-          {<ForwardArrival ref={arrivals[1]} key={1} destination={introductions[1]} eta={eta[1]} index={1} />}
-          {<ForwardArrival ref={arrivals[2]} key={2} destination={introductions[2]} eta={eta[2]} index={2} />}
+          {<Arrival control={controls0} key={0} destination={introductions[0]} eta={eta[0]} index={0} />}
+          {<Arrival control={controls1} key={1} destination={introductions[1]} eta={eta[1]} index={1} />}
+          {<Arrival control={controls2} key={2} destination={introductions[2]} eta={eta[2]} index={2} />}
         </div>
         <div className={styles.info}>
           <div className={styles.announce}>
