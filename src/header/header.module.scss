@@ -68,7 +68,7 @@ $bd-top: 246;
           font-size: 3.0vh;
         }
         position: absolute;
-        left: 0;
+        left: 0px;
         z-index: 0;
         letter-spacing: 0.003vw;
 
@@ -88,15 +88,15 @@ $bd-top: 246;
 
 
       }
-      .arrival:nth-child(1) {
-        top: 0%;
-      }
-      .arrival:nth-child(2) {
-        top: 33%;
-      }
-      .arrival:nth-child(3) {
-        top: 66%;
-      }
+      // .arrival:nth-child(1) {
+      //   top: 0%;
+      // }
+      // .arrival:nth-child(2) {
+      //   top: 33%;
+      // }
+      // .arrival:nth-child(3) {
+      //   top: 66%;
+      // }
     }
   
     .info {
