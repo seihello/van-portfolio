@@ -21,21 +21,21 @@ export default function Header() {
 
   const startAnimation = async () => {
     while(true) {
-      await controls[0].start({ x: "100%" }, { duration: 1 });
+      await controls[0].start({ x: "100%" }, { duration: 1, delay: 3 });
       controls[0].start({ x: "-100%", y: "200%"}, { duration: 0 });
       controls[1].start({ y: "-100%" }, { duration: 1 });
       await controls[2].start({ y: "-100%" }, { duration: 1 });
       setEta([getETA(2), getETA(0), getETA(1)])
       await controls[0].start({ x: "0%" }, { duration: .6 });
 
-      await controls[1].start({ x: "100%" }, { duration: 1 });
+      await controls[1].start({ x: "100%" }, { duration: 1, delay: 3 });
       controls[1].start({ x: "-100%", y: "100%"}, { duration: 0 });
       controls[2].start({ y: "-200%" }, { duration: 1 });
       await controls[0].start({ y: "100%" }, { duration: 1 });
       setEta([getETA(1), getETA(2), getETA(0)])
       await controls[1].start({ x: "0%" }, { duration: .6 });
 
-      await controls[2].start({ x: "100%" }, { duration: 1 });
+      await controls[2].start({ x: "100%" }, { duration: 1, delay: 3 });
       controls[2].start({ x: "-100%", y: "0%"}, { duration: 0 });
       controls[0].start({ y: "0%" }, { duration: 1 });
       await controls[1].start({ y: "0%" }, { duration: 1 });
