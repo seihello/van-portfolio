@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MyFont';
-  src: url(RingMatrix.ttf);
+  src: url("/font/RingMatrix.ttf");
 }
 
 $st-width: 4411;
@@ -15,7 +15,7 @@ $bd-top: 246;
 .header {
   width: 100%;
   height: 100vh;
-  background-image: url("./station.jpg");
+  background-image: url("/img/station.jpg");
   background-size: cover;
   position: relative;
   perspective: 100vmax;

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Arrival from './Arrival'
 import BoardClock from './BoardClock'
 import styles from './header.module.scss'
