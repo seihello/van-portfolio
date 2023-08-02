@@ -26,6 +26,9 @@ $bd-top: 246;
 
   .board {
     position: absolute;
+    @media (width < 1000px) {
+      display: none;
+    }
     @media (aspect-ratio > $st-ratio) { // 横長
       width: calc($bd-width/$st-width*100%);
       left: calc($bd-left/$st-width*100%);
@@ -88,15 +91,6 @@ $bd-top: 246;
 
 
       }
-      // .arrival:nth-child(1) {
-      //   top: 0%;
-      // }
-      // .arrival:nth-child(2) {
-      //   top: 33%;
-      // }
-      // .arrival:nth-child(3) {
-      //   top: 66%;
-      // }
     }
   
     .info {

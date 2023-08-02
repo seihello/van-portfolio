@@ -125,9 +125,6 @@ a.to-gallery:hover {
   text-decoration: underline;
 }
 
-
-
-
 @media only screen and (max-width:1440px) {
   .title-text {
     font-size: 1.2rem;
@@ -135,21 +132,6 @@ a.to-gallery:hover {
   }
   div.section {
     width: 90%;
-  }
-  
-  div.profile {
-    flex-direction: column;
-  }
-
-  .profile-image {
-    width: 100%;
-  }
-
-  div.profile-text {
-    width: 100%;
-    margin-top: 2rem;
-    padding-left: 0;
-
   }
 
   div.interest {
@@ -194,7 +176,6 @@ a.to-gallery:hover {
 
   div.org-name {
     width: 100%;
-
   }
 }
 

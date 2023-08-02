@@ -1,17 +1,33 @@
 @import '../../common.module.scss';
 
-div.profile {
+.profile {
   display: flex;
   justify-content: flex-start;
+
+  img.profile_image {
+    width: 30%;
+    height: auto;
+    box-shadow: 0px 5px 20px 0 rgba(251, 251, 251, 0.5);
+  }
+  
+  .profile_text {
+    width: 70%;
+    padding-left: 2rem;
+  }
 }
 
-.profile_image {
-  width: 30%;
-  height: auto;
-  box-shadow: 0px 5px 20px 0 rgba(251, 251, 251, 0.5);
-}
-
-div.profile_text {
-  width: 70%;
-  padding-left: 2rem;
+@media (width < 1440px) {
+  .profile {
+    flex-direction: column;
+  
+    img.profile_image {
+      width: 100%;
+    }
+    
+    .profile_text {
+      width: 100%;
+      margin-top: 2rem;
+      padding-left: 0;
+    }
+  }
 }
