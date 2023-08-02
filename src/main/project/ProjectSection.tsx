@@ -8,15 +8,18 @@ export default function ProjectSection() {
       <h2>Project</h2>
       <hr />
       <div className={styles.projects}>
-        <Project projectName="Reversi" projectLink="https://github.com/momoiropuchoman/Reversi" projectImage="/img/reversi.png" projectLangs={["Python", "TKinter"]}/>
-        <Project projectName="RPG" projectLink="hhttps://github.com/momoiropuchoman/BeeTrade" projectImage="/img/rpg.png" projectLangs={["Java", "Swing"]}/>
-        <Project projectName="English Learning" projectLink="https://github.com/momoiropuchoman/https://github.com/seihello/EverydayEnglish-on-Browser" projectImage="/img/everydayenglish-browser.png" projectLangs={["HTML/CSS", "JavaScript"]}/>
-        <Project projectName="English Learning(iOS)" projectLink="https://github.com/seihello/EverydayEnglish" projectImage="/img/everydayenglish.png" projectLangs={["Python", "Kivy"]}/>
-        <Project projectName="Super Mario Style Game" projectLink="https://github.com/seihello/ScrollGame" projectImage="/img/scrollgame.png" projectLangs={["Java", "Swing"]}/>
-        <Project projectName="Strategy Game" projectLink="https://github.com/seihello/AnimalMaster" projectImage="/img/animalmaster.png" projectLangs={["Python", "TKinter"]}/>
-        <Project projectName="Comment Bot" projectLink="https://github.com/seihello/LIVIT-Bot" projectImage="/img/chatbot.png" projectLangs={["Python", "Selenium"]}/>
-        <Project projectName="Weather App" projectLink="https://github.com/seihello/WeatherApp" projectImage="/img/weatherapp.png" projectLangs={["HTML/CSS", "JavaScript"]}/>
+        {createProjectComponent("Reversi", "https://github.com/momoiropuchoman/Reversi", "reversi.png", ["Python", "TKinter"])}
+        {createProjectComponent("RPG", "https://github.com/momoiropuchoman/BeeTrade", "rpg.png", ["Java", "Swing"])}
+        {createProjectComponent("English Learning", "https://github.com/seihello/EverydayEnglish-on-Browser", "everydayenglish-browser.png", ["HTML/CSS", "JavaScript"])}
+        {createProjectComponent("English Learning(iOS)", "https://github.com/seihello/EverydayEnglish", "everydayenglish.png", ["Python", "Kivy"])}
+        {createProjectComponent("Strategy Game", "https://github.com/seihello/AnimalMaster", "animalmaster.png", ["Python", "TKinter"])}
+        {createProjectComponent("Comment Bot", "https://github.com/momoiropuchoman/LIVIT-Bot", "chatbot.png", ["Python", "Selenium"])}
+        {createProjectComponent("Weather App", "https://github.com/momoiropuchoman/WeatherApp", "weatherapp.png", ["HTML/CSS", "JavaScript"])}
       </div>
     </div>
   )
+}
+
+function createProjectComponent(name: string, link: string, image:string, langs: string[]) {
+  return <Project projectName={`${name}`} projectLink={`${link}`} projectImage={`/img/${image}`} projectLangs={langs}/>
 }
