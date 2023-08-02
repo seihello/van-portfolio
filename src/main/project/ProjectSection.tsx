@@ -15,6 +15,7 @@ export default function ProjectSection() {
         {createProjectComponent("Strategy Game", "https://github.com/seihello/AnimalMaster", "animalmaster.png", ["Python", "TKinter"])}
         {createProjectComponent("Comment Bot", "https://github.com/momoiropuchoman/LIVIT-Bot", "chatbot.png", ["Python", "Selenium"])}
         {createProjectComponent("Weather App", "https://github.com/momoiropuchoman/WeatherApp", "weatherapp.png", ["HTML/CSS", "JavaScript"])}
+        {createProjectComponent("CSS Gallery", "https://github.com/seihello/css-gallery", "cssgallery.png", ["HTML/CSS", "JavaScript"])}
       </div>
     </div>
   )
