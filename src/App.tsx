@@ -1,4 +1,5 @@
 import Header from './header/Header'
+import Footer from './footer/Footer'
 import AboutMeSection from './main/about-me/AboutMeSection'
 import ProjectSection from './main/project/ProjectSection'
 import SkillSection from './main/skill/SkillSection'
@@ -21,6 +22,7 @@ function App() {
         <ResumeSection />
         <ContactSection />
       </body>
+      <Footer />
     </>
   )
 }

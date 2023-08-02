@@ -1,0 +1,11 @@
+@import '../common.module.scss';
+
+.footer {
+  margin-top: 150px;
+  height: 100px;
+  background-color: $main-beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
