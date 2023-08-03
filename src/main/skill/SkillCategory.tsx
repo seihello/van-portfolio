@@ -9,7 +9,7 @@ type Props = {
 export default function SkillCategory(props: Props) {
   return (
     <>
-      <h3>{props.categoryTitle}</h3>
+      <h3 className={styles.skill_category}>{props.categoryTitle}</h3>
       <div className={styles.skills}>
         {props.skillList.map((skill) => {
           return <Skill skillName={skill.skillName} proficiency={skill.proficiency}/>

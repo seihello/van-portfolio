@@ -10,7 +10,7 @@ $main-brown: #613d0a;
 
 h2 {
   display: inline-block;
-  margin-bottom: 0;
+  margin-bottom: 6px;
   margin-top: 3rem;
   padding: .8rem 1rem;
   outline: 3px solid $main-brown;
@@ -41,7 +41,8 @@ hr {
 	height: 2px;
 	border-width: 0;
 	background-color: $main-brown;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  @media (width <= 768px) { margin-bottom: 1rem; }
 }
 
 body {
