@@ -8,7 +8,7 @@ div.projects {
 }
 
 div.project {
-  width: 49%;
+  width: 48%;
   position: relative;
 }
 
@@ -69,3 +69,9 @@ div.project_lang {
   padding: 0rem .8rem;
   margin-right: .8rem;
 }
+
+@media (width <= 768px) {
+  div.project {
+    width: 100%;
+  }
+} 
