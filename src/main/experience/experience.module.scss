@@ -1,75 +1,101 @@
-
-div.experience_first {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+* {
+  margin: 0;
 }
 
-h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-div.org_name {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 0 1rem;
-}
-
-a.link {
-  display: flex;
-  align-items: center;
-}
-
-img.link {
-  width: 1rem;
-  height: auto;
-}
-
-img.link:hover {
-  filter: invert(88%) sepia(100%) saturate(2929%) hue-rotate(200deg) brightness(200%) contrast(104%);
-}
-
-p.role {
-  font-style: italic;
-}
-
-div.work_list {
+.work_list, .education_list {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 40px;
-}
-
-div.work_item {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0 4rem;
-}
-
-div.work_description {
-  width: 60%;
-}
-
-div.work_image {
-  width: 20%;
-  margin-top: 2rem;
-  img {
+  .work_wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
     width: 100%;
-    height: auto;
+    .experience_first {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .org_name {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 0 1rem;
+
+        a.link {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      h3 {
+        //margin-block: 0;
+      }
+    }
+
+    .work_item {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0 4rem;
+
+      .work_description {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .role {
+          margin-block: 0;
+          font-style: italic;
+        }
+      }
+
+      .work_image {
+        width: 20%;
+        margin-top: 2rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
   }
 }
 
-div.education_list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 40px;
 
-  & > div {
-    width: 100%;
+@media (width <= 768px) {
+  .work_list, .education_list {
+    row-gap: 50px;
+
+    .experience_first {
+      flex-direction: column;
+      display: flex;
+      justify-content: flex-start;
+      row-gap: 20px;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .org_name {
+        width: 100%!important;
+      }
+    }
+
+    .work_item {
+      width: 100%;
+      flex-direction: column;
+
+      .work_description {
+        width: 100%!important;
+      }
+
+      .work_image {
+        display: none;
+      }
+    }
   }
 }

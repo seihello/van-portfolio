@@ -9,7 +9,7 @@ type Props = {
 
 export default function Education(props: Props) {
   return (
-    <div>
+    <div className={styles.work_wrapper}>
       <div className={styles.experience_first}>
         <div className={styles.org_name}>
           <a className={styles.link} href={props.orgLink} target="_blank"><h3>{props.orgName}</h3></a>
