@@ -6,7 +6,7 @@ export default function ResumeSection() {
     <div className={commonStyles.section}>
       <h2>Résumé</h2>
       <hr />
-      <div className={commonStyles.line}>
+      <div className={styles.resume_item}>
         <img className={styles.pdf_icon} src="/img/pdf.png" />
         <a className="resume" href="/doc/Seisuke_Yamada_Resume.pdf"><h3>Résumé (English)</h3></a>
       </div>
