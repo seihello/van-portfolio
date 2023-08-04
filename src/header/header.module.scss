@@ -18,7 +18,7 @@ $mobile-width: 624px;
   height: 100vh;
   overflow: hidden;
   @media (width <= $mobile-width) {
-    height: 100vw * 1.7 / $st-ratio;
+    height: calc(100vw * 1.7 / $st-ratio);
   }
   background-image: url("/img/station.jpg");
   background-size: cover;
@@ -44,17 +44,17 @@ $mobile-width: 624px;
         top:  calc(100vw / $st-ratio * ($bd-top/$st-height));
       }
       @media (aspect-ratio <= $st-ratio) { // 縦長
-        height: ($bd-height/$st-height) * 100%;
-        top: ($bd-top/$st-height) * 100%;
-        width: 100vh * $st-ratio * ($bd-width/$st-width);
-        left:  100vh * $st-ratio * ($bd-left/$st-width);
+        height: calc($bd-height/$st-height) * 100%;
+        top: calc($bd-top/$st-height) * 100%;
+        width: 100vh * $st-ratio * calc($bd-width/$st-width);
+        left:  100vh * $st-ratio * calc($bd-left/$st-width);
       }
     }
     @media (width <= $mobile-width) {
       width: 75%;
-      height: ($bd-height/$st-height) * 100%;
-      left: 100vw * 1.7 * ($bd-left/$st-width) ;
-      top:  100vw *1.7 / $st-ratio * ($bd-top/$st-height);
+      height: calc(($bd-height/$st-height) * 100%);
+      left: calc(100vw * 1.7 * ($bd-left/$st-width));
+      top: calc(100vw *1.7 / $st-ratio * ($bd-top/$st-height));
     }
     margin: 0;
     background-color: rgb(16, 16, 16);
