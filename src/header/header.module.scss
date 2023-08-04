@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'MyFont';
+  font-family: "MyFont";
   src: url("/font/RingMatrix.ttf");
 }
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@500&display=swap');
 
 $st-width: 4411;
 $st-height: 2337;
@@ -37,33 +38,38 @@ $mobile-width: 624px;
     position: absolute;
 
     @media (width > $mobile-width) {
-      @media (aspect-ratio > $st-ratio) { // 横長
-        width: calc($bd-width/$st-width*100%);
-        left: calc($bd-left/$st-width*100%);
+      @media (aspect-ratio > $st-ratio) {
+        // 横長
+        width: calc($bd-width/$st-width * 100%);
+        left: calc($bd-left/$st-width * 100%);
         height: calc(100vw / $st-ratio * ($bd-height/$st-height));
-        top:  calc(100vw / $st-ratio * ($bd-top/$st-height));
+        top: calc(100vw / $st-ratio * ($bd-top/$st-height));
       }
-      @media (aspect-ratio <= $st-ratio) { // 縦長
+      @media (aspect-ratio <= $st-ratio) {
+        // 縦長
         height: calc($bd-height/$st-height) * 100%;
         top: calc($bd-top/$st-height) * 100%;
         width: 100vh * $st-ratio * calc($bd-width/$st-width);
-        left:  100vh * $st-ratio * calc($bd-left/$st-width);
+        left: 100vh * $st-ratio * calc($bd-left/$st-width);
       }
     }
     @media (width <= $mobile-width) {
       width: 75%;
       height: calc(($bd-height/$st-height) * 100%);
       left: calc(100vw * 1.7 * ($bd-left/$st-width));
-      top: calc(100vw *1.7 / $st-ratio * ($bd-top/$st-height));
+      top: calc(100vw * 1.7 / $st-ratio * ($bd-top/$st-height));
     }
     margin: 0;
     background-color: rgb(16, 16, 16);
     transform: rotateX(-2deg) rotateY(3deg);
-  
+
     * {
       font-family: "MyFont";
+      @media (width <= $mobile-width) {
+        font-family: 'Tomorrow', sans-serif;
+      }
     }
-  
+
     .schedule {
       width: 100%;
       height: 84%;
@@ -81,15 +87,18 @@ $mobile-width: 624px;
         align-items: center;
 
         @media (width > $mobile-width) {
-          @media (aspect-ratio > $st-ratio) { // 横長
+          @media (aspect-ratio > $st-ratio) {
+            // 横長
             font-size: 1.6vw;
           }
-          @media (aspect-ratio <= $st-ratio) { // 縦長
-            font-size: 3.0vh;
+          @media (aspect-ratio <= $st-ratio) {
+            // 縦長
+            font-size: 3vh;
           }
         }
         @media (width <= $mobile-width) {
-          font-size: 3vw;
+          font-size: 2.6vw;
+          letter-spacing: .04em;
         }
         position: absolute;
         left: 0px;
@@ -100,31 +109,29 @@ $mobile-width: 624px;
           height: 80%;
           width: auto;
         }
-      
+
         .destination {
           width: 70%;
         }
-      
+
         .eta {
           width: 15%;
           text-align: center;
         }
-
-
       }
     }
-  
+
     .info {
       width: 100%;
       height: 16%;
       background-color: rgb(0, 42, 120);
-  
+
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       color: white;
       border-radius: 0 0 3px 3px;
-      
+
       .announce {
         width: 86%;
         height: 100%;
@@ -132,7 +139,6 @@ $mobile-width: 624px;
         align-items: center;
         position: relative;
         overflow: hidden;
-        
 
         .announce_text {
           position: absolute;
@@ -142,10 +148,12 @@ $mobile-width: 624px;
           z-index: 100;
 
           @media (width > $mobile-width) {
-            @media (aspect-ratio > $st-ratio) { // 横長
+            @media (aspect-ratio > $st-ratio) {
+              // 横長
               font-size: 1vw;
             }
-            @media (aspect-ratio <= $st-ratio) { // 縦長
+            @media (aspect-ratio <= $st-ratio) {
+              // 縦長
               font-size: 1.8vh;
             }
           }
@@ -161,10 +169,12 @@ $mobile-width: 624px;
         letter-spacing: 0;
 
         @media (width > $mobile-width) {
-          @media (aspect-ratio > $st-ratio) { // 横長
+          @media (aspect-ratio > $st-ratio) {
+            // 横長
             font-size: 1vw;
           }
-          @media (aspect-ratio <= $st-ratio) { // 縦長
+          @media (aspect-ratio <= $st-ratio) {
+            // 縦長
             font-size: 1.8vh;
           }
         }
@@ -173,11 +183,8 @@ $mobile-width: 624px;
         }
       }
     }
-  
   }
 }
-
-
 
 @keyframes announce {
   from {
