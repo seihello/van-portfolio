@@ -8,7 +8,8 @@
 }
 
 html {
-
+  font-size: 18px;
+  @media (width <= $mobile-width) { font-size: 14px; }
 }
 
 h2 {
