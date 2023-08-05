@@ -1,3 +1,5 @@
+@import "/src/variables";
+
 @font-face {
   font-family: "MyFont";
   src: url("/font/RingMatrix.ttf");
@@ -12,7 +14,6 @@ $bd-width: 1928;
 $bd-height: 384;
 $bd-left: 352;
 $bd-top: 246;
-$mobile-width: 834px;
 
 .header {
   width: 100%;
