@@ -11,7 +11,6 @@ export default function ContactSection() {
         <Contact name="Mail" link="mailto:seisuke.ym@gmail.com" iconClassName='fas fa-envelope' />
         <Contact name="GitHub" link="https://github.com/seihello" iconClassName='fab fa-github' />
         <Contact name="LinkedIn" link="https://www.linkedin.com/in/seisuke-yamada-a02140257/" iconClassName='fab fa-linkedin' />
-        <Contact name="LeetCode" link="https://leetcode.com/momoiropuchoman/" iconClassName='fas fa-keyboard' />
         <Contact name="Instagram" link="https://www.instagram.com/y_seisuke/" iconClassName='fab fa-instagram-square' />
       </div>
     </div>

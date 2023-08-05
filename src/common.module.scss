@@ -1,52 +1,17 @@
 @import "/src/variables";
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
 
 * {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   box-sizing: border-box;
 }
 
 html {
   font-size: 18px;
-  @media (width <= $mobile-width) { font-size: 14px; }
-}
-
-h2 {
-  display: inline-block;
-  margin-bottom: 6px;
-  margin-top: 3rem;
-  padding: .8rem 1rem;
-  outline: 3px solid $main-brown;
-  position: relative;
-  z-index: 100;
-  font-size: 1.5rem;
-}
-
-h2::after {
-  width: calc(100% - 3px);
-  height: calc(100% - 3px);
-  background-color: $main-beige;
-  border: 3px solid $main-beige;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  content: "";
-  z-index: -100;
-}
-
-h2::first-letter {
-  /* font-size: 2.5rem; */
-}
-
-
-hr {
-  position: relative;
-	height: 2px;
-	border-width: 0;
-	background-color: $main-brown;
-  margin-bottom: 2rem;
-  @media (width <= $mobile-width) { margin-bottom: 1rem; }
+  @media (width <= $mobile-width) {
+    font-size: 14px;
+  }
 }
 
 body {
@@ -56,16 +21,79 @@ body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
-  font-family: 'Lexend Deca', sans-serif, 
+  font-family: "Lexend Deca", sans-serif;
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: $main-brown
+button {
+  text-align: center;
+}
+
+@media (width <= $mobile-width) {
+  h1, h2, h3, h4, h5, h6, div, p, a {
+    text-align: center;
+  }
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: $main-brown;
 }
 
 .section {
   width: min(90%, 1200px);
   margin: 0 auto;
   text-align: left;
+
+  h2 {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 6px;
+    margin-top: 3rem;
+    padding: 0.8rem 1rem;
+    outline: 3px solid $main-brown;
+    position: relative;
+    z-index: 100;
+    font-size: 1.5rem;
+  }
+
+  h2::after {
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    background-color: $main-beige;
+    border: 3px solid $main-beige;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    content: "";
+    z-index: -100;
+  }
+
+  hr {
+    position: relative;
+    height: 2px;
+    border-width: 0;
+    background-color: $main-brown;
+    margin-bottom: 2rem;
+  }
 }
 
+@media (width <= $mobile-width) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+
+    h2 {
+      width: 220px;
+      margin-inline: auto;
+      margin-bottom: 1.5rem;
+    }
+    hr {
+      margin-bottom: 1rem;
+      display: none;
+    }
+  }
+}

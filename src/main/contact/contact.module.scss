@@ -48,7 +48,7 @@
   }
 }
 
-@media (width <= 612px) {
+@media (width <= $mobile-width) {
   .contact {
     .contact_link {
       width: auto;

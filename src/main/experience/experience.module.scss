@@ -84,6 +84,7 @@
 
       .org_name {
         width: 100%!important;
+        justify-content: center!important;
       }
     }
 
@@ -93,6 +94,10 @@
 
       .work_description {
         width: 100%!important;
+
+        li {
+          text-align: left;
+        }
       }
 
       .work_image {
