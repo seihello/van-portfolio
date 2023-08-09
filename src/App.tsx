@@ -7,7 +7,7 @@ import WorkExperienceSection from './main/experience/WorkExperienceSection'
 import EducationSection from './main/experience/EducationSection'
 import ResumeSection from './main/resume/ResumeSection'
 import ContactSection from './main/contact/ContactSection'
-import Menu from './main/menu/Menu'
+import Menu from './menu/Menu'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 function App() {
