@@ -9,7 +9,7 @@ type Props = {
 export default function MenuItem(props: Props) {
   return (
     <a className={styles.menu_item} href={`/${props.path}`}>
-      {props.name}
+      <div>{props.name}</div>
     </a>
   )
 }
