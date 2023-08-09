@@ -1,7 +1,6 @@
 import styles from './menu.module.scss'
 
 type Props = {
-  index: number;
   name: string;
   path: string;
 }

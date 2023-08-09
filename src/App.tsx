@@ -3,9 +3,7 @@ import Footer from './footer/Footer'
 import AboutMeSection from './main/about-me/AboutMeSection'
 import ProjectSection from './main/project/ProjectSection'
 import SkillSection from './main/skill/SkillSection'
-import WorkExperienceSection from './main/experience/WorkExperienceSection'
-import EducationSection from './main/experience/EducationSection'
-import ResumeSection from './main/resume/ResumeSection'
+import ExperienceSection from './main/experience/ExperienceSection'
 import ContactSection from './main/contact/ContactSection'
 import Menu from './menu/Menu'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
@@ -22,9 +20,7 @@ function App() {
             <Route path="/" element={<AboutMeSection />} />
             <Route path="/projects" element={<ProjectSection />} />
             <Route path="/skill" element={<SkillSection />} />
-            <Route path="/experience" element={<WorkExperienceSection />} />
-            <Route path="/education" element={<EducationSection />} />
-            <Route path="/resume" element={<ResumeSection />} />
+            <Route path="/experience" element={<ExperienceSection />} />
             <Route path="/contact" element={<ContactSection />} />
           </Routes>
         </BrowserRouter>
