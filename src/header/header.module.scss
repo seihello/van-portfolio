@@ -4,7 +4,7 @@
   font-family: "MyFont";
   src: url("/font/RingMatrix.ttf");
 }
-@import url('https://fonts.googleapis.com/css2?family=Tomorrow:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@500&display=swap");
 
 $st-width: 4411;
 $st-height: 2337;
@@ -15,7 +15,8 @@ $bd-height: 384;
 $bd-left: 352;
 $bd-top: 246;
 
-.header, .subheader {
+.header,
+.subheader {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -62,12 +63,12 @@ $bd-top: 246;
     }
     margin: 0;
     background-color: rgb(16, 16, 16);
-    transform: rotateX(-2deg) rotateY(3deg) rotateZ(.3deg);
+    transform: rotateX(-2deg) rotateY(3deg) rotateZ(0.3deg);
 
     * {
       font-family: "MyFont";
       @media (width <= $mobile-width) {
-        font-family: 'Tomorrow', sans-serif;
+        font-family: "Tomorrow", sans-serif;
       }
     }
 
@@ -99,7 +100,7 @@ $bd-top: 246;
         }
         @media (width <= $mobile-width) {
           font-size: 2.6vw;
-          letter-spacing: .04em;
+          letter-spacing: 0.04em;
         }
         position: absolute;
         left: 0px;
@@ -197,7 +198,26 @@ $bd-top: 246;
   }
 }
 
-
 .subheader {
-  height: 450px;
+  @media (width > $mobile-width) {
+    height: 25vw;
+  }
+  @media (width <= $mobile-width) {
+    height: 40vw;
+  }
+
+  .board {
+    @media (width > $mobile-width) {
+      width: calc($bd-width/$st-width * 100vw);
+      left: calc($bd-left/$st-width * 100%);
+      height: calc(100vw / $st-ratio * ($bd-height/$st-height));
+      top: calc(100vw / $st-ratio * ($bd-top/$st-height));
+    }
+    @media (width <= $mobile-width) {
+      width: 74%;
+      height: 38%;
+      left: calc(100vw * 1.7 * ($bd-left/$st-width));
+      top: calc(100vw * 1.7 / $st-ratio * ($bd-top/$st-height));
+    }
+  }
 }
