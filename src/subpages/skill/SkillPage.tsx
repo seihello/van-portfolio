@@ -1,7 +1,7 @@
 import SkillCategory from './SkillCategory'
 import commonStyles from '../../common.module.scss'
 
-export default function SkillSection() {
+export default function SkillPage() {
 
   const computerLanguageSkills = [
       {skillName: "C++", proficiency: 100 },

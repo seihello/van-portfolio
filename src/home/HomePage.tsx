@@ -1,7 +1,7 @@
-import styles from './about-me.module.scss'
-import commonStyles from '../../common.module.scss'
+import styles from './home.module.scss'
+import commonStyles from '../common.module.scss'
 
-export default function AboutMeSection() {
+export default function HomePage() {
   return (
     <div className={commonStyles.section}>
       <h2>About Me</h2>

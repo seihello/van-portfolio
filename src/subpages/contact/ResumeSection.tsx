@@ -1,4 +1,4 @@
-import styles from './resume.module.scss'
+import styles from './contact.module.scss'
 import commonStyles from '../../common.module.scss'
 
 export default function ResumeSection() {

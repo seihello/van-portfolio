@@ -1,10 +1,10 @@
 import Header from './header/Header'
 import Footer from './footer/Footer'
-import AboutMeSection from './main/about-me/AboutMeSection'
-import ProjectSection from './main/project/ProjectSection'
-import SkillSection from './main/skill/SkillSection'
-import ExperienceSection from './main/experience/ExperienceSection'
-import ContactSection from './main/contact/ContactSection'
+import HomePage from './home/HomePage'
+import ProjectPage from './subpages/project/ProjectPage'
+import SkillPage from './subpages/skill/SkillPage'
+import ExperiencePage from './subpages/experience/ExperiencePage'
+import ContactPage from './subpages/contact/ContactPage'
 import Menu from './menu/Menu'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
@@ -17,11 +17,11 @@ function App() {
         <Menu />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<AboutMeSection />} />
-            <Route path="/projects" element={<ProjectSection />} />
-            <Route path="/skill" element={<SkillSection />} />
-            <Route path="/experience" element={<ExperienceSection />} />
-            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/skill" element={<SkillPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </BrowserRouter>
       </body>

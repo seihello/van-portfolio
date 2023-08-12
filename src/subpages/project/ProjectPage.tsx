@@ -2,7 +2,7 @@ import Project from './Project'
 import styles from './project.module.scss'
 import commonStyles from '../../common.module.scss'
 
-export default function ProjectSection() {
+export default function ProjectPage() {
   return (
     <div className={commonStyles.section}>
       <h2>Project</h2>

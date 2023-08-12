@@ -16,7 +16,6 @@ export default function ContactSection() {
           <Contact name="Instagram" link="https://www.instagram.com/y_seisuke/" iconClassName='fab fa-instagram-square' />
         </div>
       </div>
-      <ResumeSection/>
     </>
   )
 }
