@@ -3,6 +3,7 @@ import Arrival from './Arrival'
 import BoardClock from './BoardClock'
 import styles from './header.module.scss'
 import { useAnimation } from "framer-motion";
+import React from 'react';
 
 const introductions = [
   "Hello, I'm Seisuke!",
@@ -10,7 +11,7 @@ const introductions = [
   "Eager to learn new things",
 ]
 
-export default function Header() {
+function HomePageHeader() {
   const [eta, setEta] = useState([getETA(0), getETA(1), getETA(2)])
 
   const controls0 = useAnimation();
@@ -68,6 +69,8 @@ export default function Header() {
     </header>
   )
 }
+
+export default React.memo(HomePageHeader);
 
 function getETA(index: number): string {
   switch (index) {
