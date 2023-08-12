@@ -15,7 +15,7 @@ $bd-height: 384;
 $bd-left: 352;
 $bd-top: 246;
 
-.header {
+.header, .subheader {
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -29,7 +29,7 @@ $bd-top: 246;
   }
   background-repeat: no-repeat;
   position: relative;
-  perspective: 100vmax;
+  perspective: 10000vmax;
 
   .station_image {
     width: 100%;
@@ -41,7 +41,7 @@ $bd-top: 246;
     @media (width > $mobile-width) {
       @media (aspect-ratio > $st-ratio) {
         // 横長
-        width: calc($bd-width/$st-width * 100%);
+        width: calc($bd-width/$st-width * 100vw);
         left: calc($bd-left/$st-width * 100%);
         height: calc(100vw / $st-ratio * ($bd-height/$st-height));
         top: calc(100vw / $st-ratio * ($bd-top/$st-height));
@@ -62,7 +62,7 @@ $bd-top: 246;
     }
     margin: 0;
     background-color: rgb(16, 16, 16);
-    transform: rotateX(-2deg) rotateY(3deg);
+    transform: rotateX(-2deg) rotateY(3deg) rotateZ(.3deg);
 
     * {
       font-family: "MyFont";
@@ -195,4 +195,9 @@ $bd-top: 246;
   to {
     left: -100%;
   }
+}
+
+
+.subheader {
+  height: 450px;
 }
