@@ -10,17 +10,21 @@ import Menu from './menu/Menu'
 import MobileMenuToggle from './menu/MobileMenuToggle'
 import Navigation from './menu/Navigation'
 import { Routes, Route, useLocation } from 'react-router-dom'
+import React, { createContext, useRef } from 'react';
+
+export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({current: null});
 
 function App() {
 
-  const location =useLocation()
-  console.log(location);
-  
+  const mobileMenuRef = useRef<HTMLDivElement | null>(null);
+  const location = useLocation()  
 
   return (
     <>
-      <Navigation />
-      <MobileMenuToggle />
+      <mobileMenuContext.Provider value={mobileMenuRef}>
+        <Navigation />
+        <MobileMenuToggle />
+      </mobileMenuContext.Provider>
       <main>
           <Menu />
           {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}

@@ -74,6 +74,13 @@
 
 .nav {
   display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: antiquewhite;
+  inset: 0 auto auto 0;
+  color: black;
+  z-index: 200;
 }
 
 .mobile_menu_toggle {
