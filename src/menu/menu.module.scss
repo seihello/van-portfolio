@@ -102,3 +102,9 @@
   border-radius: 50%;
 }
 
+@media (width > $mobile-width) {
+  .mobile_menu_open {
+    display: none;
+  }
+}
+
