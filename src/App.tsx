@@ -6,11 +6,11 @@ import ProjectPage from './subpages/project/ProjectPage'
 import SkillPage from './subpages/skill/SkillPage'
 import ExperiencePage from './subpages/experience/ExperiencePage'
 import ContactPage from './subpages/contact/ContactPage'
-import Menu from './menu/Menu'
 import MobileMenuOpen from './menu/MobileMenuOpen'
-import Navigation from './menu/Navigation'
+import MobileMenu from './menu/MobileMenu'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import React, { createContext, useRef } from 'react';
+import DesktopMenu from './menu/DesktopMenu'
 
 export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({current: null});
 
@@ -22,12 +22,12 @@ function App() {
   return (
     <>
       <mobileMenuContext.Provider value={mobileMenuRef}>
-        <Navigation />
+        <MobileMenu />
         <MobileMenuOpen />
       </mobileMenuContext.Provider>
+      <DesktopMenu />
+      {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}
       <main>
-          <Menu />
-          {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />

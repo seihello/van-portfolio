@@ -2,7 +2,7 @@ import styles from './menu.module.scss'
 import { useContext } from 'react'
 import { mobileMenuContext } from '../App';
 
-export default function Navigation() {
+export default function MobileMenu() {
   const mobileMenuRef = useContext(mobileMenuContext)
   const onMobileMenuCloseClicked = () => {
     if(mobileMenuRef.current) {
