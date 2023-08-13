@@ -1,14 +1,13 @@
 import Project from './Project'
 import styles from './project.module.scss'
 import commonStyles from '../../common.module.scss'
-
-type Props = {
-  component: JSX.Element;
-}
+import usePageTransition from '../../hooks/usePageTransition'
 
 export default function ProjectPage() {
-  return (
 
+  usePageTransition()
+
+  return (
     <>
       <div className={commonStyles.section}>
         <h2>Project</h2>

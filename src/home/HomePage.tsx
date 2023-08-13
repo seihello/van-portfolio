@@ -1,8 +1,11 @@
 import styles from './home.module.scss'
 import commonStyles from '../common.module.scss'
-import HomePageHeader from '../header/HomePageHeader'
+import usePageTransition from '../hooks/usePageTransition'
 
 export default function HomePage() {
+
+  usePageTransition()
+
   return (
     <>
       <div className={commonStyles.section}>

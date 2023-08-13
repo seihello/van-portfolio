@@ -1,11 +1,10 @@
 import SkillCategory from './SkillCategory'
 import commonStyles from '../../common.module.scss'
-
-type Props = {
-  component: JSX.Element;
-}
+import usePageTransition from '../../hooks/usePageTransition'
 
 export default function SkillPage() {
+
+  usePageTransition()
 
   const computerLanguageSkills = [
     { skillName: "C++", proficiency: 100 },

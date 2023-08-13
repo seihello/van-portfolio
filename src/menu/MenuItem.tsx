@@ -8,10 +8,8 @@ type Props = {
 
 export default function MenuItem(props: Props) {
   return (
-    <Link to={`/${props.path}`}>
-      <div className={styles.menu_item}>
-        <div>{props.name}</div>
-      </div>
+    <Link to={`/${props.path}`} className={styles.menu_item}>
+      <div>{props.name}</div>
     </Link>
   )
 }

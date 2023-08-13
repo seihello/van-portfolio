@@ -8,7 +8,7 @@ export default function MobileMenuOpen() {
 
   const onClickMobileMenuOpen = () => {
     if(mobileMenuRef.current) {
-      mobileMenuRef.current.style.display = "block";
+      mobileMenuRef.current.style.display = "flex";
     }
 
   }
