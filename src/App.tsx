@@ -7,6 +7,7 @@ import SkillPage from './subpages/skill/SkillPage'
 import ExperiencePage from './subpages/experience/ExperiencePage'
 import ContactPage from './subpages/contact/ContactPage'
 import Menu from './menu/Menu'
+import MobileMenuToggle from './menu/MobileMenuToggle'
 import Navigation from './menu/Navigation'
 import { Routes, Route, useLocation } from 'react-router-dom'
 
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Navigation />
+      <MobileMenuToggle />
       <main>
           <Menu />
           {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}
