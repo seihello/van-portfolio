@@ -14,7 +14,6 @@ export default function Navigation() {
   return (
     <div className={styles.nav} ref={mobileMenuRef}>
       <i className={`fa-solid fa-xmark ${styles.mobile_menu_close}`} onClick={onMobileMenuCloseClicked}></i>
-      Mobile Menu
     </div>
   );
 }

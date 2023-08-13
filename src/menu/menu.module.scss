@@ -81,9 +81,13 @@
   inset: 0 auto auto 0;
   color: black;
   z-index: 200;
+
+  .mobile_menu_close {
+    font-size: 36px;
+  }
 }
 
-.mobile_menu_toggle {
+.mobile_menu_open {
   width: 56px;
   height: 56px;
   color: white;
@@ -98,6 +102,3 @@
   border-radius: 50%;
 }
 
-.mobile_menu_close {
-  font-size: 36px;
-}

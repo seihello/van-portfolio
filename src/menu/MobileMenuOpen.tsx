@@ -2,11 +2,11 @@ import styles from './menu.module.scss'
 import { useContext } from 'react'
 import { mobileMenuContext } from '../App';
 
-export default function MobileMenuToggle() {
+export default function MobileMenuOpen() {
 
   const mobileMenuRef = useContext(mobileMenuContext)
 
-  const onClickMobileMenuToggle = () => {
+  const onClickMobileMenuOpen = () => {
     if(mobileMenuRef.current) {
       mobileMenuRef.current.style.display = "block";
     }
@@ -14,6 +14,6 @@ export default function MobileMenuToggle() {
   }
 
   return (
-    <i className={`fa-solid fa-bars ${styles.mobile_menu_toggle}`} onClick={onClickMobileMenuToggle}></i>
+    <i className={`fa-solid fa-bars ${styles.mobile_menu_open}`} onClick={onClickMobileMenuOpen}></i>
   )
 }
