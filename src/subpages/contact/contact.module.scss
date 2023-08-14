@@ -48,6 +48,16 @@
   }
 }
 
+.resume_item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  img.pdf_icon {
+    width: auto;
+    height: 2rem;
+  }
+}
+
 @media (width <= $mobile-width) {
   .contact {
     .contact_link {
