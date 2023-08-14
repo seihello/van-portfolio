@@ -7,10 +7,11 @@ import SkillPage from './subpages/skill/SkillPage'
 import ExperiencePage from './subpages/experience/ExperiencePage'
 import ContactPage from './subpages/contact/ContactPage'
 import MobileMenuOpen from './menu/MobileMenuOpen'
+import DesktopMenu from './menu/DesktopMenu'
 import MobileMenu from './menu/MobileMenu'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import React, { createContext, useRef } from 'react';
-import DesktopMenu from './menu/DesktopMenu'
+import { MenuContextProvider } from './context/menuContext'
 
 export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({current: null});
 
@@ -22,10 +23,12 @@ function App() {
   return (
     <>
       <mobileMenuContext.Provider value={mobileMenuRef}>
-        <MobileMenu />
-        <MobileMenuOpen />
+        <MenuContextProvider>
+          <DesktopMenu />
+          <MobileMenu />
+          <MobileMenuOpen />
+        </MenuContextProvider>
       </mobileMenuContext.Provider>
-      <DesktopMenu />
       {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}
       <main>
           <Routes>

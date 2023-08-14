@@ -1,15 +1,22 @@
 import styles from './menu.module.scss'
-import MenuItem from './MenuItem'
+import { useContext } from 'react'
+import { MenuContext } from '../context/menuContext';
+import { Link } from 'react-router-dom';
 
-export default function menu() {
+export default function DesktopMenu() {
+  const menuItems = useContext(MenuContext)
 
   return (
-    <div className={styles.menu}>
-      <MenuItem name="Home" path="" />
-      <MenuItem name="Projects" path="projects" />
-      <MenuItem name="Skill" path="skill" />
-      <MenuItem name="Experience" path="experience" />
-      <MenuItem name="Contact" path="contact" />
+    <div className={styles.desktop_menu}>
+      {menuItems?.map((menuItem) => {
+        return (
+          <Link to={`/${menuItem.path}`}>
+            <div className={styles.menu_item}>
+              <div>{menuItem.name}</div>
+            </div>
+          </Link>
+        )
+      })}
     </div>
-  )
+  );
 }
