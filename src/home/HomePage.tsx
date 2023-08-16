@@ -1,13 +1,10 @@
 import styles from './home.module.scss'
 import commonStyles from '../common.module.scss'
-import HomePageHeader from '../header/HomePageHeader'
 
 export default function HomePage() {
   return (
     <>
       <div className={commonStyles.section}>
-        <h2>About Me</h2>
-        <hr />
         <div className={styles.profile}>
           <img className={styles.profile_image} src="/img/profile.jpg" />
           <div className={styles.profile_text}>
