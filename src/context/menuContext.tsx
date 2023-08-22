@@ -12,7 +12,7 @@ export const MenuContext = createContext<MenuContextProps | null>(null);
 export function MenuContextProvider({ children }: { children: ReactNode }) {
   const menuItems = [
     {name: "Home", path: ""},
-    {name: "Projects", path: "projects"},
+    {name: "Project", path: "projects"},
     {name: "Skill", path: "skill"},
     {name: "Experience", path: "experience"},
     {name: "Contact", path: "contact"},

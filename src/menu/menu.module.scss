@@ -5,7 +5,7 @@
   .menu_item {
     display: block;
     text-align: center;
-    background-color: rgb(41, 41, 41);
+    background: radial-gradient(circle, rgb(81, 81, 81) 0%, rgba(18,18,18,1) 100%);
     text-decoration: none;
     position: relative;
 
@@ -19,7 +19,6 @@
       transform: translate(-50%, -50%);
       width: 100%;
       z-index: 20;
-      background-color: rgb(41, 41, 41);
       color: white;
       width: min-content;
       line-height: 1;
@@ -27,6 +26,14 @@
       border-radius: 2px;
     }
     overflow: hidden;
+  }
+
+  .active {
+    background: none;
+    background-color: rgb(41, 41, 41);
+    div, i {
+      background-color: rgb(41, 41, 41);
+    }
   }
 
   .active::after {

@@ -8,8 +8,9 @@
 
   .contact_link {
     width: 170px;
-    i, p {
-      color: $main-brown;
+    i,
+    p {
+      color: black;
     }
     i {
       font-size: 1.4rem;
@@ -19,16 +20,17 @@
     button.contact_item {
       width: 100%;
       height: 3rem;
-      border: 3px solid $main-brown;
-      box-shadow: 3px 3px 0px #b29f77;
+      border: none;
+      box-shadow: 3px 3px 0px #929292;
       border-radius: 2rem;
       line-height: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0 .5rem;
+      gap: 0 0.5rem;
       font-size: 1rem;
       cursor: pointer;
+      background-color: rgb(244, 244, 244);
 
       .contact_image {
         height: 60%;
@@ -41,9 +43,12 @@
       transform: translate(3px, 3px);
       box-shadow: none;
     }
-   
+
     button.contact_item:hover {
-      background-color: $main-beige;
+      background-color: $skytrain-blue;
+      i, p {
+        color: white !important;
+      }
     }
   }
 }

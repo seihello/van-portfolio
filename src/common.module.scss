@@ -1,9 +1,9 @@
 @import "/src/variables";
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap');
 
 * {
-  font-family: "Lexend Deca", sans-serif;
+  font-family: 'Noto Sans Display', sans-serif;
   box-sizing: border-box;
 }
 
@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background-color: #ebeae8;
-  color: #4a2e07;
+  background-color: #ffffff;
+  color: black;
   font-weight: 100;
   line-height: 1.5em;
   margin: 0;
@@ -38,7 +38,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-  color: $main-brown;
+  color: black;
 }
 
 .section {
@@ -48,33 +48,20 @@ a:active {
   margin-top: 3rem;
 
   h2 {
+    font-family: 'Russo One', sans-serif;
     text-align: center;
     display: inline-block;
     margin-bottom: 6px;
-    padding: 0.8rem 1rem;
-    outline: 3px solid $main-brown;
     position: relative;
     z-index: 100;
     font-size: 1.5rem;
-  }
-
-  h2::after {
-    width: calc(100% - 3px);
-    height: calc(100% - 3px);
-    background-color: $main-beige;
-    border: 3px solid $main-beige;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    content: "";
-    z-index: -100;
   }
 
   hr {
     position: relative;
     height: 2px;
     border-width: 0;
-    background-color: $main-brown;
+    background-color: black;
     margin-bottom: 2rem;
   }
 }
