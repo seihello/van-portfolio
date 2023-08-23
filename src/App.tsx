@@ -1,5 +1,5 @@
-import HomePageHeader from './header/HomePageHeader'
-import SubPageHeader from './header/SubPageHeader'
+// import HomePageHeader from './header/HomePageHeader'
+// import SubPageHeader from './header/SubPageHeader'
 import Footer from './footer/Footer'
 import HomePage from './home/HomePage'
 import ProjectPage from './subpages/project/ProjectPage'
@@ -9,7 +9,7 @@ import ContactPage from './subpages/contact/ContactPage'
 import MobileMenuOpen from './menu/MobileMenuOpen'
 import DesktopMenu from './menu/DesktopMenu'
 import MobileMenu from './menu/MobileMenu'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import React, { createContext, useRef } from 'react';
 import { MenuContextProvider } from './context/menuContext'
 
@@ -18,7 +18,7 @@ export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivEle
 function App() {
 
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-  const location = useLocation()  
+  // const location = useLocation() 
 
   return (
     <>
