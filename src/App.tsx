@@ -12,7 +12,6 @@ import MobileMenu from './menu/MobileMenu'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import React, { createContext, useRef } from 'react';
 import { MenuContextProvider } from './context/menuContext'
-import styles from './header/header.module.scss'
 
 export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({current: null});
 
