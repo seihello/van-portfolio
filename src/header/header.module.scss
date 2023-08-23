@@ -1,4 +1,4 @@
-@import "/src/variables";
+@import "/src/util";
 
 @font-face {
   font-family: "MyFont";
@@ -18,16 +18,9 @@ $bd-top: 246;
 .header,
 .subheader {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
-  @media (width <= $mobile-width) {
-    height: calc(100vw * 1.7 / $st-ratio);
-  }
   background-image: url("/img/station.jpg");
-  background-size: cover;
-  @media (width <= $mobile-width) {
-    background-size: 170% auto;
-  }
+  @include tablet(background-size, cover, 170% auto);
   background-repeat: no-repeat;
   position: relative;
   perspective: 10000vmax;
@@ -38,36 +31,26 @@ $bd-top: 246;
 
   .board {
     position: absolute;
-
-    @media (width > $mobile-width) {
-      @media (aspect-ratio > $st-ratio) {
-        // 横長
-        width: calc($bd-width/$st-width * 100vw);
-        left: calc($bd-left/$st-width * 100%);
-        height: calc(100vw / $st-ratio * ($bd-height/$st-height));
-        top: calc(100vw / $st-ratio * ($bd-top/$st-height));
-      }
-      @media (aspect-ratio <= $st-ratio) {
-        // 縦長
-        height: calc($bd-height/$st-height) * 100%;
-        top: calc($bd-top/$st-height) * 100%;
-        width: 100vh * $st-ratio * calc($bd-width/$st-width);
-        left: 100vh * $st-ratio * calc($bd-left/$st-width);
-      }
-    }
-    @media (width <= $mobile-width) {
-      width: 75%;
-      height: calc(($bd-height/$st-height) * 100%);
-      left: calc(100vw * 1.7 * ($bd-left/$st-width));
-      top: calc(100vw * 1.7 / $st-ratio * ($bd-top/$st-height));
-    }
     margin: 0;
     background-color: rgb(16, 16, 16);
     transform: rotateX(-2deg) rotateY(3deg) rotateZ(0.3deg);
 
+    @media (width > $tablet-width) {
+      width: calc($bd-width/$st-width * 100vw);
+      left: calc($bd-left/$st-width * 100%);
+      height: calc(100vw / $st-ratio * ($bd-height/$st-height));
+      top: calc(100vw / $st-ratio * ($bd-top/$st-height));
+    }
+    @media (width <= $tablet-width) {
+      width: 74%;
+      height: 38%;
+      left: calc(100vw * 1.7 * ($bd-left/$st-width));
+      top: calc(100vw * 1.7 / $st-ratio * ($bd-top/$st-height));
+    }
+
     * {
       font-family: "MyFont";
-      @media (width <= $mobile-width) {
+      @media (width <= $tablet-width) {
         font-family: "Tomorrow", sans-serif;
       }
     }
@@ -88,7 +71,7 @@ $bd-top: 246;
         justify-content: space-between;
         align-items: center;
 
-        @media (width > $mobile-width) {
+        @media (width > $tablet-width) {
           @media (aspect-ratio > $st-ratio) {
             // 横長
             font-size: 1.6vw;
@@ -98,7 +81,7 @@ $bd-top: 246;
             font-size: 3vh;
           }
         }
-        @media (width <= $mobile-width) {
+        @media (width <= $tablet-width) {
           font-size: 2.6vw;
           letter-spacing: 0.04em;
         }
@@ -150,7 +133,7 @@ $bd-top: 246;
           margin: 0;
           z-index: 100;
 
-          @media (width > $mobile-width) {
+          @media (width > $tablet-width) {
             @media (aspect-ratio > $st-ratio) {
               // 横長
               font-size: 1vw;
@@ -160,7 +143,7 @@ $bd-top: 246;
               font-size: 1.8vh;
             }
           }
-          @media (width <= $mobile-width) {
+          @media (width <= $tablet-width) {
             font-size: 1.8vw;
           }
         }
@@ -171,7 +154,7 @@ $bd-top: 246;
         text-align: center;
         letter-spacing: 0;
 
-        @media (width > $mobile-width) {
+        @media (width > $tablet-width) {
           @media (aspect-ratio > $st-ratio) {
             // 横長
             font-size: 1vw;
@@ -181,7 +164,7 @@ $bd-top: 246;
             font-size: 1.8vh;
           }
         }
-        @media (width <= $mobile-width) {
+        @media (width <= $tablet-width) {
           font-size: 1.8vw;
         }
       }
@@ -198,26 +181,10 @@ $bd-top: 246;
   }
 }
 
-.subheader {
-  @media (width > $mobile-width) {
-    height: 25vw;
-  }
-  @media (width <= $mobile-width) {
-    height: 40vw;
-  }
+.header {
+  @include tablet(height, 52vw, 40vw);
+}
 
-  .board {
-    @media (width > $mobile-width) {
-      width: calc($bd-width/$st-width * 100vw);
-      left: calc($bd-left/$st-width * 100%);
-      height: calc(100vw / $st-ratio * ($bd-height/$st-height));
-      top: calc(100vw / $st-ratio * ($bd-top/$st-height));
-    }
-    @media (width <= $mobile-width) {
-      width: 74%;
-      height: 38%;
-      left: calc(100vw * 1.7 * ($bd-left/$st-width));
-      top: calc(100vw * 1.7 / $st-ratio * ($bd-top/$st-height));
-    }
-  }
+.subheader {
+  @include tablet(height, 25vw, 40vw);
 }

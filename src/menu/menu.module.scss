@@ -1,4 +1,4 @@
-@import "/src/variables";
+@import "/src/util";
 
 .desktop_menu, .mobile_menu {
   display: flex;
@@ -90,14 +90,14 @@
   border-radius: 50%;
 }
 
-@media (width > $mobile-width) {
+@media (width > $tablet-width) {
   .mobile_menu_open {
     display: none;
   }
 }
 
 
-@media (width <= $mobile-width) {
+@media (width <= $tablet-width) {
   .desktop_menu {
     display: none;
   }

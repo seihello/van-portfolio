@@ -1,4 +1,4 @@
-@import "/src/variables";
+@import "/src/util";
 
 .contact {
   display: flex;
@@ -63,7 +63,7 @@
   }
 }
 
-@media (width <= $mobile-width) {
+@media (width <= $tablet-width) {
   .contact {
     .contact_link {
       width: auto;
