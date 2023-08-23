@@ -1,7 +1,6 @@
 $tablet-width: 834px;
-$skytrain-blue: #d3c29e;
-$main-brown: #613d0a;
 $skytrain-blue: #002a78;
+$skytrain-yellow: #dbb600;
 
 @mixin tablet($property-name, $desktop-value, $tablet-value) {
   #{$property-name}: $tablet-value;
