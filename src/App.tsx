@@ -1,5 +1,5 @@
 // import HomePageHeader from './header/HomePageHeader'
-// import SubPageHeader from './header/SubPageHeader'
+import SubPageHeader from './header/SubPageHeader'
 import Footer from './footer/Footer'
 import HomePage from './home/HomePage'
 import ProjectPage from './subpages/project/ProjectPage'
@@ -31,7 +31,7 @@ function App() {
           <MobileMenuOpen />
         </MenuContextProvider>
       </mobileMenuContext.Provider>
-      {location.pathname === "/" ? <div>aaa</div> : <div>bbb</div>}
+      {location.pathname === "/" ? <SubPageHeader /> : <SubPageHeader />}
       <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
