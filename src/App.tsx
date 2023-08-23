@@ -29,7 +29,7 @@ function App() {
           <MobileMenuOpen />
         </MenuContextProvider>
       </mobileMenuContext.Provider>
-      {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />}
+      {/* {location.pathname === "/" ? <HomePageHeader /> : <SubPageHeader />} */}
       <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
