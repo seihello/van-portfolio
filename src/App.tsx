@@ -33,10 +33,10 @@ function App() {
       <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/projects" element={<ProjectPage />} />
-            <Route path="/skill" element={<SkillPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/projects/" element={<ProjectPage />} />
+            <Route path="/skill/" element={<SkillPage />} />
+            <Route path="/experience/" element={<ExperiencePage />} />
+            <Route path="/contact/" element={<ContactPage />} />
           </Routes>
       </main>
       <Footer />
