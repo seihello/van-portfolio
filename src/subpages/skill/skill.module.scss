@@ -10,16 +10,17 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  gap: 20px 5%;
+
+  @include tablet(gap, 20px 5%, 1rem 0);
+  @include tablet(justify-content, flex-start, space-between);
 
   .skill {
-    width: 30%;
-    margin: 0 0;
+    @include tablet(width, 30%, 45%);
+    @include tablet(margin, 0 0, 0 1%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 
     .skill_name {
       font-size: 1rem;
@@ -60,18 +61,6 @@
         border-radius: 5px;
         animation-duration: 1.5s;
       }
-    }
-  }
-}
-
-@media (width <= $tablet-width) {
-  .skills {
-    gap: 1rem 0;
-    justify-content: space-between;
-
-    .skill {
-      width: 45%;
-      margin: 0 1%;
     }
   }
 }
