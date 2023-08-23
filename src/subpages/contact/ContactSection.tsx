@@ -1,7 +1,6 @@
 import Contact from './Contact'
 import styles from './contact.module.scss'
 import commonStyles from '../../common.module.scss'
-import ResumeSection from './ResumeSection'
 
 export default function ContactSection() {
   return (

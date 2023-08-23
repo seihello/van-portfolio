@@ -1,10 +1,6 @@
 import SkillCategory from './SkillCategory'
 import commonStyles from '../../common.module.scss'
 
-type Props = {
-  component: JSX.Element;
-}
-
 export default function SkillPage() {
 
   const computerLanguageSkills = [

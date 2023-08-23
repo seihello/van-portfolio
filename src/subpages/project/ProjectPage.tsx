@@ -2,10 +2,6 @@ import Project from './Project'
 import styles from './project.module.scss'
 import commonStyles from '../../common.module.scss'
 
-type Props = {
-  component: JSX.Element;
-}
-
 export default function ProjectPage() {
   return (
 

@@ -1,5 +1,5 @@
-import { createContext, ReactNode, useState } from 'react';
-import { useLocation, Location } from 'react-router-dom'
+import { createContext, ReactNode } from 'react';
+import { useLocation } from 'react-router-dom'
 
 type MenuContextProps = {
   menuItems: Array<{name: string, path: string}>;
