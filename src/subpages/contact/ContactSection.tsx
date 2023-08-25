@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <>
       <div className={commonStyles.section}>
-        <h2>Link</h2>
+        <h2>Social</h2>
         <hr />
         <div className={styles.contact}>
           <Contact name="Mail" link="mailto:seisuke.ym@gmail.com" iconClassName='fas fa-envelope' />
