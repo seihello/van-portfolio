@@ -1,5 +1,4 @@
 import SkillCategory from './SkillCategory'
-import commonStyles from '../../common.module.scss'
 
 export default function SkillPage() {
 
@@ -54,16 +53,12 @@ export default function SkillPage() {
 
   return (
     <>
-      <div className={commonStyles.section}>
-        <h2>Skill</h2>
-        <hr />
-        <SkillCategory categoryTitle='Computer Language' skillList={computerLanguageSkills} />
-        <SkillCategory categoryTitle='Framework/Library' skillList={frameworkLibrarySkills} />
-        <SkillCategory categoryTitle='Tool' skillList={toolSkills} />
-        <SkillCategory categoryTitle='DB' skillList={DBSkills} />
-        <SkillCategory categoryTitle='OS' skillList={OSSkills} />
-        <SkillCategory categoryTitle='Other' skillList={otherSkills} />
-      </div>
+      <SkillCategory categoryTitle='Computer Language' skillList={computerLanguageSkills} />
+      <SkillCategory categoryTitle='Framework/Library' skillList={frameworkLibrarySkills} />
+      <SkillCategory categoryTitle='Tool' skillList={toolSkills} />
+      <SkillCategory categoryTitle='DB' skillList={DBSkills} />
+      <SkillCategory categoryTitle='OS' skillList={OSSkills} />
+      <SkillCategory categoryTitle='Other' skillList={otherSkills} />
     </>
   )
 }
