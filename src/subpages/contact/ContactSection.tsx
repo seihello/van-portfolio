@@ -9,9 +9,9 @@ export default function ContactSection() {
         <h2>Social</h2>
         <hr />
         <div className={styles.contact}>
-          <Contact name="GitHub" link="https://github.com/seihello" iconClassName='fab fa-github' />
-          <Contact name="LinkedIn" link="https://www.linkedin.com/in/seisuke-yamada-a02140257/" iconClassName='fab fa-linkedin' />
-          <Contact name="Instagram" link="https://www.instagram.com/y_seisuke/" iconClassName='fab fa-instagram-square' />
+          <Contact name="GitHub" link="https://github.com/seihello" imageName="/img/github.png" />
+          <Contact name="LinkedIn" link="https://www.linkedin.com/in/seisuke-yamada-a02140257/" imageName="/img/linkedin.png" />
+          <Contact name="Instagram" link="https://www.instagram.com/y_seisuke/" imageName="/img/instagram.png" />
         </div>
       </div>
     </>

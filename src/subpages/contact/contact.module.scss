@@ -7,18 +7,25 @@
 .contact {
   display: flex;
   justify-content: flex-start;
-  gap: 1rem 1rem;
+  column-gap: 30px;
   flex-wrap: wrap;
 
   .contact_link {
-    @include tablet(width, 170px, auto);
-    i,
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+
+    @include tablet(width, 60px, 50px);
+
     p {
       color: black;
     }
-    i {
-      font-size: 1.4rem;
+    img {
+      width: 100%;
+      height: auto;
     }
+    
     text-decoration: none;
 
     button.contact_item {
