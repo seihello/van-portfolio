@@ -8,7 +8,7 @@ export default function ResumeSection() {
       <hr />
       <div className={styles.resume_item}>
         <img className={styles.pdf_icon} src="/img/pdf.png" />
-        <a className="resume" href="/doc/Seisuke_Yamada_Resume.pdf"><h3>Résumé (English)</h3></a>
+        <a className="resume" href="/doc/Seisuke_Yamada_Resume.pdf">Résumé (English)</a>
       </div>
     </div>
   )
