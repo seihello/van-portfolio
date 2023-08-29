@@ -23,15 +23,15 @@ export default function WorkExperience(props: Props) {
       <div className={styles.work_item}>
         <div className={styles.work_description}>
           <p className={styles.role}>{props.position}</p>
-          <ul>
+          {/* <ul>
             {props.description.map((description) => {
               return <li>{description}</li>
             })}
-          </ul>
+          </ul> */}
         </div>
-        <div className={styles.work_image}>
+        {/* <div className={styles.work_image}>
           <img src={props.image} />
-        </div>
+        </div> */}
       </div>
     </div>
   )
