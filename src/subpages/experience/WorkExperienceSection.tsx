@@ -22,9 +22,17 @@ export default function WorkExperienceSection() {
       <h2>Work Experience</h2>
       <hr />
       <div className={styles.work_list}>
-        <WorkExperience companyName="Summations" companyLink="https://summations.com/" duration="Aug. 2023 - Present" position="Next.js Developer Internship (Remote)" description={[]} image="" />
-        <WorkExperience companyName="Sandman Media Inc." companyLink="https://www.sandmanmedia.com/" duration="Jun. 2023 - Aug. 2023" position="Part-time Web Developer" description={sandmanmediaDescription} image="/img/webdev.jpg" />
-        <WorkExperience companyName="Muratec Machinery" companyLink="https://www.muratec.jp/" duration="Apr. 2017 - Aug. 2022" position="Software Engineer" description={muratecDescription} image="/img/semicon.jpg" />
+        <WorkExperience
+          companyName="Summations"
+          companyLink="https://summations.com/"
+          companyCountry="CA"
+          duration="Aug. 2023 - Present"
+          position="Next.js Developer Internship (Remote)"
+          description={[]}
+          image=""
+        />
+        <WorkExperience companyName="Sandman Media Inc." companyLink="https://www.sandmanmedia.com/" companyCountry="CA" duration="Jun. 2023 - Aug. 2023" position="Part-time Web Developer" description={sandmanmediaDescription} image="/img/webdev.jpg" />
+        <WorkExperience companyName="Muratec Machinery" companyLink="https://www.muratec.jp/" companyCountry="JP" duration="Apr. 2017 - Aug. 2022" position="Software Engineer" description={muratecDescription} image="/img/semicon.jpg" />
       </div>
     </div>
   )
