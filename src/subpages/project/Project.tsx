@@ -1,22 +1,27 @@
 import styles from './project.module.scss'
 
+type Project = {
+  name: string;
+  description: string;
+  domoLink: string;
+  gitLink: string;
+  image: string;
+  skills: string[];
+}
 type Props = {
-  projectName: string;
-  projectLink: string;
-  projectImage: string;
-  projectLangs: string[];
+  project: Project;
 };
 
-export default function Project(props: Props) {
+export default function Project({project}: Props) {
   return (
     <div className={styles.project}>
-      <a className={styles.project_link} href={props.projectLink}>
-        <img className={styles.project_image} src={props.projectImage}></img>
+      <a className={styles.project_link} href={project.gitLink}>
+        <img className={styles.project_image} src={`img/${project.image}`}></img>
         <div className={styles.project_filter}>
-          <div className={styles.project_name}>{props.projectName}</div>
+          <div className={styles.project_name}>{project.name}</div>
           <div className={styles.project_langs}>
-            {props.projectLangs.map((projectLang) => {
-              return <div className={styles.project_lang}>{projectLang}</div>
+            {project.skills.map((skill) => {
+              return <div className={styles.project_lang}>{skill}</div>
             })}
           </div>
         </div>
