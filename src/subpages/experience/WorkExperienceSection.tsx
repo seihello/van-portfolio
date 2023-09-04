@@ -32,7 +32,7 @@ export default function WorkExperienceSection() {
           image=""
         />
         <WorkExperience companyName="Sandman Media Inc." companyLink="https://www.sandmanmedia.com/" companyCountry="CA" duration="Jun. 2023 - Aug. 2023" position="Part-time Web Developer" description={sandmanmediaDescription} image="/img/webdev.jpg" />
-        <WorkExperience companyName="Muratec Machinery" companyLink="https://www.muratec.jp/" companyCountry="JP" duration="Apr. 2017 - Aug. 2022" position="Software Engineer" description={muratecDescription} image="/img/semicon.jpg" />
+        <WorkExperience companyName="Muratec Machinery" companyLink="https://www.muratec.net/" companyCountry="JP" duration="Apr. 2017 - Aug. 2022" position="Software Engineer" description={muratecDescription} image="/img/semicon.jpg" />
       </div>
     </div>
   )
