@@ -13,7 +13,7 @@ const projects = [
     demoLink: "https://english.seisuke.info/",
     gitLink: "https://github.com/seihello/EverydayEnglish-on-Browser",
     image: "everydayenglish-browser.png",
-    skills: ["HTML", "CSS(Sass)", "JavaScript", "JQuery"]
+    skills: ["HTML", "CSS", "Sass", "JavaScript", "JQuery"]
   },
   {
     name: "English Learning(iOS)",
@@ -45,7 +45,7 @@ const projects = [
     demoLink: "https://weather.seisuke.info/",
     gitLink: "https://github.com/seihello/weather-app",
     image: "weatherapp.png",
-    skills: ["HTML", "CSS(Sass)", "JavaScript"]
+    skills: ["HTML", "CSS", "Sass", "JavaScript"]
   },
   {
     name: "CSS Gallery",
@@ -53,7 +53,7 @@ const projects = [
     demoLink: "https://css-gallery.seisuke.info/",
     gitLink: "https://github.com/seihello/css-gallery",
     image: "cssgallery.png",
-    skills: ["HTML", "CSS(Sass)", "JavaScript"]
+    skills: ["HTML", "CSS", "Sass", "JavaScript"]
   }
 ]
 

@@ -1,4 +1,5 @@
 import styles from './project.module.scss'
+import skills from '../../setting/skills';
 
 type Project = {
   name: string;
@@ -33,7 +34,10 @@ export default function Project({ project }: Props) {
         </div>
         <div className={styles.skills}>
           {project.skills.map((skill) => {
-            return <div className={styles.skill}>{skill}</div>
+            const skillSetting = skills.find((skillSetting) => {
+              return skillSetting.name === skill
+            })
+            return <div className={styles.skill} style={{backgroundColor: skillSetting?.color}}>{skill}</div>
           })}
         </div>
       </div>
