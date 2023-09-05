@@ -4,7 +4,8 @@
   margin: 0;
 }
 
-.work_list, .education_list {
+.work_list,
+.education_list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,6 +22,10 @@
       padding-top: 0;
       padding-bottom: 0;
 
+      h3 {
+        font-weight: normal;
+      }
+
       .org_name {
         width: 50%;
         display: flex;
@@ -31,15 +36,13 @@
           display: flex;
           align-items: center;
           display: flex;
-          column-gap: .4rem;
+          column-gap: 0.4rem;
 
           img {
             height: 1.5rem;
           }
         }
       }
-
-
     }
 
     .work_item {
@@ -68,13 +71,12 @@
         }
       }
     }
-
   }
 }
 
-
 @media (width <= 768px) {
-  .work_list, .education_list {
+  .work_list,
+  .education_list {
     row-gap: 50px;
 
     .experience_first {
@@ -87,8 +89,8 @@
       padding-bottom: 0;
 
       .org_name {
-        width: 100%!important;
-        justify-content: center!important;
+        width: 100% !important;
+        justify-content: center !important;
       }
     }
 
@@ -97,7 +99,7 @@
       flex-direction: column;
 
       .work_description {
-        width: 100%!important;
+        width: 100% !important;
 
         li {
           text-align: left;

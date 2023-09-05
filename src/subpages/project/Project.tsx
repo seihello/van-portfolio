@@ -1,26 +1,42 @@
 import styles from './project.module.scss'
 
+type Project = {
+  name: string;
+  description: string;
+  demoLink: string;
+  gitLink: string;
+  image: string;
+  skills: string[];
+}
 type Props = {
-  projectName: string;
-  projectLink: string;
-  projectImage: string;
-  projectLangs: string[];
+  project: Project;
 };
 
-export default function Project(props: Props) {
+export default function Project({ project }: Props) {
   return (
     <div className={styles.project}>
-      <a className={styles.project_link} href={props.projectLink}>
-        <img className={styles.project_image} src={props.projectImage}></img>
-        <div className={styles.project_filter}>
-          <div className={styles.project_name}>{props.projectName}</div>
-          <div className={styles.project_langs}>
-            {props.projectLangs.map((projectLang) => {
-              return <div className={styles.project_lang}>{projectLang}</div>
-            })}
-          </div>
+      <div className={styles.image_container}>
+        <img src={`img/${project.image}`} />
+      </div>
+      <div className={styles.info}>
+        <div className={styles.title}>
+          <h3 className={styles.name}>{project.name}</h3>
+          {project.gitLink && (
+            <a href={project.gitLink} target="_blank"><i className={`${styles.git_link} fa-brands fa-github`}></i></a>
+          )}
+          {project.demoLink && (
+            <a href={project.demoLink} target="_blank"><i className={`${styles.demo_link} fa-solid fa-globe`}></i></a>
+          )}
         </div>
-      </a>
+        <div className={styles.description}>
+          {project.description}
+        </div>
+        <div className={styles.skills}>
+          {project.skills.map((skill) => {
+            return <div className={styles.skill}>{skill}</div>
+          })}
+        </div>
+      </div>
     </div>
   )
 }
