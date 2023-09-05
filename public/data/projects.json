@@ -1,7 +1,7 @@
 [
   {
     "name": "Reversi",
-    "description": "This Reversi game that allows you to play against a computer opponent, engage in two-player matches, and even observe computer vs. computer battles.",
+    "description": "This Reversi game allows you to play against a computer opponent, engage in two-player matches, and even observe computer vs. computer battles.",
     "demoLink": "",
     "gitLink": "https://github.com/seihello/Reversi",
     "image": "reversi.png",
