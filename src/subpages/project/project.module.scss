@@ -10,27 +10,46 @@
 
 .project {
   width: 100%;
+  @include tablet(height, 320px, 600px);
+
   display: flex;
+  @include tablet(flex-direction, row, column);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 1px 1px 5px hsl(0, 0, 70);
 
-  img {
-    width: 400px;
-    height: auto;
+  .image_container {
+    width: 35%;
+    @include tablet(width, 35%, 100%);
+    @include tablet(height, 100%, 50%);
+    overflow: hidden;
+    position: relative;
     box-shadow: 1px 1px 5px hsl(0, 0, 70);
+
+    img {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+    }
   }
 
   .info {
+    @include tablet(width, 65%, 100%);
+    @include tablet(height, auto, 50%);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    @include tablet(justify-content, flex-start, center);
+
 
     .title {
       display: flex;
-      column-gap: .5rem;
+      column-gap: 0.5rem;
       align-items: center;
+      @include tablet(justify-content, flex-start, center);
 
       .name {
         font-size: 1.5rem;
@@ -52,17 +71,18 @@
 
     .skills {
       display: flex;
-      column-gap: .5rem;
+      column-gap: 0.5rem;
+      @include tablet(justify-content, flex-start, center);
       .skill {
+        font-size: 0.9rem;
         background-color: hsl(0, 0, 30);
         color: white;
-        padding: .4rem .6rem;
-        border-radius: .3rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: 0.3rem;
       }
     }
   }
 }
 
 @media (width <= 768px) {
-
-} 
+}

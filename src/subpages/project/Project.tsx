@@ -15,7 +15,9 @@ type Props = {
 export default function Project({ project }: Props) {
   return (
     <div className={styles.project}>
-      <img src={`img/${project.image}`} />
+      <div className={styles.image_container}>
+        <img src={`img/${project.image}`} />
+      </div>
       <div className={styles.info}>
         <div className={styles.title}>
           <h3 className={styles.name}>{project.name}</h3>
