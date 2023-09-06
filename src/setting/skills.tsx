@@ -140,7 +140,7 @@ const skills = [
     icon: "kivy"
   },
   {
-    name: "Tkinter",
+    name: "TKinter",
     color: "#3C3F40",
     icon: "tkinter"
   },
