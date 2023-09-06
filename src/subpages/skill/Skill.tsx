@@ -1,18 +1,18 @@
 import styles from './skill.module.scss'
+import skills from '../../setting/skills'
 
-export type SkillProps = {
-  skillName: string;
-  proficiency: number;
-};
+type SkillProps = {
+  name: string;
+}
 
-export default function Skill(props: SkillProps) {
+export default function Skill({ name }: SkillProps) {
+
+  const skill = skills.find((skill) => skill.name === name);
+
   return (
     <div className={styles.skill}>
-      <p className={styles.skill_name}>{props.skillName}</p>
-      <div className={styles.skill_rate_box}>
-        <div className={`${styles.skill_rate} ${styles[`rate${props.proficiency}`]}`}>
-        </div>
-      </div>
+      <img src={`/img/skill_logo/${skill?.icon}.svg`} />
+      <div className={styles.name}>{name}</div>
     </div>
   )
 }

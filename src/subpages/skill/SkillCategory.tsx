@@ -1,20 +1,18 @@
-import commonStyles from '../../common.module.scss'
 import styles from './skill.module.scss'
-import Skill, { SkillProps } from './Skill'
+import Skill from './Skill'
 
 type Props = {
   categoryTitle: string;
-  skillList: SkillProps[];
+  skillList: string[];
 }
 
-export default function SkillCategory(props: Props) {
+export default function SkillCategory({ categoryTitle, skillList }: Props) {
   return (
-    <div className={commonStyles.section}>
-      <h2>{props.categoryTitle}</h2>
-      <hr />
+    <div className={styles.category}>
+      <h3>{categoryTitle}</h3>
       <div className={styles.skills}>
-        {props.skillList.map((skill) => {
-          return <Skill skillName={skill.skillName} proficiency={skill.proficiency} />
+        {skillList.map((skill) => {
+          return <Skill name={skill} />
         })}
       </div>
     </div>

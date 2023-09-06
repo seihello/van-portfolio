@@ -12,7 +12,7 @@ const skills = [
   {
     name: "Python",
     color: "#376D9C",
-    icon: "py"
+    icon: "python"
   },
   {
     name: "Java",
@@ -70,14 +70,24 @@ const skills = [
     icon: "php"
   },
   {
+    name: "Swift",
+    color: "#E84F36",
+    icon: "swift"
+  },
+  {
     name: "SQL",
     color: "#2472C1",
-    icon: ""
+    icon: "sql"
   },
   {
     name: "MySQL",
     color: "#242938",
     icon: "mysql"
+  },
+  {
+    name: "SQLite",
+    color: "#242938",
+    icon: "sqlite"
   },
   {
     name: "Jenkins",
@@ -87,12 +97,12 @@ const skills = [
   {
     name: "Windows",
     color: "#024FDE",
-    icon: ""
+    icon: "windows"
   },
   {
     name: "macOS",
     color: "#3C3F40",
-    icon: ""
+    icon: "mac"
   },
   {
     name: "Linux",
@@ -112,12 +122,12 @@ const skills = [
   {
     name: "Neo4j",
     color: "#0287F7",
-    icon: ""
+    icon: "neo4j"
   },
   {
     name: "Vue.js",
     color: "#3FB883",
-    icon: "vue"
+    icon: "vuejs"
   },
   {
     name: "Selenium",
@@ -127,27 +137,32 @@ const skills = [
   {
     name: "Kivy",
     color: "#3C3F40",
-    icon: ""
+    icon: "kivy"
   },
   {
     name: "Tkinter",
     color: "#3C3F40",
-    icon: ""
+    icon: "tkinter"
+  },
+  {
+    name: "Mantine",
+    color: "#329AEF",
+    icon: "mantine"
   },
   {
     name: "Agile Development",
     color: "#3C3F40",
-    icon: ""
+    icon: "agile"
   },
   {
     name: "DevOps",
     color: "#4e1900",
-    icon: ""
+    icon: "devops"
   },
   {
     name: "Redmine",
     color: "#A91500",
-    icon: ""
+    icon: "redmine"
   },
   {
     name: "Git",
@@ -155,19 +170,34 @@ const skills = [
     icon: "git"
   },
   {
-    name: "Semi Standard",
+    name: "SEMI Standards",
     color: "#447016",
-    icon: ""
+    icon: "semi"
   },
   {
     name: "UML",
     color: "#3b007b",
-    icon: ""
+    icon: "uml"
+  },
+  {
+    name: "OOP",
+    color: "#3b007b",
+    icon: "oop"
   },
   {
     name: "Joomla!",
     color: "#006EB6",
-    icon: ""
+    icon: "joomla"
+  },
+  {
+    name: "Figma",
+    color: "#A259FF",
+    icon: "figma"
+  },
+  {
+    name: "Firebase",
+    color: "#d1b800",
+    icon: "firebase"
   },
 ]
 
