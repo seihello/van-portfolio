@@ -199,6 +199,11 @@ const skills = [
     color: "#d1b800",
     icon: "firebase"
   },
+  {
+    name: "ChatGPT",
+    color: "#0BA37F",
+    icon: "chatgpt"
+  },
 ]
 
 export default skills;

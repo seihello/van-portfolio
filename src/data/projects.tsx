@@ -40,6 +40,14 @@ const projects = [
     skills: ["Python", "Selenium"]
   },
   {
+    name: "Chat Bot",
+    description: "A chatbot running on the Gravity social media that automatically talks to users by recognizing their voices and generating natural responses using ChatGPT.",
+    demoLink: "",
+    gitLink: "https://github.com/seihello/robovity",
+    image: "default.png",
+    skills: ["Python", "ChatGPT"]
+  },
+  {
     name: "Weather App",
     description: "A web application that displays weather information. It provides current weather, a 5-day forecast, and 3-hourly forecasts. Users can not only check the weather at their current location but also bookmark their favorite cities.",
     demoLink: "https://weather.seisuke.info/",
