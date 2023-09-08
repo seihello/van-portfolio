@@ -2,7 +2,7 @@ const skills = [
   {
     category: "Computer Language",
     values: [
-      "C", "C++", "Python", "Java", "JavaScript", "PHP", "HTML", "CSS", "Sass", "SQL", "Swift"
+      "C", "C++", "Python", "Java", "JavaScript", "PHP", "HTML", "CSS", "Sass", "Dart", "SQL"
     ]
   },
   {

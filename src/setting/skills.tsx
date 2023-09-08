@@ -75,6 +75,11 @@ const skills = [
     icon: "swift"
   },
   {
+    name: "Dart",
+    color: "#00D2B8",
+    icon: "dart"
+  },
+  {
     name: "SQL",
     color: "#2472C1",
     icon: "sql"
