@@ -62,6 +62,22 @@ const projects = [
     gitLink: "https://github.com/seihello/css-gallery",
     image: "cssgallery.png",
     skills: ["HTML", "CSS", "Sass", "JavaScript"]
+  },
+  {
+    name: "Citation Generator",
+    description: "A web application that displays information related to article or paper citations, allowing users to customize the design and export it as an image.",
+    demoLink: "",
+    gitLink: "https://cite-so.vercel.app/",
+    image: "cite.png",
+    skills: ["HTML", "CSS", "Next.js"]
+  },
+  {
+    name: "Transport Controller",
+    description: "A large-scale C++ application that controls thousands of machines transporting products in a semiconductor factory. It centralizes the status of transport and each machine, and implements appropriate path-finding and task-dispatching based on real-time conditions, to improve the efficiency of the entire transportation system.",
+    demoLink: "https://www.muratec.net/cfa/products/",
+    gitLink: "",
+    image: "semiconapp.jpg",
+    skills: ["C", "C++", "Vue.js"]
   }
 ]
 
