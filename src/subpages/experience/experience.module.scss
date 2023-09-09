@@ -51,7 +51,7 @@
       gap: 0 4rem;
 
       .work_description {
-        width: 60%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         row-gap: 20px;
@@ -59,6 +59,23 @@
         .role {
           margin-block: 0;
           font-style: italic;
+        }
+
+        .skills {
+          @include tablet(width, 50%, 100%);
+          display: flex;
+          column-gap: 0.5rem;
+          @include tablet(justify-content, flex-start, center);
+          flex-wrap: wrap;
+          row-gap: 0.5rem;
+          .skill {
+            font-size: 0.9rem;
+            // background-color: hsl(0, 0, 30);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.3rem;
+            white-space: nowrap;
+          }
         }
       }
 

@@ -1,4 +1,5 @@
 import styles from './experience.module.scss'
+import skills from '../../setting/skills'
 
 type Props = {
   companyName: string;
@@ -6,6 +7,7 @@ type Props = {
   companyCountry: string;
   duration: string;
   position: string;
+  skills: string[];
   description: string[];
   image?: string;
 }
@@ -26,6 +28,14 @@ export default function WorkExperience(props: Props) {
       <div className={styles.work_item}>
         <div className={styles.work_description}>
           <p className={styles.role}>{props.position}</p>
+          <div className={styles.skills}>
+            {props.skills.map((skill) => {
+              const skillSetting = skills.find((skillSetting) => {
+                return skillSetting.name === skill
+              })
+              return <div className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
+            })}
+          </div>
           {/* <ul>
             {props.description.map((description) => {
               return <li>{description}</li>

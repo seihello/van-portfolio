@@ -28,11 +28,30 @@ export default function WorkExperienceSection() {
           companyCountry="CA"
           duration="Aug. 2023 - Present"
           position="Next.js Developer Internship (Remote)"
+          skills={["HTML", "CSS", "JavaScript", "Next.js", "Mantine", "Git"]}
           description={[]}
           image=""
         />
-        <WorkExperience companyName="Sandman Media Inc." companyLink="https://www.sandmanmedia.com/" companyCountry="CA" duration="Jun. 2023 - Aug. 2023" position="Part-time Web Developer" description={sandmanmediaDescription} image="/img/webdev.jpg" />
-        <WorkExperience companyName="Muratec Machinery" companyLink="https://www.muratec.net/" companyCountry="JP" duration="Apr. 2017 - Aug. 2022" position="Software Engineer" description={muratecDescription} image="/img/semicon.jpg" />
+        <WorkExperience
+          companyName="Sandman Media Inc."
+          companyLink="https://www.sandmanmedia.com/"
+          companyCountry="CA"
+          duration="Jun. 2023 - Aug. 2023"
+          position="Part-time Web Developer"
+          skills={["HTML", "CSS", "Sass", "JavaScript", "PHP", "MySQL", "Joomla!"]}
+          description={sandmanmediaDescription}
+          image="/img/webdev.jpg"
+        />
+        <WorkExperience
+          companyName="Muratec Machinery"
+          companyLink="https://www.muratec.net/"
+          companyCountry="JP"
+          duration="Apr. 2017 - Aug. 2022"
+          position="Software Engineer"
+          skills={["C", "C++", "Python", "SQL", "Vue.js", "Git", "Jenkins", "Redmine", "Linux", "OOP", "UML", "DevOps", "Agile Development", "SEMI Standards"]}
+          description={muratecDescription}
+          image="/img/semicon.jpg"
+        />
       </div>
     </div>
   )
