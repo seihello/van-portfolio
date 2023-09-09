@@ -3,9 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 type MenuContextProps = {
   menuItems: Array<{name: string, path: string}>;
-  // location: Location;
   currentMenu: string;
-  // setCurrentMenu: React.Dispatch<React.SetStateAction<string>>;
 }
 export const MenuContext = createContext<MenuContextProps | null>(null);
 
