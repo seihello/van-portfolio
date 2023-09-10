@@ -12,14 +12,14 @@ export type Project = {
 
 type ProjectContextProps = {
   projects: Project[];
-  selectedSkills: string[];
-  setSelectedSkills: React.Dispatch<React.SetStateAction<never[]>>;
+  selectedSkills: Set<string>;
+  setSelectedSkills: (selectedSkills: Set<string>) => void;
 }
-export const ProjectContext = createContext<ProjectContextProps | null>(null);
+export const ProjectContext = createContext<ProjectContextProps>({} as ProjectContextProps);
 
 export function ProjectContextProvider({ children }: { children: ReactNode }) {
 
-  const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedSkills, setSelectedSkills] = useState<Set<string>>(new Set());
 
   return (
     <ProjectContext.Provider value={{projects, selectedSkills, setSelectedSkills}}>

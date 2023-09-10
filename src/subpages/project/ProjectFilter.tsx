@@ -6,9 +6,7 @@ import { ProjectContext } from '../../context/projectContext'
 
 export default function ProjectFilter() {
 
-  const projects = useContext(ProjectContext)?.projects;
-  const selectedSkills = useContext(ProjectContext)?.selectedSkills;
-  const setSelectedSkills = useContext(ProjectContext)?.setSelectedSkills;
+  const { projects, selectedSkills, setSelectedSkills } = useContext(ProjectContext);
 
   const filterSkills = new Set<string>();
   if (projects) {
@@ -19,15 +17,30 @@ export default function ProjectFilter() {
     }
   }
 
+  const onClickedFiliterItem = (filterSkill: string) => {
+    const newSelectedSkills = new Set<string>(selectedSkills);
+    newSelectedSkills.add(filterSkill);
+    setSelectedSkills(newSelectedSkills);
+  }
+
   return (
     <div className={styles.filter}>
       {[...filterSkills].map((filterSkill) => {
         const skill = skills.find((skill) => skill.name === filterSkill);
         return (
-          <div className={styles.filter_item} style={{
+          <div
+          className={styles.filter_item}
+          style={selectedSkills.has(filterSkill) ? {
+            backgroundColor: skill?.color,
+            color: "white",
+            border: `1px solid ${skill?.color}`,
+          } : {
+            backgroundColor: "white",
             color: skill?.color,
             border: `1px solid ${skill?.color}`,
-          }}>
+          }}
+          onClick={() => onClickedFiliterItem(filterSkill)}
+          >
             {filterSkill}
           </div>
         )
