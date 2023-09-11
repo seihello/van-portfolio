@@ -1,5 +1,4 @@
 import styles from './project.module.scss'
-import commonStyles from '../../common.module.scss'
 import skills from '../../setting/skills'
 import { useContext } from 'react'
 import { ProjectContext } from '../../context/projectContext'
