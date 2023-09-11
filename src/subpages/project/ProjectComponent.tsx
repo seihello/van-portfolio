@@ -1,19 +1,13 @@
 import styles from './project.module.scss'
 import skills from '../../setting/skills';
+import { Project } from '../../context/projectContext';
 
-type Project = {
-  name: string;
-  description: string;
-  demoLink: string;
-  gitLink: string;
-  image: string;
-  skills: string[];
-}
+
 type Props = {
   project: Project;
 };
 
-export default function Project({ project }: Props) {
+export default function ProjectComponent({ project }: Props) {
   return (
     <div className={styles.project}>
       <div className={styles.image_container}>

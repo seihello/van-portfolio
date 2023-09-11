@@ -12,13 +12,14 @@ import MobileMenu from './menu/MobileMenu'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import React, { createContext, useRef } from 'react';
 import { MenuContextProvider } from './context/menuContext'
+import { ProjectContextProvider } from './context/projectContext'
 
-export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({current: null});
+export const mobileMenuContext = createContext<React.MutableRefObject<HTMLDivElement | null>>({ current: null });
 
 function App() {
 
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-  const location = useLocation() 
+  const location = useLocation()
 
   return (
     <>
@@ -29,8 +30,10 @@ function App() {
           <MobileMenuOpen />
         </MenuContextProvider>
       </mobileMenuContext.Provider>
-      {<HomePageHeader isHome={location.pathname === "/"}/>}
-      <main>
+      {<HomePageHeader isHome={location.pathname === "/"} />}
+
+      <ProjectContextProvider>
+        <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectPage />} />
@@ -38,7 +41,8 @@ function App() {
             <Route path="/experience" element={<ExperiencePage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
-      </main>
+        </main>
+      </ProjectContextProvider>
       <Footer />
     </>
   )
