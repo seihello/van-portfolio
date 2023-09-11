@@ -27,7 +27,7 @@
 
   .project {
     width: 100%;
-    @include tablet(height, 320px, 600px);
+    @include tablet(height, 320px, auto);
 
     display: flex;
     @include tablet(flex-direction, row, column);
@@ -36,9 +36,8 @@
     box-shadow: 1px 1px 5px hsl(0, 0, 70);
 
     .image_container {
-      width: 35%;
       @include tablet(width, 35%, 100%);
-      @include tablet(height, 100%, 50%);
+      @include tablet(height, 100%, 300px);
       overflow: hidden;
       position: relative;
       box-shadow: 1px 1px 5px hsl(0, 0, 70);
@@ -54,12 +53,12 @@
 
     .info {
       @include tablet(width, 65%, 100%);
-      @include tablet(height, auto, 50%);
+      height: auto;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       row-gap: 2rem;
-      @include tablet(justify-content, flex-start, center);
+      @include tablet(justify-content, flex-start, flex-start);
 
       .title {
         display: flex;
@@ -87,8 +86,9 @@
 
       .skills {
         display: flex;
-        column-gap: 0.5rem;
+        gap: 0.5rem;
         @include tablet(justify-content, flex-start, center);
+        flex-wrap: wrap;
         .skill {
           font-size: 0.9rem;
           // background-color: hsl(0, 0, 30);
