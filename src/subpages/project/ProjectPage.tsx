@@ -1,13 +1,27 @@
-import ProjectComponent from './ProjectComponent'
+import { useContext } from 'react'
 import styles from './project.module.scss'
 import commonStyles from '../../common.module.scss'
-import ProjectFilter from './ProjectFilter'
 import { ProjectContext } from '../../context/projectContext'
-import { useContext } from 'react'
+import { Project } from '../../context/projectContext'
+import ProjectComponent from './ProjectComponent'
+import ProjectFilter from './ProjectFilter'
 
 export default function ProjectPage() {
 
-  const projects = useContext(ProjectContext)?.projects;
+  const { projects, selectedSkills } = useContext(ProjectContext);
+  let selectedProjects: Project[] = [];
+  if (selectedSkills.has("All")) {
+    selectedProjects = projects;
+  } else {
+    selectedProjects = projects.filter((project) => {
+      for (const selectedSkill of selectedSkills) {
+        if (project.skills.includes(selectedSkill)) {
+          return true;
+        }
+      }
+      return false;
+    });
+  }
 
   return (
     <>
@@ -16,12 +30,12 @@ export default function ProjectPage() {
         <hr />
         <ProjectFilter />
         <div className={styles.projects}>
-          {projects?.map((project) => {
+          {selectedProjects?.map((project) => {
             return <ProjectComponent project={project} />
           })}
         </div>
       </div>
     </>
-  )
+  );
 }
 
