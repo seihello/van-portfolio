@@ -9,11 +9,9 @@ export default function ProjectFilter() {
   const { projects, selectedSkills, setSelectedSkills } = useContext(ProjectContext);
 
   const filterSkills = new Set<string>(["All"]);
-  if (projects) {
-    for (const project of projects) {
-      for (const skill of project.skills) {
-        filterSkills.add(skill);
-      }
+  for (const project of projects) {
+    for (const skill of project.skills) {
+      filterSkills.add(skill);
     }
   }
 
@@ -25,7 +23,11 @@ export default function ProjectFilter() {
 
   const onClickedFiliterItem = (filterSkill: string) => {
     const newSelectedSkills = new Set<string>(selectedSkills);
-    newSelectedSkills.add(filterSkill);
+    if (selectedSkills.has(filterSkill)) {
+      newSelectedSkills.delete(filterSkill);
+    } else {
+      newSelectedSkills.add(filterSkill);
+    }
     setSelectedSkills(newSelectedSkills);
   }
 
