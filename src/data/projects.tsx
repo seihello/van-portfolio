@@ -66,8 +66,8 @@ const projects = [
   {
     name: "Citation Generator",
     description: "A web application that displays information related to article or paper citations, allowing users to customize the design and export it as an image.",
-    demoLink: "",
-    gitLink: "https://cite-so.vercel.app/",
+    demoLink: "https://cite-so.vercel.app/",
+    gitLink: "",
     image: "cite.png",
     skills: ["HTML", "CSS", "Next.js"]
   },
