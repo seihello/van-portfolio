@@ -1,18 +1,11 @@
 import styles from './project.module.scss'
-import skills from '../../setting/skills'
+import skills, { filterSkills } from '../../setting/skills'
 import { useContext } from 'react'
 import { ProjectContext } from '../../context/projectContext'
 
 export default function ProjectFilter() {
 
-  const { projects, selectedSkills, setSelectedSkills } = useContext(ProjectContext);
-
-  const filterSkills = new Set<string>(["All"]);
-  for (const project of projects) {
-    for (const skill of project.skills) {
-      filterSkills.add(skill);
-    }
-  }
+  const { selectedSkills, setSelectedSkills } = useContext(ProjectContext);
 
   skills.push({
     name: "All",

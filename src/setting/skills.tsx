@@ -211,4 +211,21 @@ const skills = [
   },
 ]
 
+export const filterSkills = [
+  "All",
+  "HTML",
+  "CSS",
+  "Sass",
+  "JavaScript",
+  "PHP",
+  "JQuery",
+  "Next.js",
+  "Vue.js",
+  "C",
+  "C++",
+  "Python",
+  "Selenium",
+  "ChatGPT",
+];
+
 export default skills;
