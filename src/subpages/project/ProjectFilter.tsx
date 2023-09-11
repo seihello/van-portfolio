@@ -23,10 +23,21 @@ export default function ProjectFilter() {
 
   const onClickedFiliterItem = (filterSkill: string) => {
     const newSelectedSkills = new Set<string>(selectedSkills);
-    if (selectedSkills.has(filterSkill)) {
-      newSelectedSkills.delete(filterSkill);
-    } else {
-      newSelectedSkills.add(filterSkill);
+    if (filterSkill === "All") {
+      if (selectedSkills.has(filterSkill)) {
+        newSelectedSkills.delete(filterSkill);
+      } else {
+        newSelectedSkills.clear();
+        newSelectedSkills.add(filterSkill);
+      }
+    }
+    else {
+      if (selectedSkills.has(filterSkill)) {
+        newSelectedSkills.delete(filterSkill);
+      } else {
+        newSelectedSkills.add(filterSkill);
+        newSelectedSkills.delete("All");
+      }
     }
     setSelectedSkills(newSelectedSkills);
   }
