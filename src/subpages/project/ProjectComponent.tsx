@@ -11,15 +11,18 @@ type Props = {
 
 export default function ProjectComponent({ project }: Props) {
 
-  const { selectedSkills } = useContext(ProjectContext);
+  const { selectedSkills, isFiltered, setIsFiltered } = useContext(ProjectContext);
 
   const projectRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(projectRef.current, { y: "100%", opacity: 0, duration: .3 });
-    }, projectRef);
-    return () => ctx.revert();
+    if (isFiltered) {
+      setIsFiltered(false);
+      let ctx = gsap.context(() => {
+        gsap.from(projectRef.current, { y: "100%", opacity: 0, duration: .3 });
+      }, projectRef);
+      return () => ctx.revert();
+    }
   }, [selectedSkills]);
 
   return (
@@ -45,7 +48,7 @@ export default function ProjectComponent({ project }: Props) {
             const skillSetting = skills.find((skillSetting) => {
               return skillSetting.name === skill
             })
-            return <div className={styles.skill} style={{backgroundColor: skillSetting?.color}}>{skill}</div>
+            return <div className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
           })}
         </div>
       </div>

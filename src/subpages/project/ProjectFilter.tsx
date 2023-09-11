@@ -5,7 +5,7 @@ import { ProjectContext } from '../../context/projectContext'
 
 export default function ProjectFilter() {
 
-  const { selectedSkills, setSelectedSkills } = useContext(ProjectContext);
+  const { selectedSkills, setSelectedSkills, setIsFiltered } = useContext(ProjectContext);
 
   skills.push({
     name: "All",
@@ -34,6 +34,7 @@ export default function ProjectFilter() {
         newSelectedSkills.delete("All");
       }
     }
+    setIsFiltered(true);
     setSelectedSkills(newSelectedSkills);
   }
 
