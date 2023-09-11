@@ -27,7 +27,7 @@ export default function WorkExperienceSection() {
           companyLink="https://summations.com/"
           companyCountry="CA"
           duration="Aug. 2023 - Present"
-          position="Next.js Developer Internship (Remote)"
+          position="Web Developer Internship (Remote)"
           skills={["HTML", "CSS", "JavaScript", "Next.js", "Mantine", "Git"]}
           description={[]}
           image=""
@@ -37,7 +37,7 @@ export default function WorkExperienceSection() {
           companyLink="https://www.sandmanmedia.com/"
           companyCountry="CA"
           duration="Jun. 2023 - Aug. 2023"
-          position="Part-time Web Developer"
+          position="Web Developer"
           skills={["HTML", "CSS", "Sass", "JavaScript", "PHP", "MySQL", "Joomla!"]}
           description={sandmanmediaDescription}
           image="/img/webdev.jpg"
