@@ -23,13 +23,15 @@ export default function ProjectPage() {
     });
   }
 
+  const marginBottom = Math.max(0, 320 * (3 - selectedProjects.length));
+
   return (
     <>
       <div className={commonStyles.section}>
         <h2>Project</h2>
         <hr />
         <ProjectFilter />
-        <div className={styles.projects}>
+        <div className={styles.projects} style={{marginBottom}}>
           {selectedProjects?.map((project) => {
             return <ProjectComponent project={project} />
           })}
