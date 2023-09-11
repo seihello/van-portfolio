@@ -8,7 +8,7 @@ export default function ProjectFilter() {
 
   const { projects, selectedSkills, setSelectedSkills } = useContext(ProjectContext);
 
-  const filterSkills = new Set<string>();
+  const filterSkills = new Set<string>(["All"]);
   if (projects) {
     for (const project of projects) {
       for (const skill of project.skills) {
@@ -16,6 +16,12 @@ export default function ProjectFilter() {
       }
     }
   }
+
+  skills.push({
+    name: "All",
+    color: "#000000",
+    icon: ""
+  });
 
   const onClickedFiliterItem = (filterSkill: string) => {
     const newSelectedSkills = new Set<string>(selectedSkills);
@@ -29,17 +35,17 @@ export default function ProjectFilter() {
         const skill = skills.find((skill) => skill.name === filterSkill);
         return (
           <div
-          className={styles.filter_item}
-          style={selectedSkills.has(filterSkill) ? {
-            backgroundColor: skill?.color,
-            color: "white",
-            border: `1px solid ${skill?.color}`,
-          } : {
-            backgroundColor: "white",
-            color: skill?.color,
-            border: `1px solid ${skill?.color}`,
-          }}
-          onClick={() => onClickedFiliterItem(filterSkill)}
+            className={styles.filter_item}
+            style={selectedSkills.has(filterSkill) ? {
+              backgroundColor: skill?.color,
+              color: "white",
+              border: `1px solid ${skill?.color}`,
+            } : {
+              backgroundColor: "white",
+              color: skill?.color,
+              border: `1px solid ${skill?.color}`,
+            }}
+            onClick={() => onClickedFiliterItem(filterSkill)}
           >
             {filterSkill}
           </div>

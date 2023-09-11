@@ -19,12 +19,12 @@ export const ProjectContext = createContext<ProjectContextProps>({} as ProjectCo
 
 export function ProjectContextProvider({ children }: { children: ReactNode }) {
 
-  const [selectedSkills, setSelectedSkills] = useState<Set<string>>(new Set());
+  const [selectedSkills, setSelectedSkills] = useState<Set<string>>(new Set("All"));
 
   return (
     <ProjectContext.Provider value={{projects, selectedSkills, setSelectedSkills}}>
       {children}
     </ProjectContext.Provider>
   );
-}
+} 
 
