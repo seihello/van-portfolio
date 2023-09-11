@@ -1,15 +1,29 @@
 import styles from './project.module.scss'
 import skills from '../../setting/skills';
+import { ProjectContext } from '../../context/projectContext'
 import { Project } from '../../context/projectContext';
-
+import { useLayoutEffect, useRef, useContext } from 'react';
+import gsap from 'gsap';
 
 type Props = {
   project: Project;
 };
 
 export default function ProjectComponent({ project }: Props) {
+
+  const { selectedSkills } = useContext(ProjectContext);
+
+  const projectRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(projectRef.current, { y: "100%", opacity: 0, duration: .3 });
+    }, projectRef);
+    return () => ctx.revert();
+  }, [selectedSkills]);
+
   return (
-    <div className={styles.project}>
+    <div ref={projectRef} className={styles.project}>
       <div className={styles.image_container}>
         <img src={`img/${project.image}`} />
       </div>
