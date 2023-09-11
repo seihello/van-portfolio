@@ -78,6 +78,14 @@ const projects = [
     gitLink: "",
     image: "semiconapp.jpg",
     skills: ["C", "C++", "Vue.js"]
+  },
+  {
+    name: "Corporate Website",
+    description: "A responsive corporate website consisting of multiple pages. Features include news feeds, subscriptions, and stock price information display.",
+    demoLink: "https://planetventuresinc.com/index.php",
+    gitLink: "",
+    image: "planet.png",
+    skills: ["HTML", "CSS", "Sass", "JavaScript", "PHP", "Joomla!"]
   }
 ]
 
