@@ -18,13 +18,14 @@
   }
 }
 
-@media (width < 1440px) {
+@media (width <= 1440px) {
   .profile {
     flex-direction: column;
     align-items: center;
   
     img.profile_image {
-      width: 80%;
+      width: 60%;
+      max-width: 300px;
     }
     
     .profile_text {
