@@ -48,7 +48,7 @@ export default function WorkExperienceSection() {
           companyCountry="JP"
           duration="Apr. 2017 - Aug. 2022"
           position="Software Engineer"
-          skills={["C", "C++", "Python", "SQL", "Vue.js", "Git", "Jenkins", "Redmine", "Linux", "OOP", "UML", "DevOps", "Agile Development", "SEMI Standards"]}
+          skills={["C", "C++", "Python", "SQL", "Vue.js", "Git", "Jenkins", "Redmine", "Linux", "OOP", "UML", "DevOps", "Agile Dev", "SEMI Standards"]}
           description={muratecDescription}
           image="/img/semicon.jpg"
         />
