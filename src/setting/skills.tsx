@@ -155,7 +155,7 @@ const skills = [
     icon: "mantine"
   },
   {
-    name: "Agile Development",
+    name: "Agile Dev",
     color: "#3C3F40",
     icon: "agile"
   },

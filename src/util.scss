@@ -5,7 +5,7 @@ $skytrain-yellow: #dbb600;
 @mixin tablet($property-name, $desktop-value, $tablet-value) {
   #{$property-name}: $tablet-value;
 
-  @media (min-width: calc($tablet-width - 1px)) {
+  @media (min-width: calc($tablet-width + 1px)) {
     #{$property-name}: $desktop-value;
   }
 }

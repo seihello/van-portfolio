@@ -32,7 +32,7 @@ const skills = [
   {
     category: "Other",
     values: [
-      "OOP", "UML", "DevOps", "Agile Development", "SEMI Standards"
+      "OOP", "UML", "DevOps", "Agile Dev", "SEMI Standards"
     ]
   }
 
