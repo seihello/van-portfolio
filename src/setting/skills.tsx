@@ -135,6 +135,11 @@ const skills = [
     icon: "vuejs"
   },
   {
+    name: "Flutter",
+    color: "#01B5F8",
+    icon: "flutter"
+  },
+  {
     name: "Selenium",
     color: "#59B943",
     icon: "selenium"
