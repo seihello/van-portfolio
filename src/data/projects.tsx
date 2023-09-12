@@ -25,7 +25,7 @@ const projects = [
   },
   {
     name: "English Learning(iOS)",
-    description: "An English vocabulary learning web application for iOS",
+    description: "An English vocabulary learning application for iOS",
     demoLink: "",
     gitLink: "https://github.com/seihello/EverydayEnglish",
     image: "everydayenglish.png",
@@ -41,7 +41,7 @@ const projects = [
   },
   {
     name: "Transport Controller",
-    description: "A large-scale C++ application that controls thousands of machines transporting products in a semiconductor factory. It centralizes the status of transport and each machine, and implements appropriate path-finding and task-dispatching based on real-time conditions, to improve the efficiency of the entire transportation system.",
+    description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It centralizes the status of transport and each machine, and implements appropriate path-finding and task-dispatching based on real-time conditions, to improve the efficiency of the entire transportation system.",
     demoLink: "https://www.muratec.net/cfa/products/",
     gitLink: "",
     image: "semiconapp.jpg",
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     name: "Chat Bot",
-    description: "A chatbot running on the Gravity social media that automatically talks to users by recognizing their voices and generating natural responses using ChatGPT.",
+    description: "A chatbot running on the social media that automatically talks to users by recognizing their voices and generating natural responses using ChatGPT.",
     demoLink: "",
     gitLink: "https://github.com/seihello/robovity",
     image: "default.png",
