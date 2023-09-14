@@ -37,7 +37,7 @@ const projects = [
     demoLink: "https://weather.seisuke.info/",
     gitLink: "https://github.com/seihello/weather-app",
     image: "weatherapp.png",
-    skills: ["HTML", "CSS", "Sass", "JavaScript"]
+    skills: ["HTML", "CSS", "Sass", "JavaScript", "JQuery"]
   },
   {
     name: "Transport Controller",
