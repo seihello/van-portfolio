@@ -5,7 +5,7 @@ const projects = [
     demoLink: "https://cite-so.vercel.app/",
     gitLink: "",
     image: "cite.png",
-    skills: ["HTML", "CSS", "Next.js"]
+    skills: ["HTML", "CSS", "React", "Next.js"]
   },
   {
     name: "Corporate Website",
