@@ -224,6 +224,7 @@ export const filterSkills = [
   "JavaScript",
   "PHP",
   "JQuery",
+  "React",
   "Next.js",
   "Vue.js",
   "C",

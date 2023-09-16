@@ -87,6 +87,14 @@ const projects = [
     image: "cssgallery.png",
     skills: ["HTML", "CSS", "Sass", "JavaScript"]
   },
+  {
+    name: "Portfolio",
+    description: "A responsive website showcasing my projects and professional background.",
+    demoLink: "https://www.seisuke.info/",
+    gitLink: "https://github.com/seihello/van-portfolio",
+    image: "portfolio.png",
+    skills: ["HTML", "CSS", "Sass", "JavaScript", "React"]
+  }
 ]
 
 export default projects;
