@@ -1,5 +1,13 @@
 const projects = [
   {
+    name: "Transport Controller",
+    description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It finds optimal transport routes, efficiently dispatches tasks, and manages transportation status. Comprised of numerous processes, it operates across multiple computers communicating by WebSocket. Its screen displays a map of the factory, the machine status, errors, and other relevant information. It also allows for software updates without any downtime.",
+    demoLink: "https://www.muratec.net/cfa/products/",
+    gitLink: "",
+    image: "semiconapp.jpg",
+    skills: ["C", "C++", "Vue.js"]
+  },
+  {
     name: "Citation Generator",
     description: "A single-page web application that displays information related to article or paper citations. Users can resize the card, choose its design, add a QR code or customize other things before exporting the information as an image.",
     demoLink: "https://cite-so.vercel.app/",
@@ -46,14 +54,6 @@ const projects = [
     gitLink: "https://github.com/seihello/tiny-links",
     image: "tinylinks.png",
     skills: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "EJS"]
-  },
-  {
-    name: "Transport Controller",
-    description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It finds optimal transport routes, efficiently dispatches tasks, and manages transportation status. Comprised of numerous processes, it operates across multiple computers communicating by WebSocket. Its screen displays a map of the factory, the machine status, errors, and other relevant information. It also allows for software updates without any downtime.",
-    demoLink: "https://www.muratec.net/cfa/products/",
-    gitLink: "",
-    image: "semiconapp.jpg",
-    skills: ["C", "C++", "Vue.js"]
   },
   {
     name: "Chat Bot",
