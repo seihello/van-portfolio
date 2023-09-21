@@ -40,6 +40,14 @@ const projects = [
     skills: ["HTML", "CSS", "Sass", "JavaScript", "JQuery"]
   },
   {
+    name: "Tiny Links",
+    description: "A malti-page web application for shortening long URLs. Users can add as many URLs as they like, and they can refer back to them even after leaving the page. The application has user registration and login features and manages cookies to maintain the login state.",
+    demoLink: "https://tiny-links.onrender.com/",
+    gitLink: "https://github.com/seihello/tiny-links",
+    image: "tinylinks.png",
+    skills: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "EJS"]
+  },
+  {
     name: "Transport Controller",
     description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It centralizes the status of transport and each machine, and implements appropriate path-finding and task-dispatching based on real-time conditions, to improve the efficiency of the entire transportation system.",
     demoLink: "https://www.muratec.net/cfa/products/",

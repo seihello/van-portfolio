@@ -65,6 +65,11 @@ const skills = [
     icon: "nodejs"
   },
   {
+    name: "Express",
+    color: "#2C2C2C",
+    icon: "express"
+  },
+  {
     name: "PHP",
     color: "#242938",
     icon: "php"
@@ -227,6 +232,7 @@ export const filterSkills = [
   "React",
   "Next.js",
   "Vue.js",
+  "Node.js",
   "C",
   "C++",
   "Python",
