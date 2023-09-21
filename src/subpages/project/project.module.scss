@@ -27,7 +27,8 @@
 
   .project {
     width: 100%;
-    @include tablet(height, 320px, auto);
+    height: auto;
+    @include tablet(min-height, 320px, auto);
 
     display: flex;
     @include tablet(flex-direction, row, column);
@@ -37,7 +38,7 @@
 
     .image_container {
       @include tablet(width, 35%, 100%);
-      @include tablet(height, 100%, 300px);
+      @include tablet(height, auto, 300px);
       overflow: hidden;
       position: relative;
       box-shadow: 1px 1px 5px hsl(0, 0, 70);

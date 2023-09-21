@@ -1,7 +1,7 @@
 const projects = [
   {
     name: "Citation Generator",
-    description: "A web application that displays information related to article or paper citations, allowing users to customize the design and export it as an image.",
+    description: "A single-page web application that displays information related to article or paper citations. Users can resize the card, choose its design, add a QR code or customize other things before exporting the information as an image.",
     demoLink: "https://cite-so.vercel.app/",
     gitLink: "",
     image: "cite.png",
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     name: "Weather App",
-    description: "A web application that displays weather information. It provides current weather, a 5-day forecast, and 3-hourly forecasts. Users can not only check the weather at their current location but also bookmark their favorite cities.",
+    description: "A single-page website that displays weather information. It provides current weather, a 5-day forecast, and 3-hourly forecasts. Users can not only check the weather at their current location but also bookmark their favorite cities.",
     demoLink: "https://weather.seisuke.info/",
     gitLink: "https://github.com/seihello/weather-app",
     image: "weatherapp.png",
@@ -49,7 +49,7 @@ const projects = [
   },
   {
     name: "Transport Controller",
-    description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It centralizes the status of transport and each machine, and implements appropriate path-finding and task-dispatching based on real-time conditions, to improve the efficiency of the entire transportation system.",
+    description: "A large-scale application that controls thousands of machines transporting products in a semiconductor factory. It finds optimal transport routes, efficiently dispatches tasks, and manages transportation status. Comprised of numerous processes, it operates across multiple computers communicating by WebSocket. Its screen displays a map of the factory, the machine status, errors, and other relevant information. It also allows for software updates without any downtime.",
     demoLink: "https://www.muratec.net/cfa/products/",
     gitLink: "",
     image: "semiconapp.jpg",
