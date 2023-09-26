@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className={styles.profile}>
           <img className={styles.profile_image} src="/img/profile.jpg" />
           <div className={styles.profile_text}>
-            Hi, I'm Seisuke, a full stack developer. I have dedicated over 5 years to software development after graduating with a degree in Computer Science and Engineering. My expertise widely ranges from large-scale embedded applications to web development. Along the way, I started to realize that I have a passion for creating efficient, maintainable, and user-friendly systems. I'm confident that this passion and sense of responsibility will make me the person you are looking for. I will continue my life journey while learning and growing.
+            Hi, I'm Seisuke, a full stack developer with a Bachelor's degree in Computer Science and 5+ years of experience in software development. My expertise widely ranges from large-scale embedded applications to web development. I consistently engage in coding activities and learning new technology on a daily basis while working on a group project. Considered responsible and detail-oriented, I contribute to team goals with a passion for building efficient, maintainable, and user-friendly systems. I will continue my life journey while learning and growing.
           </div>
         </div>
       </div>
