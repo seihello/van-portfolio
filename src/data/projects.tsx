@@ -24,6 +24,14 @@ const projects = [
     skills: ["HTML", "CSS", "Sass", "JavaScript", "PHP", "Joomla!"]
   },
   {
+    name: "Recipe Search",
+    description: "A multi-page web application that users can manage ingredients they have in fridge and search for recipes with filters.",
+    demoLink: "https://fridgefy.seisuke.info/",
+    gitLink: "https://github.com/seihello/fridgefy",
+    image: "fridgefy.png",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Firebase"]
+  },
+  {
     name: "English Learning",
     description: "An English vocabulary learning web application that features word-meaning-example sets, category-based filtering, and user-friendly word bookmarking for focused learning.",
     demoLink: "https://english.seisuke.info/",
