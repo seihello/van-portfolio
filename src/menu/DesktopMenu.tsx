@@ -9,9 +9,9 @@ export default function DesktopMenu() {
 
   return (
     <div className={styles.desktop_menu}>
-      {menuItems?.map((menuItem) => {
+      {menuItems?.map((menuItem, index) => {
         return (
-          <Link to={`/${menuItem.path}`}>
+          <Link key={index} to={`/${menuItem.path}`}>
             <div className={`${styles.menu_item} ${currentMenu === menuItem.path ? styles.active : ""}`}>
               <div>{menuItem.name}</div>
             </div>

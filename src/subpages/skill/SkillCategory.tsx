@@ -11,8 +11,8 @@ export default function SkillCategory({ categoryTitle, skillList }: Props) {
     <div className={styles.category}>
       <h3>{categoryTitle}</h3>
       <div className={styles.skills}>
-        {skillList.map((skill) => {
-          return <Skill name={skill} />
+        {skillList.map((skill, index) => {
+          return <Skill key={index} name={skill} />
         })}
       </div>
     </div>

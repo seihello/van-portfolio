@@ -29,11 +29,11 @@ export default function WorkExperience(props: Props) {
         <div className={styles.work_description}>
           <p className={styles.role}>{props.position}</p>
           <div className={styles.skills}>
-            {props.skills.map((skill) => {
+            {props.skills.map((skill, index) => {
               const skillSetting = skills.find((skillSetting) => {
                 return skillSetting.name === skill
               })
-              return <div className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
+              return <div key={index} className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
             })}
           </div>
           {/* <ul>

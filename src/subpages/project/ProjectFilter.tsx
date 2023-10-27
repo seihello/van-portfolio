@@ -40,10 +40,11 @@ export default function ProjectFilter() {
 
   return (
     <div className={styles.filter}>
-      {[...filterSkills].map((filterSkill) => {
+      {[...filterSkills].map((filterSkill, index) => {
         const skill = skills.find((skill) => skill.name === filterSkill);
         return (
           <div
+            key={index}
             className={styles.filter_item}
             style={selectedSkills.has(filterSkill) ? {
               backgroundColor: skill?.color,

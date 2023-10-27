@@ -4,7 +4,7 @@ import SkillCategory from './SkillCategory'
 import skills from '../../data/skills'
 
 export default function SkillPage() {
-  console.log(skills);
+
   return (
     <div className={commonStyles.section}>
       <h2>Skill</h2>

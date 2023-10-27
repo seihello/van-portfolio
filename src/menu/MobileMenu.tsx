@@ -17,9 +17,9 @@ export default function MobileMenu() {
   return (
     <div className={styles.mobile_menu} ref={mobileMenuRef}>
       <i className={`fa-solid fa-xmark ${styles.mobile_menu_close}`} onClick={onMobileMenuCloseClicked}></i>
-      {menuItems?.map((menuItem) => {
+      {menuItems?.map((menuItem, index) => {
         return (
-          <a href={`/${menuItem.path}`}>
+          <a key={index} href={`/${menuItem.path}`}>
             <div className={`${styles.menu_item} ${currentMenu === menuItem.path ? styles.active : ""}`}>
               <div>{menuItem.name}</div>
             </div>

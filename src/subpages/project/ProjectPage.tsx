@@ -32,8 +32,8 @@ export default function ProjectPage() {
         <hr />
         <ProjectFilter />
         <div className={styles.projects} style={{marginBottom}}>
-          {selectedProjects?.map((project) => {
-            return <ProjectComponent project={project} />
+          {selectedProjects?.map((project, index) => {
+            return <ProjectComponent key={index} project={project} />
           })}
         </div>
       </div>

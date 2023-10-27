@@ -44,11 +44,11 @@ export default function ProjectComponent({ project }: Props) {
           {project.description}
         </div>
         <div className={styles.skills}>
-          {project.skills.map((skill) => {
+          {project.skills.map((skill, index) => {
             const skillSetting = skills.find((skillSetting) => {
               return skillSetting.name === skill
             })
-            return <div className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
+            return <div key={index} className={styles.skill} style={{ backgroundColor: skillSetting?.color }}>{skill}</div>
           })}
         </div>
       </div>
