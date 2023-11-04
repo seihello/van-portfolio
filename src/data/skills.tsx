@@ -8,7 +8,7 @@ const skills = [
   {
     category: "Framework / Library",
     values: [
-      "JQuery", "React", "Next.js", "Vue.js", "Node.js", "Flutter", "Selenium", "Kivy"
+      "JQuery", "React", "Next.js", "Vue.js", "Tailwind", "Node.js", "Flutter", "Selenium", "Kivy"
     ]
   },
   {
