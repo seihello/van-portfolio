@@ -140,7 +140,7 @@ const skills = [
     icon: "vuejs"
   },
   {
-    name: "Tailwind",
+    name: "Tailwind CSS",
     color: "#14BCB8",
     icon: "tailwind"
   },

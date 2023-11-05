@@ -29,7 +29,15 @@ const projects = [
     demoLink: "https://fridgefy.seisuke.info/",
     gitLink: "https://github.com/seihello/fridgefy",
     image: "fridgefy.png",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Firebase"]
+    skills: ["HTML", "CSS", "TypeScript", "React", "Next.js", "Firebase"]
+  },
+  {
+    name: "Compass Card",
+    description: "A multi-page web application that allows you to manage your fare card.",
+    demoLink: "https://vercel.com/seihello/compass-card",
+    gitLink: "https://github.com/seihello/compass-card",
+    image: "compass.png",
+    skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Next.js"]
   },
   {
     name: "English Learning",
