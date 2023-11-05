@@ -34,7 +34,7 @@ const projects = [
   {
     name: "Compass Card",
     description: "A multi-page web application that allows you to manage your fare card.",
-    demoLink: "https://vercel.com/seihello/compass-card",
+    demoLink: "https://compass-card.vercel.app/",
     gitLink: "https://github.com/seihello/compass-card",
     image: "compass.png",
     skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Next.js"]
