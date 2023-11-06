@@ -13,7 +13,7 @@ const projects = [
     demoLink: "https://cite-so.vercel.app/",
     gitLink: "",
     image: "cite.png",
-    skills: ["HTML", "CSS", "React", "Next.js"]
+    skills: ["HTML", "CSS", "TypeScript", "React", "Next.js"]
   },
   {
     name: "Corporate Website",
@@ -37,7 +37,7 @@ const projects = [
     demoLink: "https://compass-card.vercel.app/",
     gitLink: "https://github.com/seihello/compass-card",
     image: "compass.png",
-    skills: ["HTML", "Tailwind CSS", "TypeScript", "React", "Next.js"]
+    skills: ["HTML", "CSS", "Tailwind", "TypeScript", "React", "Next.js"]
   },
   {
     name: "English Learning",

@@ -140,7 +140,7 @@ const skills = [
     icon: "vuejs"
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     color: "#14BCB8",
     icon: "tailwind"
   },
@@ -230,18 +230,16 @@ export const filterSkills = [
   "All",
   "HTML",
   "CSS",
-  "Sass",
+  "Tailwind",
   "JavaScript",
+  "TypeScript",
   "PHP",
-  "JQuery",
   "React",
   "Next.js",
   "Vue.js",
   "Node.js",
-  "C",
   "C++",
   "Python",
-  "Selenium",
   "ChatGPT",
 ];
 
