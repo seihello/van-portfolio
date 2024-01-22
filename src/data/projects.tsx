@@ -7,14 +7,14 @@ const projects = [
     image: "semiconapp.jpg",
     skills: ["C", "C++", "Vue.js"]
   },
-  {
-    name: "Citation Generator",
-    description: "A single-page web application that displays information related to article or paper citations. Users can resize the card, choose its design, add a QR code or customize other things before exporting the information as an image.",
-    demoLink: "https://cite-so.vercel.app/",
-    gitLink: "",
-    image: "cite.png",
-    skills: ["HTML", "CSS", "TypeScript", "React", "Next.js"]
-  },
+  // {
+  //   name: "Citation Generator",
+  //   description: "A single-page web application that displays information related to article or paper citations. Users can resize the card, choose its design, add a QR code or customize other things before exporting the information as an image.",
+  //   demoLink: "https://cite-so.vercel.app/",
+  //   gitLink: "",
+  //   image: "cite.png",
+  //   skills: ["HTML", "CSS", "TypeScript", "React", "Next.js"]
+  // },
   {
     name: "Corporate Website",
     description: "A responsive corporate website consisting of multiple pages. Features include news feeds, subscriptions, and stock price information display.",
