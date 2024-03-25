@@ -95,6 +95,11 @@ const skills = [
     icon: "mysql"
   },
   {
+    name: "PostgreSQL",
+    color: "#336790",
+    icon: "postgresql"
+  },
+  {
     name: "SQLite",
     color: "#242938",
     icon: "sqlite"
@@ -218,6 +223,11 @@ const skills = [
     name: "Firebase",
     color: "#d1b800",
     icon: "firebase"
+  },
+  {
+    name: "Supabase",
+    color: "#3DCF8E",
+    icon: "supabase"
   },
   {
     name: "ChatGPT",
