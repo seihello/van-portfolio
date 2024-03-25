@@ -6,7 +6,7 @@ const skills = [
     ]
   },
   {
-    category: "Framework / Library",
+    category: "Framework/Library",
     values: [
       "JQuery", "React", "Next.js", "Tailwind", "Node.js", "Selenium"
     ]
