@@ -1,41 +1,28 @@
 const skills = [
   {
     category: "Computer Language",
-    values: [
-      "C", "C++", "Python", "Java", "JavaScript", "PHP", "HTML", "CSS", "Sass", "SQL"
-    ]
+    values: ["C", "C++", "JavaScript", "TypeScript", "Python", "Java", "PHP", "HTML", "CSS", "Sass", "SQL"],
   },
   {
     category: "Framework/Library",
-    values: [
-      "JQuery", "React", "Next.js", "Tailwind", "Node.js", "Selenium"
-    ]
+    values: ["React", "Next.js", "Redux", "Tailwind", "JQuery", "Node.js", "React Native"],
   },
   {
     category: "Database",
-    values: [
-      "MySQL", "PostgreSQL", "Cassandra", "Neo4j"
-    ]
+    values: ["MySQL", "PostgreSQL", "Cassandra", "Neo4j"],
   },
   {
     category: "Tool/Platform",
-    values: [
-      "Git", "Firebase", "Supabase", "Joomla!", "Jenkins", "Redmine", "Figma"
-    ]
+    values: ["Git", "Firebase", "Supabase", "Joomla!", "Jenkins", "Redmine", "Figma"],
   },
   {
     category: "OS",
-    values: [
-      "Windows", "macOS", "Linux"
-    ]
+    values: ["Windows", "macOS", "Linux"],
   },
   {
     category: "Other",
-    values: [
-      "OOP", "UML", "DevOps", "Agile Dev", "SEMI Standards"
-    ]
-  }
-
-]
+    values: ["OOP", "UML", "DevOps", "Agile Dev", "SEMI Standards"],
+  },
+];
 
 export default skills;
