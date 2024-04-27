@@ -33,7 +33,7 @@ export default function WorkExperience(props: Props) {
             <p className={styles.role}>{props.position}</p>
             <p>{props.duration}</p>
           </div>
-          <div className={styles.skills}>
+          {/* <div className={styles.skills}>
             {props.skills.map((skill, index) => {
               const skillSetting = skills.find((skillSetting) => {
                 return skillSetting.name === skill;
@@ -44,12 +44,12 @@ export default function WorkExperience(props: Props) {
                 </div>
               );
             })}
-          </div>
-          {/* <ul>
+          </div> */}
+          <ul>
             {props.description.map((description) => {
-              return <li>{description}</li>
+              return <li>{description}</li>;
             })}
-          </ul> */}
+          </ul>
         </div>
         {/* <div className={styles.work_image}>
           <img src={props.image} />

@@ -2,18 +2,30 @@ import WorkExperience from "./WorkExperience";
 import styles from "./experience.module.scss";
 import commonStyles from "../../common.module.scss";
 
+const summationsFulltimeDescription = [
+  "Develop an educational web platform for university students and professors to enhance their learning process using Next.js and Supabase.",
+  "Design UI/UX that allows users to operate comfortably and conveniently.",
+  "Build a robust database that enables efficient data retrieval and allows for data manipulation based on permissions.",
+];
+
+const summationsInternshipDescription = [
+  "Developed an educational web application using Next.js.",
+  "Implemented 15+ interactive features and refactored the code for easy maintenance.",
+  "Collaborated with another developer to refine designs and achieve user-friendly application.",
+];
+
 const sandmanmediaDescription = [
-  "Built web pages using a CMS, utilizing HTML and CSS to ensure optimal design and layout across different devices and screen sizes",
-  "Utilized JavaScript to implement interactive features and functionality, such as API calling and smooth animations",
-  "Created CMS components and modules using PHP, to enhance the efficiency of development process",
-  "Collaborated with designers and developers to refine designs and achieve user-friendly websites",
+  "Built web pages using a CMS, utilizing HTML and CSS to ensure optimal design and layout across different devices and screen sizes.",
+  "Utilized JavaScript to implement interactive features and functionality, such as API calling and smooth animations.",
+  "Created CMS components and modules using PHP, to enhance the efficiency of development process.",
+  "Collaborated with designers and developers to refine designs and achieve user-friendly websites.",
 ];
 
 const muratecDescription = [
-  "Developed a large-scale software for controlling machines which work in semiconductor factories",
-  "Designed the architecture, created C++ codes, conducted testing",
-  "Managed external development teams and reviewed their deliverables",
-  "Communicated with our clients and local workers to arrange schedules and report problems",
+  "Developed a large-scale software for controlling machines which work in semiconductor factories.",
+  "Designed the architecture, created C++ codes, conducted testing.",
+  "Managed external development teams and reviewed their deliverables.",
+  "Communicated with our clients and local workers to arrange schedules and report problems.",
 ];
 
 export default function WorkExperienceSection() {
@@ -29,7 +41,7 @@ export default function WorkExperienceSection() {
           duration="Nov. 2023 - Present"
           position="Full Stack Web Developer"
           skills={["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Tailwind", "Git"]}
-          description={[]}
+          description={summationsFulltimeDescription}
           image=""
         />
         <WorkExperience
@@ -39,7 +51,7 @@ export default function WorkExperienceSection() {
           duration="Aug. 2023 - Nov. 2023"
           position="Full Stack Web Developer (Internship)"
           skills={["Next.js", "TypeScript", "Mantine", "Git"]}
-          description={[]}
+          description={summationsInternshipDescription}
           image=""
           isCompanyNameHidden={true}
         />

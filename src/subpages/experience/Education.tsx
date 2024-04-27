@@ -24,7 +24,7 @@ export default function Education(props: Props) {
         <p
           className={styles.role}
           style={{
-            width: "50%",
+            width: "70%",
           }}
         >
           {props.level}
