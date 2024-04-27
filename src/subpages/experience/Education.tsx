@@ -1,4 +1,4 @@
-import styles from './experience.module.scss'
+import styles from "./experience.module.scss";
 
 type Props = {
   orgName: string;
@@ -6,7 +6,7 @@ type Props = {
   orgCountry: string;
   duration: string;
   level: string;
-}
+};
 
 export default function Education(props: Props) {
   return (
@@ -19,9 +19,18 @@ export default function Education(props: Props) {
             <i className="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
         </div>
-        <h3>{props.duration}</h3>
       </div>
-      <p className={styles.role}>{props.level}</p>
+      <div className={styles.experience_first}>
+        <p
+          className={styles.role}
+          style={{
+            width: "50%",
+          }}
+        >
+          {props.level}
+        </p>
+        <p>{props.duration}</p>
+      </div>
     </div>
-  )
+  );
 }
