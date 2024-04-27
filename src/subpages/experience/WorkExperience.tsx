@@ -1,5 +1,5 @@
 import styles from "./experience.module.scss";
-import skills from "../../setting/skills";
+// import skills from "../../setting/skills";
 
 type Props = {
   companyName: string;
